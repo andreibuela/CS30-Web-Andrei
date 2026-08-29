@@ -3,98 +3,456 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Impact of Music Genres on Academic Productivity</title>
+  <title>SoundFocus — Optimize Productivity Through Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: #111827;
+      --surface-border: #1f2937;
+      --primary: #dc2626;
+      --primary-hover: #b91c1c;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #f87171;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      color: #493a9c;
-      margin: 2rem auto;
-      max-width: 800px;
-      padding: 0 1rem;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(11, 15, 25, 0.85);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background-color: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--surface-border);
+      background-color: transparent;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--surface);
+      border-color: #374151;
+    }
+
+    /* Metrics Banner */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .metric-card {
+      background-color: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .metric-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Section Structure */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    /* Grid Layouts */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #374151;
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Focus vs Lyrics Highlight */
+    .feature-box {
+      background: linear-gradient(145deg, #111827 0%, #1a2333 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      margin-bottom: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .feature-box ol {
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .feature-box li {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    blockquote {
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #e2e8f0;
+      border-left: 4px solid var(--primary);
+      padding-left: 1.25rem;
+    }
+
+    /* Personality Persona Cards */
+    .persona-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .persona-card {
+      background-color: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .persona-card.introvert {
+      border-top: 4px solid #38bdf8;
+    }
+
+    .persona-card.extravert {
+      border-top: 4px solid #f87171;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--surface-border);
+      padding: 3rem 1.5rem;
+      background-color: rgba(11, 15, 25, 0.95);
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .feature-box, .persona-split {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>THE IMPACT OF MUSIC GENRES ON ACADEMIC PRODUCTIVITY</h1>
-  <p>This article was prepared for <i>CS30-8P Websites and Online Communication</i> for <strong>Mapúa University</strong> students of <strong>BS Technical Communication</strong>. It presents research findings on how music genres influenced essay-writing productivity under the 14-Week Trimestral System.</p>
-</header>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#" class="brand">Sound<span>Focus</span></a>
+    <ul class="nav-links">
+      <li><a href="#genres">Genres</a></li>
+      <li><a href="#dynamics">Focus Dynamics</a></li>
+      <li><a href="#profiles">Profiles</a></li>
+      <li><a href="#soundscapes">Lo-Fi</a></li>
+    </ul>
+    <a href="#genres" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Explore Findings</a>
+  </nav>
 
-<hr>
+  <!-- Hero Header -->
+  <header class="hero">
+    <span class="hero-tag">Acoustic Performance Blueprint</span>
+    <h1>The Impact of Music Genres on Academic Productivity</h1>
+    <p>Discover how mood regulation, lyric familiarity, and acoustic environments optimize cognitive endurance during intensive writing workflows.</p>
+    <div class="cta-group">
+      <a href="#genres" class="btn btn-primary">Browse Genre Metrics</a>
+      <a href="#dynamics" class="btn btn-outline">Read The Research</a>
+    </div>
+  </header>
 
-<main>
+  <!-- Key Fast Metrics -->
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="metric-val">#1</div>
+      <div class="metric-label">Mood Regulation over Silence</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">Top 3</div>
+      <div class="metric-label">Pop, OPM & Rock Dominance</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">+Endurance</div>
+      <div class="metric-label">Resilience to Academic Burnout</div>
+    </div>
+  </div>
 
-<section>
-  <h2>ACADEMIC CONTEXT</h2>
-  <p><strong>Mapúa University</strong> operated on a compressed 14-Week Trimestral System that required students to produce large volumes of work in short bursts. Essay writing was one of the most cognitively demanding tasks, requiring idea generation, logical structuring, vocabulary retrieval, and syntactic formulation under severe time pressure.</p>
-  <p>Students relied on music as a coping mechanism. The <em>Arousal-Mood Hypothesis</em> suggested music improved performance by regulating mood and arousal, while <em>Cognitive Load Theory</em> warned that music, especially with lyrics, competed for limited working memory resources.</p>
-</section>
+  <div class="container">
 
-<section>
-  <h2>GENRE PREFERENCES</h2>
-  <p>Survey data revealed strong preferences for <strong>Pop</strong>, <strong>OPM</strong>, and <strong>Rock</strong>. Students favored these over <i>Classical</i> or <i>Lo-fi</i>, showing that emotional regulation and familiarity outweighed concerns about interference.</p>
-  <ul>
-    <li>Pop provided rhythm and predictability.</li>
-    <li>OPM reinforced cultural identity.</li>
-    <li>Rock offered intensity and energy.</li>
-  </ul>
-</section>
+    <!-- Genres Overview -->
+    <div id="genres">
+      <h2 class="section-title">Genre Preferences</h2>
+      <p class="section-subtitle">Why familiar emotional resonance beats silence in practical performance</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <h3>Pop</h3>
+          <p>Delivers rhythmic consistency and structural predictability, anchoring cadence without overburdening working memory.</p>
+        </div>
+        <div class="card">
+          <h3>OPM</h3>
+          <p>Reinforces emotional comfort and cultural connection, transforming isolated study sessions into sustainable workflows.</p>
+        </div>
+        <div class="card">
+          <h3>Rock</h3>
+          <p>Provides raw drive and acoustic intensity, elevating central nervous system arousal when combating task fatigue.</p>
+        </div>
+      </div>
+    </div>
 
-<section>
-  <h2>LYRICS VS FOCUS</h2>
-  <p>The “Irrelevant Speech Effect” explained why lyrics interfered with verbal tasks. Yet, students reported that lyrics had not hindered them. Instead, preferred genres provided emotional uplift, reduced stress, and sustained focus.</p>
-  <ol>
-    <li>Familiar lyrics faded into the background.</li>
-    <li>Lyrics provided companionship during solitary writing.</li>
-    <li>Adaptation transformed interference into resilience.</li>
-  </ol>
-</section>
+    <!-- Lyrics vs Focus Feature Highlight -->
+    <div class="feature-box" id="dynamics">
+      <div>
+        <h2 style="font-size: 1.75rem; margin-bottom: 1rem; color: #fff;">Lyrics vs. Focus</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          While classic theories point out potential interference during verbal tasks, empirical routines prove familiar lyrical tracks function as emotional anchors rather than distractions.
+        </p>
+        <ol>
+          <li><strong>Familiarity factor:</strong> Known lyrics fade quickly into rhythmic background noise.</li>
+          <li><strong>Synthetic presence:</strong> Vocals mitigate isolation during long late-night sessions.</li>
+          <li><strong>Adapted cognitive load:</strong> Emotional uplift compensates for minimal speed trade-offs.</li>
+        </ol>
+      </div>
+      <div>
+        <blockquote>
+          "Productivity isn't purely measured by words-per-minute. It is sustained through endurance, emotional regulation, and avoiding burnout."
+        </blockquote>
+      </div>
+    </div>
 
-<section>
-  <h2>PRODUCTIVITY TRADE-OFFS</h2>
-  <p>Research showed that music reduced words-per-minute output compared to silence. However, productivity was not only about speed—it was also about endurance and quality. Music elevated mood, reduced stress, and increased willingness to stay engaged with tasks.</p>
-  <blockquote>
-    "Students explained that music helped them push through late-night writing sessions, preventing burnout and maintaining a sense of control."
-  </blockquote>
-</section>
+    <!-- Individual Profiles -->
+    <div id="profiles">
+      <h2 class="section-title">Cognitive Profiles</h2>
+      <p class="section-subtitle">How baseline stimulus requirements shape optimal auditory environments</p>
 
-<section>
-  <h2>INDIVIDUAL DIFFERENCES</h2>
-  <p>Not all students responded to music the same way. Personality and baseline arousal levels played a major role. Introverts were more easily overstimulated and often found music distracting, while extraverts required stimulation to reach optimal focus.</p>
-  <dl>
-    <dt>Introverts</dt>
-    <dd>Benefited from silence or Lo-fi, which reduced overstimulation.</dd>
-    <dt>Extraverts</dt>
-    <dd>Required Pop or Rock to elevate arousal and sustain focus.</dd>
-  </dl>
-</section>
+      <div class="persona-split">
+        <div class="persona-card introvert">
+          <h3>The Introvert Baseline</h3>
+          <p style="margin-top: 0.5rem; color: var(--text-muted);">
+            Naturally prone to sensory overload. Achieves top output with silence, ambient sound, or Lo-fi tracks that shield against sharp environmental interruptions without overloading verbal pathways.
+          </p>
+        </div>
+        <div class="persona-card extravert">
+          <h3>The Extravert Baseline</h3>
+          <p style="margin-top: 0.5rem; color: var(--text-muted);">
+            Requires supplementary stimulus to reach optimal cognitive focus. High-energy tracks across Pop and Rock raise cortical arousal to combat task monotony and sustain writing velocity.
+          </p>
+        </div>
+      </div>
+    </div>
 
-<section>
-  <h2>LO-FI AND ACOUSTIC CONTROL</h2>
-  <p><i>Lo-fi music</i> emerged as a middle ground between silence and lyrical distraction. Characterized by steady beats and absence of vocals, Lo-fi created a predictable, unobtrusive soundscape. It masked disruptive environmental noise while providing mood regulation benefits.</p>
-</section>
+    <!-- Lo-Fi Section -->
+    <div class="card" id="soundscapes" style="text-align: center; padding: 3rem 2rem;">
+      <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Lo-Fi & Acoustic Control</h2>
+      <p style="max-width: 700px; margin: 0 auto 1.5rem;">
+        Emerging as the functional median between pure silence and high-stimulation audio, non-vocal beatscapes mask ambient acoustic disruptions while maintaining calm autonomic focus.
+      </p>
+      <a href="https://mapua.edu.ph" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-block;">
+        View Technical Communication Resource
+      </a>
+    </div>
 
-<section>
-  <h2>IMPLICATIONS</h2>
-  <p>For <strong>Mapúa undergraduates</strong>, music was not just background—it was a survival strategy. Understanding how different genres affected productivity allowed students to make informed choices about their study playlists.</p>
-  <p>Visit the official portal to review objectives for <a href="https://mapua.edu.ph" target="_blank">Mapúa students of BS Technical Communication</a>.</p>
-</section>
+  </div>
 
-<section>
-  <h2>CONCLUSION</h2>
-  <p>The study validated the <em>Arousal-Mood Hypothesis</em>. Preferred genres, even those with lyrics, enhanced productivity by regulating mood and sustaining motivation. While <em>Cognitive Load Theory</em> warned of interference, the lived experience of students showed that emotional benefits outweighed cognitive costs.</p>
-</section>
-
-</main>
-
-<hr>
-
-<footer>
-  <p><strong>By Ralph Andrei P. Buela for CS30-8P A1</strong></p>
-  <p>&copy; 2026 Mapúa University. CS30-8P Coursework Resource.</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p><strong>Developed by Ralph Andrei P. Buela</strong></p>
+    <p>&copy; 2026 CS30-8P Websites and Online Communication &bull; Academic Project</p>
+  </footer>
 
 </body>
 </html>

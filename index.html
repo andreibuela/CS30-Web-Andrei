@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoundFocus — Optimize Productivity Through Music</title>
+  <title>SoundFocus — Acoustic Productivity for Filipino College Students</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,12 +11,15 @@
     :root {
       --bg: #0b0f19;
       --surface: #111827;
+      --surface-card: #161f30;
       --surface-border: #1f2937;
       --primary: #dc2626;
       --primary-hover: #b91c1c;
       --text: #f3f4f6;
       --text-muted: #9ca3af;
       --accent: #f87171;
+      --spotify: #1db954;
+      --youtube: #ff0000;
     }
 
     * {
@@ -26,7 +29,7 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -56,7 +59,7 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .brand span {
@@ -84,8 +87,8 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 6rem 1.5rem 4rem;
-      max-width: 900px;
+      padding: 5.5rem 1.5rem 3.5rem;
+      max-width: 960px;
       margin: 0 auto;
     }
 
@@ -98,26 +101,26 @@
       color: var(--accent);
       background-color: rgba(220, 38, 38, 0.12);
       border: 1px solid rgba(220, 38, 38, 0.3);
-      padding: 0.35rem 1rem;
+      padding: 0.4rem 1.1rem;
       border-radius: 9999px;
       margin-bottom: 1.5rem;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto 2rem;
     }
 
@@ -129,6 +132,9 @@
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.85rem 1.75rem;
       border-radius: 8px;
       font-weight: 600;
@@ -136,13 +142,13 @@
       text-decoration: none;
       transition: all 0.2s ease;
       cursor: pointer;
+      border: none;
     }
 
     .btn-primary {
       background-color: var(--primary);
       color: #fff;
-      border: none;
-      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
     }
 
     .btn-primary:hover {
@@ -161,14 +167,19 @@
       border-color: #374151;
     }
 
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
     /* Metrics Banner */
     .metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 2rem auto 4rem;
-      padding: 0 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 5rem;
     }
 
     .metric-card {
@@ -180,9 +191,13 @@
     }
 
     .metric-val {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: var(--text);
+    }
+
+    .metric-val.highlight {
+      color: var(--accent);
     }
 
     .metric-label {
@@ -191,28 +206,26 @@
       margin-top: 0.25rem;
     }
 
-    /* Section Structure */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem 5rem;
+    /* Section Headings */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
     .section-title {
       font-size: 1.85rem;
       font-weight: 700;
-      text-align: center;
       margin-bottom: 0.5rem;
     }
 
     .section-subtitle {
-      text-align: center;
       color: var(--text-muted);
-      margin-bottom: 3rem;
       font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    /* Grid Layouts */
+    /* Grids */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -233,6 +246,17 @@
       transform: translateY(-2px);
     }
 
+    .card-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(220, 38, 38, 0.15);
+      color: var(--accent);
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
     .card h3 {
       font-size: 1.25rem;
       font-weight: 700;
@@ -245,15 +269,15 @@
       font-size: 0.95rem;
     }
 
-    /* Focus vs Lyrics Highlight */
+    /* Highlight Feature Box */
     .feature-box {
       background: linear-gradient(145deg, #111827 0%, #1a2333 100%);
       border: 1px solid var(--surface-border);
       border-radius: 16px;
-      padding: 3rem 2rem;
-      margin-bottom: 4rem;
+      padding: 3rem 2.25rem;
+      margin-bottom: 5rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 2.5rem;
       align-items: center;
     }
@@ -261,6 +285,7 @@
     .feature-box ol {
       padding-left: 1.25rem;
       color: var(--text-muted);
+      margin-top: 1rem;
     }
 
     .feature-box li {
@@ -275,29 +300,228 @@
       color: #e2e8f0;
       border-left: 4px solid var(--primary);
       padding-left: 1.25rem;
+      font-style: italic;
     }
 
-    /* Personality Persona Cards */
-    .persona-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 4rem;
+    /* Interactive Playlist Generator */
+    .generator-panel {
+      background-color: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 5rem;
     }
 
-    .persona-card {
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.5rem 0 2rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      background-color: var(--surface);
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      padding: 0.65rem 1.25rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .recommendation-display {
       background-color: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: 12px;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
     }
 
-    .persona-card.introvert {
-      border-top: 4px solid #38bdf8;
+    .rec-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    .persona-card.extravert {
-      border-top: 4px solid #f87171;
+    .rec-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .rec-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .platform-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-spotify {
+      background-color: #121212;
+      border: 1px solid #282828;
+      color: #fff;
+    }
+
+    .btn-spotify:hover {
+      border-color: var(--spotify);
+      color: var(--spotify);
+    }
+
+    .btn-youtube {
+      background-color: #121212;
+      border: 1px solid #282828;
+      color: #fff;
+    }
+
+    .btn-youtube:hover {
+      border-color: var(--youtube);
+      color: var(--youtube);
+    }
+
+    /* FAQ Accordion */
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto 5rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--surface-border);
+      background-color: var(--surface);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      padding-bottom: 1.25rem;
+    }
+
+    /* Paper Banner Callout */
+    .paper-banner {
+      background-color: var(--surface);
+      border: 1px dashed #374151;
+      border-radius: 14px;
+      padding: 2.25rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .paper-banner h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .paper-banner p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.8);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background-color: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+
+    .path-box {
+      background-color: #0b0f19;
+      border: 1px solid var(--surface-border);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      word-break: break-all;
+      margin: 1rem 0;
     }
 
     /* Footer */
@@ -321,7 +545,7 @@
     }
 
     @media (max-width: 768px) {
-      .feature-box, .persona-split {
+      .feature-box {
         grid-template-columns: 1fr;
       }
       .nav-links {
@@ -336,123 +560,315 @@
   <nav>
     <a href="#" class="brand">Sound<span>Focus</span></a>
     <ul class="nav-links">
-      <li><a href="#genres">Genres</a></li>
-      <li><a href="#dynamics">Focus Dynamics</a></li>
-      <li><a href="#profiles">Profiles</a></li>
-      <li><a href="#soundscapes">Lo-Fi</a></li>
+      <li><a href="#stats">The Data</a></li>
+      <li><a href="#dynamics">Lyrical Paradox</a></li>
+      <li><a href="#curator">Playlist Engine</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#paper">The Research</a></li>
     </ul>
-    <a href="#genres" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Explore Findings</a>
+    <a href="#curator" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Build Your Mix</a>
   </nav>
 
-  <!-- Hero Header -->
+  <!-- Hero Section -->
   <header class="hero">
-    <span class="hero-tag">Acoustic Performance Blueprint</span>
+    <span class="hero-tag">Student Cognitive Blueprint &bull; Philippine Higher Ed</span>
     <h1>The Impact of Music Genres on Academic Productivity</h1>
-    <p>Discover how mood regulation, lyric familiarity, and acoustic environments optimize cognitive endurance during intensive writing workflows.</p>
+    <p>
+      Grounded in empirical study of Mapúa undergraduates under high-stress academic pacing, discovering why high-arousal genres, familiar lyrics, and intentional soundscapes fuel mental endurance during essay-writing across Filipino universities.
+    </p>
     <div class="cta-group">
-      <a href="#genres" class="btn btn-primary">Browse Genre Metrics</a>
-      <a href="#dynamics" class="btn btn-outline">Read The Research</a>
+      <a href="#curator" class="btn btn-primary">Find Your Focus Genre</a>
+      <a href="#dynamics" class="btn btn-outline">Explore The Science</a>
     </div>
   </header>
 
-  <!-- Key Fast Metrics -->
-  <div class="metrics">
-    <div class="metric-card">
-      <div class="metric-val">#1</div>
-      <div class="metric-label">Mood Regulation over Silence</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-val">Top 3</div>
-      <div class="metric-label">Pop, OPM & Rock Dominance</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-val">+Endurance</div>
-      <div class="metric-label">Resilience to Academic Burnout</div>
-    </div>
-  </div>
-
-  <div class="container">
-
-    <!-- Genres Overview -->
-    <div id="genres">
-      <h2 class="section-title">Genre Preferences</h2>
-      <p class="section-subtitle">Why familiar emotional resonance beats silence in practical performance</p>
-      
-      <div class="grid-3">
-        <div class="card">
-          <h3>Pop</h3>
-          <p>Delivers rhythmic consistency and structural predictability, anchoring cadence without overburdening working memory.</p>
-        </div>
-        <div class="card">
-          <h3>OPM</h3>
-          <p>Reinforces emotional comfort and cultural connection, transforming isolated study sessions into sustainable workflows.</p>
-        </div>
-        <div class="card">
-          <h3>Rock</h3>
-          <p>Provides raw drive and acoustic intensity, elevating central nervous system arousal when combating task fatigue.</p>
-        </div>
+  <!-- Metric Highlights -->
+  <div class="container" id="stats">
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-val highlight">69.4%</div>
+        <div class="metric-label">Deem Music "Essential for Mental Survival"</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">75.0%</div>
+        <div class="metric-label">Report Faster Writing Output Speeds</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val highlight">72.2%</div>
+        <div class="metric-label">Prefer or Tolerate Lyrics During Writing</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">3.96 / 5</div>
+        <div class="metric-label">Flow State Rating in Lyrical Listeners</div>
       </div>
     </div>
 
-    <!-- Lyrics vs Focus Feature Highlight -->
+    <!-- Core Research Findings -->
+    <div class="section-header">
+      <h2 class="section-title">The Realities of Student Study Audio</h2>
+      <p class="section-subtitle">
+        Pedagogical advice pushes classical silence, but Filipino college students thrive on emotional upregulation.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <span class="card-badge">61.1% Preference</span>
+        <h3>Pop & OPM</h3>
+        <p>
+          Far from causing distraction, familiar local melodies and pop tracks provide psychological comfort, cultural familiarity, and an auditory defense mechanism against noisy households or dorms.
+        </p>
+      </div>
+      <div class="card">
+        <span class="card-badge">58.3% Preference</span>
+        <h3>Rock & Metal</h3>
+        <p>
+          High cortical arousal and driving tempos combat task monotony and physical fatigue, keeping students motivated during midnight drafting sprints and finals-week cram sessions.
+        </p>
+      </div>
+      <div class="card">
+        <span class="card-badge">Acoustic Shield</span>
+        <h3>Lo-Fi & Game OSTs</h3>
+        <p>
+          Non-lyrical beatscapes mask ambient background chatter and city noise, serving as steady autonomic anchors without triggering competitive verbal phonological loads.
+        </p>
+      </div>
+    </div>
+
+    <!-- Neurological Habituation Feature -->
     <div class="feature-box" id="dynamics">
       <div>
-        <h2 style="font-size: 1.75rem; margin-bottom: 1rem; color: #fff;">Lyrics vs. Focus</h2>
-        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-          While classic theories point out potential interference during verbal tasks, empirical routines prove familiar lyrical tracks function as emotional anchors rather than distractions.
+        <h2 style="font-size: 1.75rem; margin-bottom: 1rem; color: #fff;">The Habituation Paradox</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+          Traditional Cognitive Load Theory warns that background speech hijacks the phonological loop. However, empirical findings prove habituated students train their minds to strip semantic meaning from vocals:
         </p>
         <ol>
-          <li><strong>Familiarity factor:</strong> Known lyrics fade quickly into rhythmic background noise.</li>
-          <li><strong>Synthetic presence:</strong> Vocals mitigate isolation during long late-night sessions.</li>
-          <li><strong>Adapted cognitive load:</strong> Emotional uplift compensates for minimal speed trade-offs.</li>
+          <li><strong>Selective Attenuation:</strong> Familiar vocals fade into harmless background rhythm.</li>
+          <li><strong>Lower Distraction:</strong> Lyrical listeners reported lower distraction (3.19/5) than instrumental purists (3.70/5).</li>
+          <li><strong>Emotional Regulation:</strong> Positive affect and dopamine outweigh the minor subconscious cost of auditory filtering.</li>
         </ol>
       </div>
       <div>
         <blockquote>
-          "Productivity isn't purely measured by words-per-minute. It is sustained through endurance, emotional regulation, and avoiding burnout."
+          "Silence makes me feel anxious or bored... music is not merely background sound, it is an essential survival strategy against burnout."
         </blockquote>
       </div>
     </div>
 
-    <!-- Individual Profiles -->
-    <div id="profiles">
-      <h2 class="section-title">Cognitive Profiles</h2>
-      <p class="section-subtitle">How baseline stimulus requirements shape optimal auditory environments</p>
+    <!-- Interactive Playlist Configurator -->
+    <div id="curator">
+      <div class="section-header">
+        <h2 class="section-title">Acoustic Focus Configurator</h2>
+        <p class="section-subtitle">Select your immediate academic state to discover your optimal study soundscape.</p>
+      </div>
 
-      <div class="persona-split">
-        <div class="persona-card introvert">
-          <h3>The Introvert Baseline</h3>
-          <p style="margin-top: 0.5rem; color: var(--text-muted);">
-            Naturally prone to sensory overload. Achieves top output with silence, ambient sound, or Lo-fi tracks that shield against sharp environmental interruptions without overloading verbal pathways.
-          </p>
+      <div class="generator-panel">
+        <div class="filter-group">
+          <button class="filter-btn active" onclick="setPlaylist('burnout')">Exhausted / Low Energy</button>
+          <button class="filter-btn" onclick="setPlaylist('drafting')">High-Urgency Drafting</button>
+          <button class="filter-btn" onclick="setPlaylist('analytical')">Proofreading / Complex Synthesis</button>
+          <button class="filter-btn" onclick="setPlaylist('ambient')">Noisy Environment / Household</button>
         </div>
-        <div class="persona-card extravert">
-          <h3>The Extravert Baseline</h3>
-          <p style="margin-top: 0.5rem; color: var(--text-muted);">
-            Requires supplementary stimulus to reach optimal cognitive focus. High-energy tracks across Pop and Rock raise cortical arousal to combat task monotony and sustain writing velocity.
+
+        <div class="recommendation-display" id="recBox">
+          <div class="rec-header">
+            <div>
+              <div class="rec-title" id="recTitle">Energetic Rock & Pop Upregulation</div>
+              <div class="card-badge" id="recTag" style="margin-top:0.4rem;">High Cortical Arousal</div>
+            </div>
+            <div class="platform-actions">
+              <a href="https://open.spotify.com/search/filipino%20rock%20high%20energy" target="_blank" rel="noopener noreferrer" class="btn btn-spotify" id="spotifyBtn">
+                Search Spotify
+              </a>
+              <a href="https://www.youtube.com/results?search_query=opm+rock+study+playlist" target="_blank" rel="noopener noreferrer" class="btn btn-youtube" id="ytBtn">
+                Search YouTube
+              </a>
+            </div>
+          </div>
+          <p class="rec-desc" id="recDesc">
+            When battling mental fatigue, your brain lacks dopamine. Fast-tempo Pop, OPM, and Rock elevate physiological arousal to overcome procrastination and break past writer's block.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Lo-Fi Section -->
-    <div class="card" id="soundscapes" style="text-align: center; padding: 3rem 2rem;">
-      <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Lo-Fi & Acoustic Control</h2>
-      <p style="max-width: 700px; margin: 0 auto 1.5rem;">
-        Emerging as the functional median between pure silence and high-stimulation audio, non-vocal beatscapes mask ambient acoustic disruptions while maintaining calm autonomic focus.
+    <!-- Frequently Asked Questions -->
+    <div id="faq">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Evidence-based answers to study audio dilemmas.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <button class="faq-question">Doesn't listening to lyrics hurt grammar and vocabulary retrieval?</button>
+          <div class="faq-answer">
+            Cognitive science shows that unfamiliar or unexpected lyrics do compete for working memory. However, for students who habitually study with lyrical music, repeated exposure produces neurological habituation—the brain treats familiar vocals as rhythmic texture rather than semantic language, preserving writing speed while boosting mood.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Why shouldn't I just write in absolute silence?</button>
+          <div class="faq-answer">
+            For many students, complete silence induces anxiety, sensory underload, or rumination, leading to frequent smartphone checks and boredom. In non-isolated environments (like family homes or dorms), silence leaves you vulnerable to sudden, disruptive noises (doors slamming, conversation spikes). Music creates a predictable acoustic perimeter.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Should I use the same genre for writing drafts and final editing?</button>
+          <div class="faq-answer">
+            No. The recommended strategy is metacognitive auditing: deploy high-energy genres (Rock, Pop, upbeat OPM) during the initial drafting phase to generate momentum and dopamine, then transition to non-lyrical Lo-Fi, classical, or ambient noise during analytical proofreading to eliminate all semantic competition.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How does this data apply to non-Mapúan college students?</button>
+          <div class="faq-answer">
+            While the empirical data originates from Mapúa undergraduates facing a compressed 14-week trimestral system, the underlying psychological mechanisms—combatting burnout, emotional regulation, and masking uncontrolled ambient study environments—are universal challenges across higher education in the Philippines.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Academic Paper Section -->
+    <div class="paper-banner" id="paper">
+      <h3>Review the Complete Empirical Paper</h3>
+      <p>
+        Authored by Ralph Andrei P. Buela &bull; Extended Analytical Essay Submitted to the Department of Liberal Arts
       </p>
-      <a href="https://mapua.edu.ph" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-block;">
-        View Technical Communication Resource
-      </a>
+      <div class="cta-group">
+        <button class="btn btn-primary" onclick="openModal()">
+          Open Local PDF Resource
+        </button>
+        <a href="#curator" class="btn btn-outline">
+          Back to Playlist Engine
+        </a>
+      </div>
     </div>
 
   </div>
 
+  <!-- Local PDF Viewer Modal -->
+  <div class="modal-overlay" id="pdfModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Access Research Document</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Modern web browsers restrict automated opening of local computer file paths for security. You can access the paper using the methods below:
+      </p>
+
+      <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Local File Path</label>
+      <div class="path-box" id="filePathText">file:///C:/Users/Admin/Downloads/FINAL_BUELA%20ENG120-0_%20Extended%20Analytical%20Essay%20(1).pdf</div>
+
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+        <button class="btn btn-primary" onclick="copyPath()" id="copyBtn" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+          Copy File URL
+        </button>
+        <a href="file:///C:/Users/Admin/Downloads/FINAL_BUELA%20ENG120-0_%20Extended%20Analytical%20Essay%20(1).pdf" target="_blank" class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+          Direct Link (If Supported)
+        </a>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
+        💡 Tip: If clicking doesn't launch due to your browser's security sandbox, copy the path above and paste it directly into a new browser tab.
+      </p>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
-    <p><strong>Developed by Ralph Andrei P. Buela</strong></p>
-    <p>&copy; 2026 CS30-8P Websites and Online Communication &bull; Academic Project</p>
+    <p><strong>SoundFocus &bull; Ralph Andrei P. Buela</strong></p>
+    <p>&copy; 2026 CS30-8P Websites and Online Communication &bull; Mapúa University</p>
   </footer>
 
+  <script>
+    // Playlist Engine Data
+    const playlistData = {
+      burnout: {
+        title: "Energetic Rock & Pop Upregulation",
+        tag: "High Cortical Arousal",
+        desc: "When battling mental fatigue, your brain lacks dopamine. Fast-tempo Pop, OPM, and Rock elevate physiological arousal to overcome procrastination and break past writer's block.",
+        spotify: "https://open.spotify.com/search/filipino%20rock%20high%20energy",
+        youtube: "https://www.youtube.com/results?search_query=opm+rock+study+playlist"
+      },
+      drafting: {
+        title: "High-Cadence Flow (Pop & Metronomic Beats)",
+        tag: "Momentum & Rhythm",
+        desc: "Upbeat tracks provide rhythmic structure that matches keyboard typing velocity, converting linguistic generation into an immersive sprint.",
+        spotify: "https://open.spotify.com/search/upbeat%20opm%20study",
+        youtube: "https://www.youtube.com/results?search_query=upbeat+opm+productivity+playlist"
+      },
+      analytical: {
+        title: "Zero-Vocal Acoustic Shield (Lo-Fi / Classical)",
+        tag: "Zero Phonological Interference",
+        desc: "During syntax editing, citation building, and proofreading, eliminate lexical competition with instrumentals, chillhop, or neo-classical compositions.",
+        spotify: "https://open.spotify.com/search/lofi%20beats%20study",
+        youtube: "https://www.youtube.com/results?search_query=lofi+beats+to+study+to"
+      },
+      ambient: {
+        title: "Acoustic Masking (Soundscapes & Game Soundtracks)",
+        tag: "Environmental Noise Cancellation",
+        desc: "Video game OSTs and steady ambient soundscapes mask unpredictable noises like street traffic, barking dogs, or household conversation spikes.",
+        spotify: "https://open.spotify.com/search/video%20game%20soundtracks%20focus",
+        youtube: "https://www.youtube.com/results?search_query=video+game+ambient+study+music"
+      }
+    };
+
+    function setPlaylist(key) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const data = playlistData[key];
+      document.getElementById('recTitle').innerText = data.title;
+      document.getElementById('recTag').innerText = data.tag;
+      document.getElementById('recDesc').innerText = data.desc;
+      document.getElementById('spotifyBtn').href = data.spotify;
+      document.getElementById('ytBtn').href = data.youtube;
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = button.nextElementSibling;
+
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Modal Handling for Local PDF
+    function openModal() {
+      document.getElementById('pdfModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('pdfModal').classList.remove('active');
+    }
+
+    function copyPath() {
+      const path = document.getElementById('filePathText').innerText;
+      navigator.clipboard.writeText(path).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.innerText = 'Copied to Clipboard!';
+        setTimeout(() => { btn.innerText = 'Copy File URL'; }, 2000);
+      });
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('pdfModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+  </script>
 </body>
 </html>

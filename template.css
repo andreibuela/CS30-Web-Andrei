@@ -1,20 +1,20 @@
 /* ==========================================================================
-   SoundFocus - Stylesheet (CS30-8P Prelims Project)
-   Theme: Clean Cream / Bright White & Cardinal Red
+   SoundFocus - External Stylesheet (CS30-8P Prelims Project)
+   Palette: Cream & White Surface with Cardinal Red Accents
    ========================================================================== */
 
 :root {
-  --bg-main: #fdfbf7;           /* Warm, bright cream base */
-  --bg-surface: #ffffff;        /* Pure white cards */
-  --bg-subtle: #f4efe6;         /* Light cream accent */
-  --text-primary: #1f2937;      /* High contrast charcoal */
-  --text-muted: #4b5563;        /* Readable secondary text */
-  --cardinal-red: #b91c1c;      /* Primary Red */
-  --cardinal-hover: #991b1b;    /* Darker Red hover */
-  --cardinal-light: #fef2f2;    /* Soft red tint */
-  --cardinal-border: #fecaca;   /* Border red tint */
+  --bg-main: #fdfbf7;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f4efe6;
+  --text-primary: #1f2937;
+  --text-muted: #4b5563;
+  --cardinal-red: #b91c1c;
+  --cardinal-hover: #991b1b;
+  --cardinal-light: #fef2f2;
+  --cardinal-border: #fecaca;
   --border-color: #e5e7eb;
-  --focus-ring: #2563eb;        /* High-contrast blue focus ring */
+  --focus-ring: #2563eb;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -37,7 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Clear accessibility focus indicators */
+/* Accessible focus indicators */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--focus-ring);
@@ -241,7 +241,7 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* 3-Column Card Grid */
+/* Multi-Column 3-Column Grid */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -287,6 +287,43 @@ button:focus-visible {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* Media Cards for Visual Diagrams */
+.media-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.media-caption {
+  padding: 1.25rem;
+}
+
+.media-caption h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.media-caption p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* 2-Column Split Feature Row */
@@ -356,6 +393,53 @@ cite {
   font-weight: 700;
   color: var(--cardinal-red);
   margin-top: 1rem;
+}
+
+/* Spotify Player Component */
+.spotify-embed-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 4rem;
+}
+
+.spotify-embed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.spotify-embed-header h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* 16:9 Responsive Video Wrapper */
+.video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: #000;
+  box-shadow: var(--shadow-sm);
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* Interactive Configurator Area */
@@ -528,7 +612,7 @@ footer p {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide navigation links to ensure zero horizontal scroll on mobile */
+    display: none;
   }
 
   .hero {
@@ -536,17 +620,17 @@ footer p {
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .grid-3 {
-    grid-template-columns: 1fr; /* 3-column gracefully collapses into 1-column */
+    grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
   .split-grid {
-    grid-template-columns: 1fr; /* Feature split collapses into stacked rows */
+    grid-template-columns: 1fr;
     padding: 2rem 1.5rem;
   }
 
@@ -568,86 +652,4 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-/* Media & Embed Elements */
-.media-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.media-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.media-caption {
-  padding: 1.25rem;
-}
-
-.media-caption h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.35rem;
-}
-
-.media-caption p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* 16:9 Responsive Video Container */
-.video-responsive {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  background-color: #000;
-  box-shadow: var(--shadow-sm);
-}
-
-.video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* Spotify Embedded Player Card */
-.spotify-embed-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 4rem;
-}
-
-.spotify-embed-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.spotify-embed-header h3 {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--text-primary);
 }

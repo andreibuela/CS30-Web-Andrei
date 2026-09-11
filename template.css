@@ -89,7 +89,7 @@ button:focus-visible {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.75rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -97,7 +97,7 @@ button:focus-visible {
   text-decoration: none;
   color: var(--text-muted);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   transition: color 0.2s ease;
 }
 
@@ -185,12 +185,37 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-/* Metric Stats Row (Multi-Column Grid) */
+/* General Section Structure */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Multi-Column Metric Stats Row */
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .metric-card {
@@ -216,32 +241,7 @@ button:focus-visible {
   margin-top: 0.5rem;
 }
 
-/* General Section Structure */
-.section {
-  padding: 3.5rem 0;
-}
-
-.section-head {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.section-desc {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-/* Multi-Column 3-Column Grid */
+/* 3-Column Grid */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -420,28 +420,6 @@ cite {
   color: var(--text-primary);
 }
 
-/* 16:9 Responsive Video Wrapper */
-.video-responsive {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  background-color: #000;
-  box-shadow: var(--shadow-sm);
-}
-
-.video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 /* Interactive Configurator Area */
 .configurator {
   background-color: var(--bg-surface);
@@ -515,7 +493,7 @@ cite {
 
 /* FAQ Accordion */
 .faq-list {
-  max-width: 820px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -523,7 +501,7 @@ cite {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .faq-toggle {
@@ -561,6 +539,56 @@ cite {
 
 .faq-item.open .faq-icon {
   transform: rotate(45deg);
+}
+
+/* Key Takeaway Callout Box */
+.takeaways-card {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--cardinal-border);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 3rem;
+}
+
+.takeaways-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.takeaway-item {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.takeaway-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cardinal-red);
+  margin-bottom: 0.35rem;
+}
+
+.takeaway-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.takeaway-item p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 /* Call to Action Paper Banner */
@@ -607,6 +635,9 @@ footer p {
 @media (max-width: 1024px) {
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .takeaways-grid {
+    grid-template-columns: 1fr;
   }
 }
 

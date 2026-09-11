@@ -24,13 +24,13 @@
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="#stats">Data</a></li>
-          <li><a href="#visuals">Visuals</a></li>
+          <li><a href="#background">Overview</a></li>
+          <li><a href="#data-visuals">Data & Visuals</a></li>
           <li><a href="#genres">Genres</a></li>
-          <li><a href="#favorite-track">Featured Track</a></li>
           <li><a href="#science">The Science</a></li>
           <li><a href="#builder">Playlist Engine</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="#takeaways">Takeaways</a></li>
         </ul>
       </nav>
       <a href="#builder" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
@@ -56,8 +56,52 @@
       </div>
     </section>
 
-    <!-- Multi-Column Layout 1: Metrics Grid -->
-    <section class="container" id="stats" aria-label="Key Empirical Metrics">
+    <!-- NEW SECTION: Background & Academic Context -->
+    <section class="section container" id="background" aria-labelledby="bg-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="bg-heading">Study Overview & Core Questions</h2>
+        <p class="section-desc">
+          Examining the cognitive coping mechanisms of students facing compressed academic terms and generative writing demands.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="card-tag">Academic Pressure</span>
+          <h3>The 14-Week Crucible</h3>
+          <p>
+            Operating under Mapúa University's 14-Week Trimestral System requires rapid synthesis and sustained cognitive output in severely compressed modular timelines, making emotional fatigue a primary barrier to completion.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Cognitive Demand</span>
+          <h3>Generative Essay Writing</h3>
+          <p>
+            Unlike passive studying, essay composition demands continuous lexical retrieval, syntax formation, and logical structuring—processes that heavily tax human working memory and the phonological loop.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Core Objective</span>
+          <h3>What We Wanted to Know</h3>
+          <p>
+            Does high-energy, lyrical study audio cause destructive cognitive overload (Cognitive Load Theory), or does it serve as a necessary emotional regulator to elevate dopamine and sustain endurance (Arousal-Mood Hypothesis)?
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMBINED SECTION: Data & Visuals in One Flow -->
+    <section class="section container" id="data-visuals" aria-labelledby="data-visuals-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="data-visuals-heading">Empirical Data & Visual Evidence</h2>
+        <p class="section-desc">
+          Key quantitative metrics, statistical distributions, and causal frameworks derived from the undergraduate respondent pool.
+        </p>
+      </div>
+
+      <!-- Quantitative Metric Row -->
       <div class="metrics-grid">
         <article class="metric-card">
           <div class="metric-number">69.4%</div>
@@ -76,17 +120,8 @@
           <div class="metric-label">Flow-State Score in Lyrical Listeners</div>
         </article>
       </div>
-    </section>
 
-    <!-- Multi-Column Layout 2: Visual Research Evidence -->
-    <section class="section container" id="visuals" aria-labelledby="visuals-heading">
-      <div class="section-head">
-        <h2 class="section-title" id="visuals-heading">Visual Research Evidence</h2>
-        <p class="section-desc">
-          Key diagrams and empirical distributions examining the causal mechanics behind student study audio.
-        </p>
-      </div>
-
+      <!-- Visual Evidence Diagrams -->
       <div class="grid-3">
         <article class="media-card">
           <img src="./assets/conceptual-framework.png" alt="Diagram of the Input-Process-Output conceptual framework connecting music genres to cognitive load and essay productivity." loading="lazy">
@@ -114,7 +149,7 @@
       </div>
     </section>
 
-    <!-- Multi-Column Layout 3: Genre Analysis Grid -->
+    <!-- Genre Breakdown -->
     <section class="section container" id="genres" aria-labelledby="genres-heading">
       <div class="section-head">
         <h2 class="section-title" id="genres-heading">Predominant Genre Breakdown</h2>
@@ -180,7 +215,7 @@
       </div>
     </section>
 
-    <!-- Multi-Column Layout 4: 2-Column Split Feature Row -->
+    <!-- 2-Column Split Feature Row -->
     <section class="section container" id="science" aria-labelledby="science-heading">
       <div class="split-grid">
         <div class="split-content">
@@ -240,11 +275,11 @@
       </div>
     </section>
 
-    <!-- FAQ Accordion -->
+    <!-- EXPANDED FAQ Section (6 Practical Dilemmas) -->
     <section class="section container" id="faq" aria-labelledby="faq-heading">
       <div class="section-head">
         <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
-        <p class="section-desc">Practical answers to auditory study dilemmas.</p>
+        <p class="section-desc">Evidence-based answers to auditory study dilemmas and cognitive science.</p>
       </div>
 
       <div class="faq-list">
@@ -275,6 +310,67 @@
           </button>
           <div class="faq-content">
             <p>Practice metacognitive auditing: Use high-energy, lyrical genres (Pop, Rock, OPM) during the exploratory and generative drafting phase to build momentum. Then, switch to instrumental Lo-Fi, ambient, or video game OSTs during final proofreading to eliminate lexical distraction.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            Does listening to new, unfamiliar songs have the same effect as familiar tracks?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content">
+            <p>No. Neurological habituation relies strictly on predictability. Discovering a new song forces your brain's attentional filter to decode unfamiliar words, chord progressions, and vocal shifts, heavily triggering the Irrelevant Speech Effect and breaking your writing flow.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            How does playback volume affect cognitive load?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content">
+            <p>Moderate volume (50–65 dB) provides optimal acoustic masking without demanding conscious auditory processing. Excessively loud volumes can overstimulate the nervous system, spike cortisol, and lead to premature mental exhaustion during extended sessions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-toggle" aria-expanded="false">
+            Do these findings apply equally to STEM and Humanities writing?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content">
+            <p>Yes, because General Education essay requirements (Ethics, Purposive Communication, The Contemporary World) are universal across engineering and arts faculties. While technical writing involves equations, the verbal formulation of arguments relies on the same shared cognitive architecture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Main Research Takeaways for the Reader -->
+    <section class="section container" id="takeaways" aria-labelledby="takeaway-heading">
+      <div class="takeaways-card">
+        <div class="takeaways-head">
+          <span class="card-tag">Executive Summary</span>
+          <h3 class="section-title" id="takeaway-heading" style="font-size: 1.75rem;">Core Takeaways for Students</h3>
+          <p class="section-desc">Practical principles derived from empirical observation of student writing habits.</p>
+        </div>
+
+        <div class="takeaways-grid">
+          <div class="takeaway-item">
+            <div class="takeaway-num">01</div>
+            <h4>Ditch the Study Guilt</h4>
+            <p>If silence makes you anxious or distracted, listening to upbeat OPM, Pop, or Rock is scientifically validated as an effective dopamine regulator, not a personal flaw.</p>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-num">02</div>
+            <h4>Familiarity Enables Habituation</h4>
+            <p>Your brain can effortlessly tune out lyrics you already know by heart. Keep your study playlist on repeat and save new album discoveries for leisure time.</p>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-num">03</div>
+            <h4>Phase-Match Your Soundscapes</h4>
+            <p>Deploy heavy, rhythmic beats to conquer writer's block and generate your initial word count, then transition to quiet instrumentals for precision editing.</p>
           </div>
         </div>
       </div>

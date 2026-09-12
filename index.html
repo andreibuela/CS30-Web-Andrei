@@ -1,426 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An empirical investigation into how music genres and lyrical habituation shape essay-writing productivity among college students.">
-    <title>SoundFocus — The Impact of Music on Academic Productivity</title>
-    <link rel="stylesheet" href="template.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An empirical investigation into how music genres, high cortical arousal, and neurological habituation impact essay writing performance among college students.">
+  <title>SoundFocus — Music & Essay Productivity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="template.css">
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- =========================================================
-         HEADER
-    ========================================================== -->
-    <header class="site-header">
-        <div class="container nav">
-            <a class="brand" href="#">
-                Sound<span>Focus</span>
-            </a>
-            <nav aria-label="Primary navigation">
-                <ul class="nav-list">
-                    <li><a href="#background">Background</a></li>
-                    <li><a href="#data-visuals">Data & Visuals</a></li>
-                    <li><a href="#genres">The Genres</a></li>
-                    <li><a href="#track">Featured Track</a></li>
-                    <li><a href="#engine">Audio Engine</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#takeaways">Takeaways</a></li>
-                </ul>
-            </nav>
+  <!-- Sticky Navbar -->
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="SoundFocus Homepage">
+        Sound<span>Focus</span>
+      </a>
+      <nav aria-label="Page Sections">
+        <ul class="nav-list">
+          <li><a href="#background">Theory & Context</a></li>
+          <li><a href="#evidence">Empirical Data</a></li>
+          <li><a href="#genres">Genre Breakdown</a></li>
+          <li><a href="#case-studies">OPM Case Studies</a></li>
+          <li><a href="#engine">Focus Audio Studio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#takeaways">Takeaways</a></li>
+        </ul>
+      </nav>
+      <a href="#engine" class="button button-cardinal" style="min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+        Audio Studio
+      </a>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- Section 1: Hero (Centered Layout) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <span class="hero-tag">Acoustic Ergonomics &bull; Student Cognitive Science</span>
+        <h1 id="hero-title">Writing essays has an optimal soundtrack.</h1>
+        <p class="hero-copy">
+          Faced with heavy academic volume, strict deadlines, and noisy environments, students do not use music merely for entertainment[cite: 1]. It serves as a necessary emotional regulator and a tool for mental endurance during complex writing tasks[cite: 1].
+        </p>
+        <div class="hero-actions">
+          <a href="#evidence" class="button button-cardinal">Review the Findings</a>
+          <a href="#engine" class="button button-outline">Configure Study Audio</a>
+          <a href="#case-studies" class="button button-dark">Listen to Case Studies</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main id="main-content">
-        <!-- =====================================================
-             HERO (Clean, Centered Layout Without Top Image)
-        ====================================================== -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero-content">
-                <p class="eyebrow">Cognition • Music • Productivity</p>
-                <h1 id="hero-title">
-                    Academic writing has a soundtrack.
-                </h1>
-                <p class="hero-copy">
-                    Under the relentless deadlines and demanding workloads of university life, music ceases to be mere entertainment[cite: 1]. It becomes an essential emotional regulator and an acoustic shield against burnout[cite: 1].
-                </p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#data-visuals">
-                        Explore the Data
-                    </a>
-                    <a class="button button-secondary" href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                        Read Original Paper (PDF)
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- Section 2: Theoretical Context & Background -->
+    <section class="section-background" id="background" aria-labelledby="bg-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Theoretical Tension</span>
+          <h2 class="section-title" id="bg-title">Why Traditional Study Advice Fails Modern Writers</h2>
+          <p class="section-desc">
+            Standard educational psychology pits two opposing theories against each other when evaluating study soundscapes[cite: 1].
+          </p>
+        </div>
 
-        <!-- =====================================================
-             BACKGROUND (Broadened, Relatable Academic Context)
-        ====================================================== -->
-        <section class="section" id="background" aria-labelledby="background-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Background</p>
-                    <h2 id="background-title">
-                        Why silence is no longer the default study model.
-                    </h2>
-                </div>
-                <div class="intro-grid">
-                    <div class="statement">
-                        <h2>The Rigorous Pace of College</h2>
-                        <p>
-                            Navigating university requirements demands rapid synthesis, continuous problem-solving, and heavy writing outputs under tight deadlines[cite: 1]. In this high-intensity environment, emotional exhaustion and task fatigue often become far steeper hurdles than vocabulary retrieval[cite: 1].
-                        </p>
-                    </div>
-                    <div class="intro-text">
-                        <p>
-                            Traditional pedagogical advice insists that students should write in absolute silence or stick strictly to classical instrumentals to avoid cognitive overload[cite: 1].
-                        </p>
-                        <p>
-                            Yet across university libraries, coffee shops, and dorms, students routinely choose high-energy, lyrical genres like Pop, OPM, and Rock while drafting complex papers[cite: 1].
-                        </p>
-                        <p>
-                            This research investigated that contradiction: does lyrical music cause cognitive interference, or does it supply the emotional fuel and dopamine needed to finish the work[cite: 1]?
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             DATA & VISUALS (Combined Section)
-        ====================================================== -->
-        <section class="section journey" id="data-visuals" aria-labelledby="data-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Empirical Results</p>
-                    <h2 id="data-title">Data and Visual Research Evidence</h2>
-                    <p>
-                        Causal-comparative survey findings from undergraduate students actively writing academic essays[cite: 1].
-                    </p>
-                </div>
-
-                <!-- 4-Column Stat Metric Row -->
-                <div class="metrics-row">
-                    <article class="metric-card">
-                        <div class="metric-value">69.4%</div>
-                        <p>Deem music essential for mental survival[cite: 1]</p>
-                    </article>
-                    <article class="metric-card">
-                        <div class="metric-value">75.0%</div>
-                        <p>Report measurable writing speed gains[cite: 1]</p>
-                    </article>
-                    <article class="metric-card">
-                        <div class="metric-value">72.2%</div>
-                        <p>Tolerate or prefer lyrics while writing[cite: 1]</p>
-                    </article>
-                    <article class="metric-card">
-                        <div class="metric-value">3.96/5</div>
-                        <p>Flow-state score for lyrical listeners[cite: 1]</p>
-                    </article>
-                </div>
-
-                <!-- 3-Column Diagram Grid -->
-                <div class="visuals-grid">
-                    <article class="visual-card">
-                        <img
-                            src="assets/conceptual-framework.png"
-                            alt="IPO Conceptual Framework diagram illustrating music genre input and essay output."
-                            loading="lazy"
-                        >
-                        <div class="visual-content">
-                            <h3>IPO Theoretical Framework</h3>
-                            <p>Illustrates how music genre inputs causally alter working memory load to dictate drafting speed and syntactic precision[cite: 1].</p>
-                        </div>
-                    </article>
-
-                    <article class="visual-card">
-                        <img
-                            src="assets/genre-distribution.png"
-                            alt="Bar chart showing frequency of preferred music genres."
-                            loading="lazy"
-                        >
-                        <div class="visual-content">
-                            <h3>Genre Distribution Data</h3>
-                            <p>Pop/OPM (61.1%) and Rock/Metal (58.3%) dominate student writing sessions over traditional Lo-fi or Classical options[cite: 1].</p>
-                        </div>
-                    </article>
-
-                    <article class="visual-card">
-                        <img
-                            src="assets/flow-habituation.png"
-                            alt="Pie chart illustrating the preference for lyrics versus instrumentals."
-                            loading="lazy"
-                        >
-                        <div class="visual-content">
-                            <h3>The Habituation Split</h3>
-                            <p>Over 72% confirm lyrics cause no disruption, revealing a subconscious neurological habituation filter at work[cite: 1].</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             BIG QUOTE
-        ====================================================== -->
-        <section class="quote-section" aria-label="Key finding">
-            <div class="container">
-                <blockquote>
-                    <p>
-                        "Silence induces anxiety and phone checks. <span>Music is our psychological shield."</span>[cite: 1]
-                    </p>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             GENRE BREAKDOWN (3-Column Journey Cards)
-        ====================================================== -->
-        <section class="section" id="genres" aria-labelledby="genres-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Auditory Mechanics</p>
-                    <h2 id="genres-title">How specific genres fuel student workflows</h2>
-                    <p>
-                        Different sonic profiles solve distinct cognitive and emotional hurdles during long writing sessions[cite: 1].
-                    </p>
-                </div>
-                <div class="journey-grid">
-                    <article class="journey-card">
-                        <span class="journey-number">01</span>
-                        <h3>Pop & OPM</h3>
-                        <p>
-                            Familiar vocal cadences provide cultural companionship and emotional comfort, softening the strain of isolated writing sessions[cite: 1].
-                        </p>
-                    </article>
-                    <article class="journey-card">
-                        <span class="journey-number">02</span>
-                        <h3>Rock & Metal</h3>
-                        <p>
-                            Driving rhythms and acoustic intensity elevate physiological arousal, supplying the dopamine needed to break past task fatigue[cite: 1].
-                        </p>
-                    </article>
-                    <article class="journey-card">
-                        <span class="journey-number">03</span>
-                        <h3>Lo-Fi & Game OSTs</h3>
-                        <p>
-                            Steady, non-vocal beatscapes mask uncontrolled environmental noises (traffic, household chatter) without competing for working memory[cite: 1].
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             FEATURED SPOTIFY TRACK
-        ====================================================== -->
-        <section class="section track-section" id="track" aria-labelledby="track-title">
-            <div class="container track-grid">
-                <div>
-                    <iframe
-                        style="border-radius: 12px;"
-                        src="https://open.spotify.com/embed/track/5tlb0AxuzsMWL2GtEppXGX?utm_source=generator&theme=0"
-                        width="100%"
-                        height="152"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        title="Cup of Joe - Multo Spotify Player">
-                    </iframe>
-                </div>
-                <div>
-                    <p class="eyebrow">Featured OPM Case Study</p>
-                    <h2 id="track-title">Multo — Cup of Joe</h2>
-                    <p style="color: var(--muted); font-size: 1.05rem;">
-                        This track demonstrates the habituation paradox in action[cite: 1]: highly melodic, familiar songs generate emotional momentum without interfering with sentence generation[cite: 1].
-                    </p>
-                    <ul class="pill-list" aria-label="Key musical attributes">
-                        <li>Familiar Melody</li>
-                        <li>Emotional Upregulation</li>
-                        <li>Non-Intrusive Rhythm</li>
-                        <li>Acoustic Buffer</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             CONFIGURATOR (Interactive Audio Engine)
-        ====================================================== -->
-        <section class="section" id="engine" aria-labelledby="engine-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Focus Audio Engine</p>
-                    <h2 id="engine-title">Match your playlist to your workload state</h2>
-                    <p>
-                        Select your current mental workload phase to generate your optimal study audio profile[cite: 1].
-                    </p>
-                </div>
-
-                <div class="configurator-wrap">
-                    <div class="config-tabs" role="tablist">
-                        <button class="config-btn active" onclick="setProfile('burnout', this)">Exhausted / Low Energy</button>
-                        <button class="config-btn" onclick="setProfile('drafting', this)">Fast Drafting Sprint</button>
-                        <button class="config-btn" onclick="setProfile('editing', this)">Proofreading / Syntax</button>
-                        <button class="config-btn" onclick="setProfile('ambient', this)">Noisy Living Space</button>
-                    </div>
-
-                    <div class="config-box">
-                        <span class="config-tag" id="cfg-tag">High Cortical Arousal</span>
-                        <h3 id="cfg-title">Energetic Rock & High-Tempo Pop</h3>
-                        <p id="cfg-desc" style="color: var(--muted); margin-bottom: 1.5rem;">
-                            When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance[cite: 1].
-                        </p>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                            <a class="button button-primary" id="cfg-yt" href="https://www.youtube.com/results?search_query=opm+rock+study+playlist" target="_blank" rel="noopener noreferrer">
-                                Open on YouTube
-                            </a>
-                            <a class="button button-secondary" id="cfg-sp" href="https://open.spotify.com/search/opm%20rock%20high%20energy" target="_blank" rel="noopener noreferrer">
-                                Open on Spotify
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             FAQS (2-Column Card Grid)
-        ====================================================== -->
-        <section class="section journey" id="faq" aria-labelledby="faq-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Common Questions</p>
-                    <h2 id="faq-title">Evidence-based answers to study dilemmas</h2>
-                </div>
-                <div class="faq-grid">
-                    <article class="faq-card">
-                        <h3>Do lyrics hurt vocabulary and grammar?</h3>
-                        <p>Unfamiliar lyrics do compete for working memory[cite: 1]. However, repeated exposure enables neurological habituation: the brain treats familiar vocals as acoustic texture rather than semantic speech[cite: 1].</p>
-                    </article>
-                    <article class="faq-card">
-                        <h3>Why is silence counterproductive for some?</h3>
-                        <p>Total silence often amplifies internal anxiety and under-stimulation, prompting frequent smartphone checking[cite: 1]. In shared households, it also leaves you exposed to sudden noise spikes[cite: 1].</p>
-                    </article>
-                    <article class="faq-card">
-                        <h3>What is metacognitive auditing?</h3>
-                        <p>It means intentionally shifting audio[cite: 1]: deploy high-energy lyrical tracks during initial idea drafting to build momentum, then switch to instrumentals for syntactic editing[cite: 1].</p>
-                    </article>
-                    <article class="faq-card">
-                        <h3>Do new songs have the same effect?</h3>
-                        <p>No. Habituation relies on predictability[cite: 1]. Novel songs force your brain to actively decode new lyrics and chord shifts, triggering the Irrelevant Speech Effect[cite: 1].</p>
-                    </article>
-                    <article class="faq-card">
-                        <h3>What is the ideal volume level?</h3>
-                        <p>Moderate volume (50–65 dB) provides effective acoustic masking without commanding conscious attention[cite: 1]. Blaring volume can overstimulate the nervous system[cite: 1].</p>
-                    </article>
-                    <article class="faq-card">
-                        <h3>Does this apply across all college majors?</h3>
-                        <p>Yes. Required general education essays are universal across engineering, architecture, and liberal arts curricula, sharing identical linguistic demands[cite: 1].</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             TAKEAWAYS & CTA (Audience Split Layout)
-        ====================================================== -->
-        <section class="section audience" id="takeaways" aria-labelledby="takeaways-title">
-            <div class="container audience-grid">
-                <div>
-                    <p class="eyebrow">Practical Rules</p>
-                    <h2 id="takeaways-title">
-                        Core takeaways for college writers.
-                    </h2>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">
-                        Three evidence-based study principles to optimize your writing routine[cite: 1]:
-                    </p>
-                    <ul class="audience-list">
-                        <li><strong>1. Ditch Study Guilt:</strong> Upbeat music is a legitimate tool for regulating mood, not a sign of poor discipline[cite: 1].</li>
-                        <li><strong>2. Stick to Familiar Tracks:</strong> Your brain effortlessly filters songs you know by heart; save new releases for later[cite: 1].</li>
-                        <li><strong>3. Match the Phase:</strong> Use driving beats to generate rough drafts, and silent or instrumental tracks for final proofreading[cite: 1].</li>
-                    </ul>
-                </div>
-                <div class="cta">
-                    <h2>Read the Full Analytical Essay</h2>
-                    <p>
-                        Explore the complete methodology, theoretical tensions, and survey breakdowns[cite: 1].
-                    </p>
-                    <a
-                        class="button button-primary"
-                        href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Access Paper on Google Drive
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-    <footer>
-        <div class="container footer-grid">
-            <p><strong>SoundFocus &bull; Ralph Andrei P. Buela</strong>[cite: 1]</p>
-            <p>CS30-8P Websites and Online Communication &bull; Mapúa University</p>
+        <div class="theory-split">
+          <article class="theory-card">
+            <span class="theory-badge badge-blue">The Conventional Warning</span>
+            <h3>Cognitive Load Theory</h3>
             <p>
-                <a href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                    Original Research Document
-                </a>
+              Proposed by Sweller (1988), this model asserts that human working memory has strictly limited processing capacity[cite: 1]. Generative writing requires simultaneous lexical retrieval, syntactic structuring, and logical argumentation[cite: 1].
             </p>
+            <p>
+              According to the <strong>Irrelevant Speech Effect</strong>, external lyrics directly compete with the brain's phonological loop, creating cognitive bottlenecks that theoretically slow typing velocity and increase syntax errors[cite: 1].
+            </p>
+          </article>
+
+          <article class="theory-card">
+            <span class="theory-badge badge-red">The Real-World Reality</span>
+            <h3>The Arousal-Mood Hypothesis</h3>
+            <p>
+              Husain, Thompson, and Schellenberg (2002) argue that music enhances cognitive performance indirectly by optimizing mood and cortical arousal[cite: 1]. When students face fatigue, anxiety, or boredom, their primary barrier is not neural capacity—it is task initiation and endurance[cite: 1].
+            </p>
+            <p>
+              High-energy music acts as an emotional buffer, releasing dopamine to counteract academic burnout and help writers enter a sustained flow state[cite: 1].
+            </p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        const profiles = {
-            burnout: {
-                tag: "High Cortical Arousal",
-                title: "Energetic Rock & High-Tempo Pop",
-                desc: "When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance[cite: 1].",
-                yt: "https://www.youtube.com/results?search_query=opm+rock+study+playlist",
-                sp: "https://open.spotify.com/search/opm%20rock%20high%20energy"
-            },
-            drafting: {
-                tag: "Writing Cadence",
-                title: "Cadence & Rhythmic Flow (Pop / OPM)",
-                desc: "Upbeat rhythmic songs provide an auditory metronome matching keyboard typing velocity, sustaining a state of deep flow during long drafting sessions[cite: 1].",
-                yt: "https://www.youtube.com/results?search_query=upbeat+opm+focus",
-                sp: "https://open.spotify.com/search/upbeat%20opm"
-            },
-            editing: {
-                tag: "Minimal Phonological Load",
-                title: "Zero-Vocal Instrumental (Lo-Fi & Classical)",
-                desc: "Eliminates all external verbal competition while checking citation mechanics, grammar syntax, and logical flow[cite: 1].",
-                yt: "https://www.youtube.com/results?search_query=lofi+beats+to+study+to",
-                sp: "https://open.spotify.com/search/lofi%20study%20beats"
-            },
-            ambient: {
-                tag: "Noise Masking",
-                title: "Acoustic Shielding (Video Game Soundtracks)",
-                desc: "Designed to keep listeners engaged without stealing central attention, masking background interruptions in shared households[cite: 1].",
-                yt: "https://www.youtube.com/results?search_query=video+game+ambient+study+music",
-                sp: "https://open.spotify.com/search/video%20game%20soundtracks%20focus"
-            }
-        };
+    <!-- Section 3: Empirical Data & Visual Gallery -->
+    <section class="section-evidence" id="evidence" aria-labelledby="evidence-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Empirical Findings</span>
+          <h2 class="section-title" id="evidence-title">Survey Evidence on Essay Productivity</h2>
+          <p class="section-desc">
+            Data collected from undergraduate students actively writing academic papers reveals a sharp departure from traditional study assumptions[cite: 1].
+          </p>
+        </div>
 
-        function setProfile(key, btn) {
-            document.querySelectorAll('.config-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        <!-- 4-Column Stat Metric Strip -->
+        <div class="metrics-strip">
+          <article class="metric-box">
+            <div class="metric-num">69.4%</div>
+            <div class="metric-title">Mental Survival</div>
+            <div class="metric-sub">Deemed study music essential for getting through work[cite: 1].</div>
+          </article>
+          <article class="metric-box">
+            <div class="metric-num">75.0%</div>
+            <div class="metric-title">Writing Speed</div>
+            <div class="metric-sub">Reported that music actively accelerated their drafting speed[cite: 1].</div>
+          </article>
+          <article class="metric-box">
+            <div class="metric-num">72.2%</div>
+            <div class="metric-title">Lyric Tolerance</div>
+            <div class="metric-sub">Explicitly preferred or were unbothered by songs with vocals[cite: 1].</div>
+          </article>
+          <article class="metric-box">
+            <div class="metric-num">3.96/5</div>
+            <div class="metric-title">Flow State Score</div>
+            <div class="metric-sub">Lyrical listeners scored higher in flow than instrumental purists (3.70)[cite: 1].</div>
+          </article>
+        </div>
 
-            const item = profiles[key];
-            document.getElementById('cfg-tag').textContent = item.tag;
-            document.getElementById('cfg-title').textContent = item.title;
-            document.getElementById('cfg-desc').textContent = item.desc;
-            document.getElementById('cfg-yt').href = item.yt;
-            document.getElementById('cfg-sp').href = item.sp;
-        }
-    </script>
+        <!-- 3-Column Diagram Grid -->
+        <div class="visual-cards-grid">
+          <article class="evidence-card">
+            <div class="evidence-img-wrap">
+              <img src="./assets/conceptual-framework.png" alt="Conceptual framework diagram demonstrating how lyrical and instrumental music inputs alter cognitive processing to dictate essay performance." loading="lazy">
+            </div>
+            <div class="evidence-details">
+              <h4>IPO Conceptual Framework</h4>
+              <p>Illustrates the causal link between auditory structure, working memory competition, and final task efficiency[cite: 1].</p>
+            </div>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-img-wrap">
+              <img src="./assets/genre-distribution.png" alt="Bar chart of genre distribution showing Pop and Rock leading over Lo-Fi and Classical." loading="lazy">
+            </div>
+            <div class="evidence-details">
+              <h4>Genre Distribution</h4>
+              <p>Pop/OPM (61.1%) and Rock/Metal (58.3%) significantly outperformed low-load options like Lo-Fi (30.6%) and Classical (33.3%)[cite: 1].</p>
+            </div>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-img-wrap">
+              <img src="./assets/flow-habituation.png" alt="Chart showing 72.2 percent of respondents prefer or tolerate lyrics when writing." loading="lazy">
+            </div>
+            <div class="evidence-details">
+              <h4>The Habituation Paradox</h4>
+              <p>Habituated students reported significantly lower lyric distraction (3.19/5) than students who only study to instrumentals (3.70/5)[cite: 1].</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Genre Breakdowns & Qualitative Themes -->
+    <section class="section-genres" id="genres" aria-labelledby="genre-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Acoustic Profiles</span>
+          <h2 class="section-title" id="genre-title">How Different Genres Serve Writing Workflows</h2>
+          <p class="section-desc">
+            Students choose genres based on immediate emotional and environmental hurdles rather than abstract cognitive theory[cite: 1].
+          </p>
+        </div>
+
+        <div class="genre-grid-3">
+          <article class="genre-card">
+            <span class="genre-stat">61.1% Preference</span>
+            <h3>Pop & OPM</h3>
+            <p>
+              Melodic familiarity and conversational cadence turn vocals into predictable acoustic companions, removing the feelings of isolation and dread common during long writing sessions[cite: 1].
+            </p>
+          </article>
+
+          <article class="genre-card">
+            <span class="genre-stat">58.3% Preference</span>
+            <h3>Rock & Metal</h3>
+            <p>
+              High-tempo rhythms and distorted instrumentation provide cortical stimulation, raising dopamine levels to defeat task procrastination and fatigue during deadline crunches[cite: 1].
+            </p>
+          </article>
+
+          <article class="genre-card">
+            <span class="genre-stat">Acoustic Perimeter</span>
+            <h3>Lo-Fi & Game Soundtracks</h3>
+            <p>
+              Steady tempos without vocal lines establish an acoustic blanket, masking erratic domestic sounds (street traffic, voices) without competing with the brain's phonological loop[cite: 1].
+            </p>
+          </article>
+        </div>
+
+        <!-- Qualitative Synthesis Banner -->
+        <div class="qualitative-quote-box">
+          <div>
+            <h3>The Habituation Mechanism</h3>
+            <p>
+              Habituated listeners do not process familiar lyrics as language[cite: 1]. Through repeated exposure, the brain's attentional filters treat vocals as rhythmic texture, neutralizing the Irrelevant Speech Effect while retaining the emotional lift of the song[cite: 1].
+            </p>
+            <ul style="padding-left: 1.25rem; color: #cbd5e1; font-size: 0.92rem; margin: 0;">
+              <li style="margin-bottom: 0.5rem;">Silence increases anxiety and causes reflexive phone checks[cite: 1].</li>
+              <li style="margin-bottom: 0.5rem;">Familiar music creates a reliable psychological work perimeter[cite: 1].</li>
+              <li>Emotional energy and momentum outweigh minor subconscious auditory filtering costs[cite: 1].</li>
+            </ul>
+          </div>
+          <div>
+            <div class="quote-bubble">
+              "When I am all by myself, music is my company... It creates a lighter, less intimidating atmosphere in the workplace and motivates me to finish my essays."
+              <span style="display: block; font-size: 0.85rem; font-weight: 700; color: #f87171; margin-top: 0.75rem; font-style: normal;">
+                — Survey Qualitative Finding[cite: 1]
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: OPM Case Studies (3 Embedded Tracks) -->
+    <section class="section-case-study" id="case-studies" aria-labelledby="case-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Audio Case Studies</span>
+          <h2 class="section-title" id="case-title">Featured Philippine Study Tracks</h2>
+          <p class="section-desc">
+            Three distinct OPM tracks demonstrating melodic comfort, rhythmic momentum, and flow state activation.
+          </p>
+        </div>
+
+        <div class="tracks-grid">
+          <!-- Track 1 -->
+          <article class="track-card">
+            <div class="track-meta">
+              <span class="track-pill">Emotional Buffer & Flow</span>
+              <h3>Multo</h3>
+              <p>Cup of Joe</p>
+              <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
+                A rich vocal melody that demonstrates the habituation paradox—familiar OPM songwriting creates comfortable momentum without semantic interference[cite: 1].
+              </p>
+            </div>
+            <div class="spotify-iframe-wrap">
+              <iframe
+                style="border-radius: 12px;"
+                src="https://open.spotify.com/embed/track/5tlb0AxuzsMWL2GtEppXGX?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Cup of Joe - Multo on Spotify">
+              </iframe>
+            </div>
+          </article>
+
+          <!-- Track 2 -->
+          <article class="track-card">
+            <div class="track-meta">
+              <span class="track-pill">Indie Texture & Cadence</span>
+              <h3>Pag-Ibig ay Kanibalismo II</h3>
+              <p>fitzgerald / fitterkarma</p>
+              <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
+                Dreamy, textured guitar layers and repetitive melodic phrases that blend into a continuous acoustic backdrop during deep writing sessions.
+              </p>
+            </div>
+            <div class="spotify-iframe-wrap">
+              <iframe
+                style="border-radius: 12px;"
+                src="https://open.spotify.com/embed/track/1I44TjvgnOjZTxaGs0E44W?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Pag-Ibig ay Kanibalismo II on Spotify">
+              </iframe>
+            </div>
+          </article>
+
+          <!-- Track 3 -->
+          <article class="track-card">
+            <div class="track-meta">
+              <span class="track-pill">Rhythmic Groove & Pacing</span>
+              <h3>Kabisado</h3>
+              <p>IV OF SPADES</p>
+              <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
+                A strong bass-driven pulse and steady tempo that act as a rhythmic metronome, helping writers synchronize their typing cadence[cite: 1].
+              </p>
+            </div>
+            <div class="spotify-iframe-wrap">
+              <iframe
+                style="border-radius: 12px;"
+                src="https://open.spotify.com/embed/track/4z928BtE4j1bjhcX9RU44M?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="IV OF SPADES - Kabisado on Spotify">
+              </iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Focus Audio Engine & Playlist Studio -->
+    <section class="section-engine" id="engine" aria-labelledby="engine-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Interactive Configurator</span>
+          <h2 class="section-title" id="engine-title">Focus Audio Engine & Playlist Studio</h2>
+          <p class="section-desc">
+            Choose your current cognitive state to find pre-filtered soundscapes, or use the playlist builder tools to assemble your own focused sets.
+          </p>
+        </div>
+
+        <div class="engine-shell">
+          <!-- Filter Tabs -->
+          <div class="engine-tabs" role="tablist" aria-label="Mental States">
+            <button class="engine-tab active" role="tab" aria-selected="true" onclick="setProfile('burnout', this)">Low Energy / Exhaustion</button>
+            <button class="engine-tab" role="tab" aria-selected="false" onclick="setProfile('drafting', this)">High-Speed Drafting</button>
+            <button class="engine-tab" role="tab" aria-selected="false" onclick="setProfile('editing', this)">Proofreading / Syntax</button>
+            <button class="engine-tab" role="tab" aria-selected="false" onclick="setProfile('ambient', this)">Noisy Environment</button>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="engine-display" aria-live="polite">
+            <div>
+              <span class="engine-badge" id="cfg-tag">High Cortical Arousal</span>
+              <h3 id="cfg-title">Energetic Rock & High-Tempo Pop</h3>
+              <p id="cfg-desc">
+                When battling mental exhaustion, your nervous system lacks dopamine[cite: 1]. Upbeat Pop, OPM, or Rock elevates cortical arousal, breaks initial task friction, and sustains typing momentum[cite: 1].
+              </p>
+            </div>
+            <div class="engine-cta-column">
+              <a class="button button-cardinal" id="cfg-yt" href="https://www.youtube.com/results?search_query=opm+rock+study+playlist" target="_blank" rel="noopener noreferrer">
+                Search on YouTube
+              </a>
+              <a class="button button-outline" id="cfg-sp" href="https://open.spotify.com/search/opm%20rock%20high%20energy" target="_blank" rel="noopener noreferrer">
+                Search on Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Playlist Curation Tools -->
+          <div class="diy-curate-box">
+            <div class="diy-curate-text">
+              <h4>Build Your Own Custom Study Playlist</h4>
+              <p>Open streaming playlist tools directly to assemble your personal collection of familiar, habituated tracks.</p>
+            </div>
+            <div class="diy-curate-actions">
+              <a href="https://open.spotify.com/collection/playlists" target="_blank" rel="noopener noreferrer" class="button button-dark" style="font-size: 0.88rem;">
+                Open Spotify Playlist Studio
+              </a>
+              <a href="https://www.youtube.com/feed/library" target="_blank" rel="noopener noreferrer" class="button button-outline" style="font-size: 0.88rem;">
+                Open YouTube Playlist Creator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: FAQs & Takeaways -->
+    <section class="section-faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-label">Questions & Analysis</span>
+          <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Evidence-based answers addressing common auditory dilemmas during writing tasks.
+          </p>
+        </div>
+
+        <div class="faq-grid-2">
+          <article class="faq-card">
+            <h4>Do lyrics hurt vocabulary and sentence structure?</h4>
+            <p>Unfamiliar lyrics do compete with the phonological loop for working memory[cite: 1]. However, when listening to familiar playlists, neurological habituation allows the brain to process vocals as acoustic texture rather than semantic speech, preserving syntax while boosting mood[cite: 1].</p>
+          </article>
+          <article class="faq-card">
+            <h4>Why is absolute silence often counterproductive?</h4>
+            <p>For many students, silence brings on anxiety and under-stimulation, leading to reflexive phone-checking[cite: 1]. In shared households or dorms, it also leaves you exposed to sudden spikes in ambient noise (e.g., doors, conversations)[cite: 1].</p>
+          </article>
+          <article class="faq-card">
+            <h4>What is metacognitive auditing?</h4>
+            <p>It is the practice of matching audio to your writing phase[cite: 1]: use driving Pop, OPM, or Rock during the exploratory and drafting phase to build momentum, then switch to instrumentals for syntactic editing[cite: 1].</p>
+          </article>
+          <article class="faq-card">
+            <h4>Do new songs have the same effect as familiar tracks?</h4>
+            <p>No. Habituation relies on predictability[cite: 1]. Novel songs force your brain to actively decode new lyrics and chord shifts, triggering the Irrelevant Speech Effect and breaking your flow[cite: 1].</p>
+          </article>
+          <article class="faq-card">
+            <h4>What is the optimal volume level?</h4>
+            <p>Moderate volume (50–65 dB) provides effective acoustic masking without commanding conscious attention[cite: 1]. Excessively high volume can overstimulate the nervous system and accelerate mental fatigue[cite: 1].</p>
+          </article>
+          <article class="faq-card">
+            <h4>Does this apply to non-humanities tasks?</h4>
+            <p>Yes. Required general education essays share identical linguistic demands across all disciplines, requiring the same cognitive resources to organize thoughts into words[cite: 1].</p>
+          </article>
+        </div>
+
+        <!-- Takeaways Banner -->
+        <div class="takeaway-banner" id="takeaways">
+          <div class="takeaway-banner-header">
+            <span class="section-label">Key Takeaways</span>
+            <h3>Three Practical Rules for Student Writers</h3>
+            <p style="color: var(--muted); font-size: 0.98rem; margin: 0;">
+              Evidence-based guidelines to get the most out of your study audio routine[cite: 1].
+            </p>
+          </div>
+
+          <div class="takeaways-3-col">
+            <article class="takeaway-block">
+              <span>01</span>
+              <h4>Drop Study Guilt</h4>
+              <p>If silence makes you anxious or distracted, upbeat OPM, Pop, or Rock is a valid way to support dopamine regulation, not a sign of poor discipline[cite: 1].</p>
+            </article>
+
+            <article class="takeaway-block">
+              <span>02</span>
+              <h4>Rely on Familiar Tracks</h4>
+              <p>Your brain easily filters songs you already know by heart[cite: 1]. Keep familiar playlists on repeat while writing, and save new discoveries for downtime.</p>
+            </article>
+
+            <article class="takeaway-block">
+              <span>03</span>
+              <h4>Phase Your Soundtracks</h4>
+              <p>Use upbeat, rhythmic tracks to get words onto the page during early drafts, then switch to quiet instrumentals when revising citations and structure[cite: 1].</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        Sound<span>Focus</span>
+      </div>
+      <p>
+        Academic Coursework Resource &bull; Mapúa University
+      </p>
+      <p style="font-size: 0.8rem; color: #64748b;">
+        &copy; 2026 SoundFocus. Built for modern student workflows.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Focus Audio Engine Logic -->
+  <script>
+    const profiles = {
+      burnout: {
+        tag: "High Cortical Arousal",
+        title: "Energetic Rock & High-Tempo Pop",
+        desc: "When battling mental exhaustion, your nervous system lacks dopamine[cite: 1]. Upbeat Pop, OPM, or Rock elevates cortical arousal, breaks initial task friction, and sustains typing momentum[cite: 1].",
+        yt: "https://www.youtube.com/results?search_query=opm+rock+study+playlist",
+        sp: "https://open.spotify.com/search/opm%20rock%20high%20energy"
+      },
+      drafting: {
+        tag: "Writing Cadence",
+        title: "Cadence & Rhythmic Flow (Pop / OPM)",
+        desc: "Upbeat rhythmic songs provide an auditory metronome matching keyboard typing velocity, sustaining a state of deep flow during long drafting sessions[cite: 1].",
+        yt: "https://www.youtube.com/results?search_query=upbeat+opm+focus",
+        sp: "https://open.spotify.com/search/upbeat%20opm"
+      },
+      editing: {
+        tag: "Minimal Phonological Load",
+        title: "Zero-Vocal Instrumental (Lo-Fi & Classical)",
+        desc: "Eliminates external verbal competition while checking citation mechanics, grammar syntax, and logical argument structure[cite: 1].",
+        yt: "https://www.youtube.com/results?search_query=lofi+beats+to+study+to",
+        sp: "https://open.spotify.com/search/lofi%20study%20beats"
+      },
+      ambient: {
+        tag: "Noise Masking",
+        title: "Acoustic Shielding (Video Game Soundtracks)",
+        desc: "Designed to keep listeners engaged without stealing central attention, masking background domestic noise in shared households[cite: 1].",
+        yt: "https://www.youtube.com/results?search_query=video+game+ambient+study+music",
+        sp: "https://open.spotify.com/search/video%20game%20soundtracks%20focus"
+      }
+    };
+
+    function setProfile(key, btn) {
+      document.querySelectorAll('.engine-tab').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const item = profiles[key];
+      document.getElementById('cfg-tag').textContent = item.tag;
+      document.getElementById('cfg-title').textContent = item.title;
+      document.getElementById('cfg-desc').textContent = item.desc;
+      document.getElementById('cfg-yt').href = item.yt;
+      document.getElementById('cfg-sp').href = item.sp;
+    }
+  </script>
 </body>
 </html>

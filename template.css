@@ -1,6 +1,7 @@
 /* =========================================================
-   SOUNDFOCUS: VIBRANT PHOTOGRAPHIC SECTIONS (HIGH VISIBILITY)
-   Images replace flat backgrounds with frosted glass cards
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH VIVID BACKDROPS
+   Full-Visibility Photo Sections + Frosted Glass Cards
+   Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
 ========================================================= */
 
 *,
@@ -89,7 +90,7 @@ a {
   --radius-sm: 8px;
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
   --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.16);
-  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
 .container {
@@ -97,7 +98,9 @@ a {
   margin-inline: auto;
 }
 
-/* Navigation */
+/* =========================================================
+   TOP NAVIGATION BAR
+========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -147,7 +150,9 @@ a {
   color: var(--cardinal);
 }
 
-/* Buttons */
+/* =========================================================
+   BUTTON STYLES
+========================================================= */
 .button {
   display: inline-flex;
   align-items: center;
@@ -188,7 +193,9 @@ a {
   border-color: var(--ink);
 }
 
-/* Section Global Defaults */
+/* =========================================================
+   TYPOGRAPHY & SECTION SCAFFOLDING
+========================================================= */
 .section {
   padding: clamp(5rem, 8vw, 7.5rem) 0;
   position: relative;
@@ -232,13 +239,11 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO (VIBRANT FULL-VISIBILITY PHOTO 1)
+   1. HERO: VIBRANT PHOTOGRAPHIC BACKDROP (hero-bg.jpg)
 ========================================================= */
 .hero {
   position: relative;
-  background:
-    linear-gradient(180deg, rgba(247, 244, 237, 0.3) 0%, rgba(247, 244, 237, 0.55) 100%),
-    url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
+  background: url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
   padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
 }
@@ -246,7 +251,7 @@ h1, h2, h3, h4 {
 .hero-glass-box {
   max-width: 860px;
   margin-inline: auto;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   padding: clamp(2.5rem, 5vw, 4rem);
   border-radius: 24px;
@@ -466,25 +471,37 @@ h1 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS (VIBRANT FULL-VISIBILITY PHOTO 2)
+   3. FEATURED OPM TRACKS (tracks-bg.jpg)
 ========================================================= */
 .section-track {
   position: relative;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.25), rgba(15, 23, 42, 0.45)),
-    url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
+}
+
+.section-track::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  pointer-events: none;
+}
+
+.section-track .container {
+  position: relative;
+  z-index: 2;
 }
 
 .section-track .section-heading h2,
 .section-track .section-heading p {
   color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .section-track .eyebrow {
   color: #fca5a5;
 }
+
 .section-track .eyebrow::before {
   background: #fca5a5;
 }
@@ -493,12 +510,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  position: relative;
-  z-index: 2;
 }
 
 .track-box {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
@@ -535,25 +550,37 @@ h1 {
 }
 
 /* =========================================================
-   4. DIVE DEEPER: BACKGROUND (VIBRANT FULL-VISIBILITY PHOTO 4)
+   4. DIVE DEEPER: RESEARCH BACKGROUND (deep-bg.jpg)
 ========================================================= */
 .section-background {
   position: relative;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.45)),
-    url("./assets/deep-bg.jpg") center / cover no-repeat;
+  background: url("./assets/deep-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
+}
+
+.section-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  pointer-events: none;
+}
+
+.section-background .container {
+  position: relative;
+  z-index: 2;
 }
 
 .section-background .section-heading h2,
 .section-background .section-heading p {
   color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .section-background .eyebrow {
   color: #fca5a5;
 }
+
 .section-background .eyebrow::before {
   background: #fca5a5;
 }
@@ -563,13 +590,11 @@ h1 {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: stretch;
-  position: relative;
-  z-index: 2;
 }
 
 .statement {
   padding: clamp(2rem, 4vw, 3.25rem);
-  background: rgba(15, 23, 42, 0.92);
+  background: rgba(15, 23, 42, 0.94);
   backdrop-filter: blur(12px);
   color: #ffffff;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
@@ -591,7 +616,7 @@ h1 {
 }
 
 .intro-text {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
@@ -614,7 +639,7 @@ h1 {
 }
 
 /* =========================================================
-   5. EMPIRICAL EVIDENCE & GALLERY (Crisp Slate Canvas)
+   5. EMPIRICAL EVIDENCE & DATA GALLERY
 ========================================================= */
 .section-evidence {
   background-color: #f1f5f9;
@@ -694,13 +719,11 @@ h1 {
 }
 
 /* =========================================================
-   6. STATEMENT BANNER (VIBRANT FULL-VISIBILITY PHOTO 3)
+   6. STATEMENT QUOTE BANNER (quote-bg.jpg)
 ========================================================= */
 .quote-section {
   position: relative;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65)),
-    url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
+  background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
   padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
   border-bottom: 2px solid #380a0a;
@@ -709,11 +732,11 @@ h1 {
 .quote-glass-box {
   max-width: 880px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.88);
+  background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(12px);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 24px;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
   box-shadow: var(--shadow-lg);
 }
 
@@ -865,7 +888,9 @@ blockquote p span {
   margin: 0;
 }
 
-/* Footer */
+/* =========================================================
+   FOOTER (Deep Slate Ink)
+========================================================= */
 footer {
   padding: 3rem 0;
   background: #0f172a;
@@ -888,7 +913,9 @@ footer p {
   font-size: 0.92rem;
 }
 
-/* Responsive */
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+========================================================= */
 @media (max-width: 1000px) {
   .metrics-row,
   .visuals-grid,

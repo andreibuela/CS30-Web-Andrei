@@ -367,7 +367,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Widget Script with Google Analytics Tracking -->
+    <!-- Interactive Widget Script with Dedicated Google Analytics Events -->
     <script>
         const profiles = {
             burnout: {
@@ -400,7 +400,6 @@
             }
         };
 
-        // Variable to track the active state key for click events
         let currentProfileKey = 'burnout';
 
         function setProfile(key, btn) {
@@ -417,48 +416,82 @@
             document.getElementById('cfg-yt').href = item.yt;
             document.getElementById('cfg-sp').href = item.sp;
 
-            // Google Analytics Event: Tab Selection
+            // GA4 Event 1: Dedicated Widget State Selection
             if (typeof gtag === 'function') {
-                gtag('event', 'select_content', {
-                    content_type: 'audio_engine_state',
-                    item_id: key,
-                    content_name: btnLabel,
-                    recommended_title: item.title,
-                    event_category: 'interactive_widget'
+                gtag('event', 'widget_state_select', {
+                    selected_state: key,
+                    button_label: btnLabel,
+                    recommended_genre: item.title,
+                    event_category: 'audio_engine'
                 });
             }
         }
 
-        // Event listeners for YouTube and Spotify outbound/search clicks
         document.addEventListener('DOMContentLoaded', () => {
             const ytBtn = document.getElementById('cfg-yt');
             const spBtn = document.getElementById('cfg-sp');
 
-            if (ytBtn) {
-                ytBtn.addEventListener('click', () => {
+            // GA4 Event 2: Dedicated Spotify Query Launch
+            if (spBtn) {
+                spBtn.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
-                        gtag('event', 'click_streaming_link', {
-                            event_category: 'interactive_widget',
-                            platform: 'YouTube',
-                            selected_state: currentProfileKey,
-                            link_url: ytBtn.href
+                        gtag('event', 'widget_spotify_click', {
+                            event_category: 'audio_engine_outbound',
+                            active_state: currentProfileKey,
+                            destination_url: spBtn.href
                         });
                     }
                 });
             }
 
-            if (spBtn) {
-                spBtn.addEventListener('click', () => {
+            // GA4 Event 3: Dedicated YouTube Query Launch
+            if (ytBtn) {
+                ytBtn.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
-                        gtag('event', 'click_streaming_link', {
-                            event_category: 'interactive_widget',
-                            platform: 'Spotify',
-                            selected_state: currentProfileKey,
-                            link_url: spBtn.href
+                        gtag('event', 'widget_youtube_click', {
+                            event_category: 'audio_engine_outbound',
+                            active_state: currentProfileKey,
+                            destination_url: ytBtn.href
                         });
                     }
                 });
             }
+
+            // GA4 Event 4: Hero CTA Click Tracking
+            document.querySelectorAll('.hero-actions a').forEach(cta => {
+                cta.addEventListener('click', (e) => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'hero_cta_click', {
+                            cta_text: cta.textContent.trim(),
+                            cta_target: cta.getAttribute('href')
+                        });
+                    }
+                });
+            });
+
+            // GA4 Event 5: External Paper Link Clicks
+            document.querySelectorAll('a[href*="drive.google.com"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'paper_link_click', {
+                            link_location: link.closest('section') ? link.closest('section').id : 'footer',
+                            destination: 'google_drive'
+                        });
+                    }
+                });
+            });
+
+            // GA4 Event 6: Navigation Menu Section Clicks
+            document.querySelectorAll('.nav-list a').forEach(navItem => {
+                navItem.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'nav_link_click', {
+                            section_target: navItem.getAttribute('href'),
+                            menu_label: navItem.textContent.trim()
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>

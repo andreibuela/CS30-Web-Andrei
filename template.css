@@ -1,6 +1,6 @@
 /* =========================================================
-   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH PHOTO BACKDROPS
-   Palette: Warm Sand, Cardinal Red, Deep Wine, High Contrast Overlay
+   SOUNDFOCUS: VIBRANT PHOTOGRAPHIC SECTIONS (HIGH VISIBILITY)
+   Images replace flat backgrounds with frosted glass cards
 ========================================================= */
 
 *,
@@ -80,19 +80,16 @@ a {
   --cardinal-border: #fca5a5;
 
   --bg-sand: #f7f4ed;
-  --bg-parchment: #ede6d8;
-  --bg-slate: #f1f5f9;
-
   --border-light: #e2dcd0;
   --border-card: #d9d0c1;
   --border-slate: #cbd5e1;
 
   --max-width: 1180px;
-  --radius: 16px;
+  --radius: 18px;
   --radius-sm: 8px;
-  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-cardinal: 0 8px 24px rgba(185, 28, 28, 0.14);
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.16);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -105,9 +102,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 244, 237, 0.96);
+  background: rgba(247, 244, 237, 0.94);
   border-bottom: 2px solid var(--border-light);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
 }
 
 .nav {
@@ -141,7 +138,7 @@ a {
 
 .nav-list a {
   font-size: 0.9rem;
-  font-weight: 650;
+  font-weight: 700;
   color: var(--ink-secondary);
   transition: color 150ms ease;
 }
@@ -172,7 +169,7 @@ a {
 .button-primary {
   background: var(--cardinal);
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.35);
 }
 
 .button-primary:hover {
@@ -180,19 +177,20 @@ a {
 }
 
 .button-secondary {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--ink) !important;
   border: 1.5px solid var(--border-slate);
+  backdrop-filter: blur(6px);
 }
 
 .button-secondary:hover {
-  background: #f8fafc;
+  background: #ffffff;
   border-color: var(--ink);
 }
 
-/* Global Section Framework */
+/* Section Global Defaults */
 .section {
-  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
   position: relative;
 }
 
@@ -234,42 +232,42 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO (WITH IMAGE 1 AS ATMOSPHERIC BACKDROP)
+   1. HERO (VIBRANT FULL-VISIBILITY PHOTO 1)
 ========================================================= */
 .hero {
   position: relative;
-  background-image:
-    linear-gradient(180deg, rgba(247, 244, 237, 0.88) 0%, rgba(247, 244, 237, 0.96) 65%, #f7f4ed 100%),
-    url('assets/hero-bg.jpg');
-  background-size: cover;
-  background-position: center 35%;
-  background-repeat: no-repeat;
-  padding: clamp(5.5rem, 9vw, 8.5rem) 0 clamp(4rem, 7vw, 6rem);
-  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(247, 244, 237, 0.3) 0%, rgba(247, 244, 237, 0.55) 100%),
+    url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
+  padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
 }
 
-.hero-content {
+.hero-glass-box {
   max-width: 860px;
   margin-inline: auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 h1 {
   margin-bottom: 1.25rem;
-  font-size: clamp(2.5rem, 5.5vw, 4.3rem);
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
   color: var(--ink);
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0 auto 2rem;
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: var(--ink-secondary);
   line-height: 1.65;
 }
@@ -283,19 +281,19 @@ h1 {
 }
 
 /* =========================================================
-   2. PRIMARY OPTIMIZER WORKSPACE (Pure White Canvas)
+   2. PRIMARY OPTIMIZER & CURATOR WORKSPACE
 ========================================================= */
 .section-optimizer {
-  background-color: var(--white);
-  border-bottom: 2px solid var(--border-slate);
+  background-color: #faf8f4;
+  border-bottom: 2px solid var(--border-light);
 }
 
 .configurator-wrap {
-  background: var(--bg-sand);
+  background: var(--white);
   border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   margin-bottom: 3.5rem;
 }
 
@@ -308,7 +306,7 @@ h1 {
 }
 
 .config-btn {
-  background: var(--white);
+  background: #f1f5f9;
   border: 1.5px solid var(--border-slate);
   color: var(--ink);
   padding: 0.65rem 1.25rem;
@@ -328,7 +326,7 @@ h1 {
 }
 
 .config-box {
-  background: var(--white);
+  background: #fdfcf9;
   border: 1.5px solid var(--border-light);
   border-radius: 12px;
   padding: 2rem;
@@ -369,7 +367,7 @@ h1 {
   border: 2px solid var(--cardinal-border);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
-  box-shadow: var(--shadow-cardinal);
+  box-shadow: var(--shadow-md);
 }
 
 .curator-form-grid {
@@ -397,7 +395,7 @@ h1 {
   padding: 0.7rem 1rem;
   border-radius: var(--radius-sm);
   border: 1.5px solid var(--border-slate);
-  background-color: var(--bg-slate);
+  background-color: #f8fafc;
   color: var(--ink);
   font-size: 0.92rem;
   font-weight: 600;
@@ -410,7 +408,7 @@ h1 {
 }
 
 .curator-results {
-  background: var(--bg-sand);
+  background: #fdfcf9;
   border: 1.5px solid var(--border-card);
   border-radius: 14px;
   padding: 1.75rem;
@@ -468,17 +466,27 @@ h1 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS (WITH IMAGE 2 AS LIGHT BACKGROUND)
+   3. FEATURED OPM TRACKS (VIBRANT FULL-VISIBILITY PHOTO 2)
 ========================================================= */
 .section-track {
   position: relative;
-  background-image:
-    linear-gradient(135deg, rgba(253, 242, 242, 0.92) 0%, rgba(255, 255, 255, 0.94) 60%, rgba(254, 226, 226, 0.92) 100%),
-    url('assets/tracks-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-bottom: 2px solid var(--cardinal-border);
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.25), rgba(15, 23, 42, 0.45)),
+    url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.section-track .section-heading h2,
+.section-track .section-heading p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.section-track .eyebrow {
+  color: #fca5a5;
+}
+.section-track .eyebrow::before {
+  background: #fca5a5;
 }
 
 .tracks-grid-3 {
@@ -490,12 +498,12 @@ h1 {
 }
 
 .track-box {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  border: 1.5px solid var(--cardinal-border);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -523,21 +531,31 @@ h1 {
 .spotify-container {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--border-slate);
+  border: 1.5px solid var(--border-slate);
 }
 
 /* =========================================================
-   4. DIVE DEEPER: BACKGROUND (WITH IMAGE 4 AS STUDY BACKDROP)
+   4. DIVE DEEPER: BACKGROUND (VIBRANT FULL-VISIBILITY PHOTO 4)
 ========================================================= */
 .section-background {
   position: relative;
-  background-image:
-    linear-gradient(180deg, rgba(237, 230, 216, 0.92) 0%, rgba(244, 237, 226, 0.95) 100%),
-    url('assets/deep-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.45)),
+    url("./assets/deep-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
+}
+
+.section-background .section-heading h2,
+.section-background .section-heading p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.section-background .eyebrow {
+  color: #fca5a5;
+}
+.section-background .eyebrow::before {
+  background: #fca5a5;
 }
 
 .intro-grid {
@@ -551,11 +569,12 @@ h1 {
 
 .statement {
   padding: clamp(2rem, 4vw, 3.25rem);
-  background: rgba(30, 41, 59, 0.96);
-  backdrop-filter: blur(6px);
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
   color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .statement h2 {
@@ -572,12 +591,12 @@ h1 {
 }
 
 .intro-text {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(6px);
-  border: 1.5px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
   padding: clamp(2rem, 3.5vw, 3rem);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -598,7 +617,7 @@ h1 {
    5. EMPIRICAL EVIDENCE & GALLERY (Crisp Slate Canvas)
 ========================================================= */
 .section-evidence {
-  background-color: var(--bg-slate);
+  background-color: #f1f5f9;
   border-bottom: 2px solid var(--border-slate);
 }
 
@@ -675,32 +694,37 @@ h1 {
 }
 
 /* =========================================================
-   6. STATEMENT BANNER (WITH IMAGE 3 AS DARK MOOD BACKDROP)
+   6. STATEMENT BANNER (VIBRANT FULL-VISIBILITY PHOTO 3)
 ========================================================= */
 .quote-section {
   position: relative;
-  background-image:
-    linear-gradient(rgba(20, 5, 5, 0.88), rgba(20, 5, 5, 0.92)),
-    url('assets/quote-bg.jpg');
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
-  padding: clamp(5rem, 8.5vw, 7rem) 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65)),
+    url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
+  padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
   border-bottom: 2px solid #380a0a;
 }
 
-blockquote {
-  max-width: 860px;
+.quote-glass-box {
+  max-width: 880px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+blockquote {
+  margin: 0;
 }
 
 blockquote p {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.22;
 }
@@ -776,7 +800,7 @@ blockquote p span {
 
 .faq-card {
   padding: 2rem;
-  background: var(--bg-sand);
+  background: #fdfcf9;
   border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
@@ -798,7 +822,7 @@ blockquote p span {
    9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
-  background-color: var(--bg-parchment);
+  background-color: #ede6d8;
 }
 
 .takeaways-3-col {
@@ -892,7 +916,7 @@ footer p {
   }
 
   .hero {
-    padding-top: 3.5rem;
+    padding-top: 4rem;
   }
 }
 

@@ -1,8 +1,6 @@
 /* =========================================================
-   SOUNDFOCUS: REFRESHED VISUAL IDENTITY & HIGH-CONTRAST PALETTE
-   Base Canvas: Warm Sand (#f7f4ed)
-   Accent: Cardinal Red (#b91c1c) & Deep Wine (#801010)
-   Text: Slate Ink (#0f172a) & Charcoal Gray (#334155)
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH PHOTO BACKDROPS
+   Palette: Warm Sand, Cardinal Red, Deep Wine, High Contrast Overlay
 ========================================================= */
 
 *,
@@ -69,24 +67,21 @@ a {
   top: 0;
 }
 
-/* Design Tokens */
+/* Tokens */
 :root {
   --ink: #0f172a;
   --ink-secondary: #334155;
   --muted: #475569;
   --white: #ffffff;
-  
+
   --cardinal: #b91c1c;
   --cardinal-hover: #991b1b;
-  --cardinal-dark: #801010;
   --cardinal-soft: #fef2f2;
   --cardinal-border: #fca5a5;
 
   --bg-sand: #f7f4ed;
   --bg-parchment: #ede6d8;
-  --bg-rose: #fdf2f2;
   --bg-slate: #f1f5f9;
-  --bg-night: #1e0909;
 
   --border-light: #e2dcd0;
   --border-card: #d9d0c1;
@@ -97,7 +92,7 @@ a {
   --radius-sm: 8px;
   --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
   --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-cardinal: 0 8px 24px rgba(185, 28, 28, 0.12);
+  --shadow-cardinal: 0 8px 24px rgba(185, 28, 28, 0.14);
 }
 
 .container {
@@ -105,9 +100,7 @@ a {
   margin-inline: auto;
 }
 
-/* =========================================================
-   HEADER & NAVIGATION
-========================================================= */
+/* Navigation */
 .site-header {
   position: sticky;
   top: 0;
@@ -157,9 +150,7 @@ a {
   color: var(--cardinal);
 }
 
-/* =========================================================
-   BUTTON STYLES
-========================================================= */
+/* Buttons */
 .button {
   display: inline-flex;
   align-items: center;
@@ -199,20 +190,10 @@ a {
   border-color: var(--ink);
 }
 
-.button-dark {
-  background: var(--ink);
-  color: #ffffff !important;
-}
-
-.button-dark:hover {
-  background: #1e293b;
-}
-
-/* =========================================================
-   TYPOGRAPHY & SECTION SCAFFOLDING
-========================================================= */
+/* Global Section Framework */
 .section {
   padding: clamp(4.5rem, 8vw, 6.5rem) 0;
+  position: relative;
 }
 
 .section-heading {
@@ -253,11 +234,17 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO SECTION (Warm Sand Architectural Tone)
+   1. HERO (WITH IMAGE 1 AS ATMOSPHERIC BACKDROP)
 ========================================================= */
 .hero {
-  background: radial-gradient(circle at 50% 15%, #ffffff 0%, #f7f4ed 70%, #ede6d8 100%);
-  padding: clamp(5.5rem, 9vw, 8rem) 0 clamp(4rem, 7vw, 6rem);
+  position: relative;
+  background-image:
+    linear-gradient(180deg, rgba(247, 244, 237, 0.88) 0%, rgba(247, 244, 237, 0.96) 65%, #f7f4ed 100%),
+    url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  padding: clamp(5.5rem, 9vw, 8.5rem) 0 clamp(4rem, 7vw, 6rem);
   text-align: center;
   border-bottom: 2px solid var(--border-light);
 }
@@ -269,6 +256,8 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -479,22 +468,31 @@ h1 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS (Blush Rose Accent Canvas)
+   3. FEATURED OPM TRACKS (WITH IMAGE 2 AS LIGHT BACKGROUND)
 ========================================================= */
 .section-track {
-  background-color: var(--bg-rose);
-  border-bottom: 2px solid var(--rose-border);
+  position: relative;
+  background-image:
+    linear-gradient(135deg, rgba(253, 242, 242, 0.92) 0%, rgba(255, 255, 255, 0.94) 60%, rgba(254, 226, 226, 0.92) 100%),
+    url('assets/tracks-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid var(--cardinal-border);
 }
 
 .tracks-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .track-box {
-  background: var(--white);
-  border: 1.5px solid var(--rose-border);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--cardinal-border);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
@@ -529,10 +527,16 @@ h1 {
 }
 
 /* =========================================================
-   4. DIVE DEEPER: BACKGROUND (Organic Parchment Base)
+   4. DIVE DEEPER: BACKGROUND (WITH IMAGE 4 AS STUDY BACKDROP)
 ========================================================= */
 .section-background {
-  background-color: var(--bg-parchment);
+  position: relative;
+  background-image:
+    linear-gradient(180deg, rgba(237, 230, 216, 0.92) 0%, rgba(244, 237, 226, 0.95) 100%),
+    url('assets/deep-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-bottom: 2px solid var(--border-light);
 }
 
@@ -541,11 +545,14 @@ h1 {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: stretch;
+  position: relative;
+  z-index: 2;
 }
 
 .statement {
   padding: clamp(2rem, 4vw, 3.25rem);
-  background: #1e293b;
+  background: rgba(30, 41, 59, 0.96);
+  backdrop-filter: blur(6px);
   color: #ffffff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
@@ -565,7 +572,8 @@ h1 {
 }
 
 .intro-text {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
   border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: clamp(2rem, 3.5vw, 3rem);
@@ -667,18 +675,26 @@ h1 {
 }
 
 /* =========================================================
-   6. STATEMENT BANNER (Deep Night Wine Atmosphere)
+   6. STATEMENT BANNER (WITH IMAGE 3 AS DARK MOOD BACKDROP)
 ========================================================= */
 .quote-section {
-  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
+  position: relative;
+  background-image:
+    linear-gradient(rgba(20, 5, 5, 0.88), rgba(20, 5, 5, 0.92)),
+    url('assets/quote-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  padding: clamp(5rem, 8.5vw, 7rem) 0;
   text-align: center;
-  background: var(--bg-night);
   border-bottom: 2px solid #380a0a;
 }
 
 blockquote {
   max-width: 860px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 blockquote p {
@@ -686,11 +702,11 @@ blockquote p {
   color: #ffffff;
   font-size: clamp(1.9rem, 4.5vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.22;
 }
 
 blockquote p span {
-  color: #f87171;
+  color: #fca5a5;
 }
 
 /* =========================================================
@@ -825,9 +841,7 @@ blockquote p span {
   margin: 0;
 }
 
-/* =========================================================
-   FOOTER (Deep Slate Ink)
-========================================================= */
+/* Footer */
 footer {
   padding: 3rem 0;
   background: #0f172a;
@@ -850,9 +864,7 @@ footer p {
   font-size: 0.92rem;
 }
 
-/* =========================================================
-   RESPONSIVE DESIGN
-========================================================= */
+/* Responsive */
 @media (max-width: 1000px) {
   .metrics-row,
   .visuals-grid,

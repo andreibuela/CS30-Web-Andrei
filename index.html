@@ -32,8 +32,9 @@
                     <li><a href="#background">Background</a></li>
                     <li><a href="#data-visuals">Data & Visuals</a></li>
                     <li><a href="#genres">The Genres</a></li>
-                    <li><a href="#track">Featured Track</a></li>
+                    <li><a href="#tracks">Featured Tracks</a></li>
                     <li><a href="#engine">Audio Engine</a></li>
+                    <li><a href="#curator">Playlist Curator</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#takeaways">Takeaways</a></li>
                 </ul>
@@ -56,15 +57,18 @@
                     <a class="button button-primary" href="#data-visuals">
                         Explore the Data
                     </a>
-                    <a class="button button-secondary" href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                        Read Original Paper (PDF)
+                    <a class="button button-secondary" href="#engine">
+                        Audio Configurator
+                    </a>
+                    <a class="button button-secondary" href="#curator">
+                        Custom Curator
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Background Section -->
-        <section class="section" id="background" aria-labelledby="background-title">
+        <section class="section section-background" id="background" aria-labelledby="background-title">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Background</p>
@@ -95,7 +99,7 @@
         </section>
 
         <!-- Data & Visuals Section -->
-        <section class="section journey" id="data-visuals" aria-labelledby="data-title">
+        <section class="section section-evidence" id="data-visuals" aria-labelledby="data-title">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Empirical Results</p>
@@ -178,7 +182,7 @@
         </section>
 
         <!-- Genre Breakdown -->
-        <section class="section" id="genres" aria-labelledby="genres-title">
+        <section class="section section-genres" id="genres" aria-labelledby="genres-title">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Auditory Mechanics</p>
@@ -213,40 +217,95 @@
             </div>
         </section>
 
-        <!-- Featured Track -->
-        <section class="section track-section" id="track" aria-labelledby="track-title">
-            <div class="container track-grid">
-                <div>
-                    <iframe
-                        style="border-radius: 12px;"
-                        src="https://open.spotify.com/embed/track/5tlb0AxuzsMWL2GtEppXGX?utm_source=generator&theme=0"
-                        width="100%"
-                        height="152"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        title="Cup of Joe - Multo Spotify Player">
-                    </iframe>
-                </div>
-                <div>
-                    <p class="eyebrow">Featured OPM Case Study</p>
-                    <h2 id="track-title">Multo — Cup of Joe</h2>
-                    <p style="color: var(--muted); font-size: 1.05rem;">
-                        This track demonstrates the habituation paradox in action: highly melodic, familiar songs generate emotional momentum without interfering with sentence generation.
+        <!-- Featured Track: 3-Track Spotify Case Studies -->
+        <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Featured OPM Case Studies</p>
+                    <h2 id="tracks-title">Local Soundtracks for Writing Flow</h2>
+                    <p>
+                        Three empirical examples demonstrating how familiar melodies, textured rhythms, and driving grooves support positive affect without semantic competition.
                     </p>
-                    <ul class="pill-list" aria-label="Key musical attributes">
-                        <li>Familiar Melody</li>
-                        <li>Emotional Upregulation</li>
-                        <li>Non-Intrusive Rhythm</li>
-                        <li>Acoustic Buffer</li>
-                    </ul>
+                </div>
+
+                <div class="tracks-grid-3">
+                    <!-- Track 1: Multo -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Multo</h3>
+                            <div class="artist">Cup of Joe</div>
+                            <p>
+                                Demonstrates the habituation paradox: highly melodic, familiar Filipino pop provides emotional momentum and comfort during long writing sessions.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/5tlb0AxuzsMWL2GtEppXGX?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="Cup of Joe - Multo Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
+
+                    <!-- Track 2: Pag-Ibig ay Kanibalismo II -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Pag-Ibig ay Kanibalismo II</h3>
+                            <div class="artist">fitzgerald / fitterkarma</div>
+                            <p>
+                                Layered indie guitars and cyclical melodic arrangements create an ambient acoustic cushion, ideal for sustained focus during exploratory drafting.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/1I44TjvgnOjZTxaGs0E44W?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="Pag-Ibig ay Kanibalismo II Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
+
+                    <!-- Track 3: Kabisado -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Kabisado</h3>
+                            <div class="artist">IV OF SPADES</div>
+                            <p>
+                                A rhythmic groove and steady tempo serve as an auditory metronome, synchronizing keyboard typing velocity during fast drafting sprints.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/4z928BtE4j1bjhcX9RU44M?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="IV OF SPADES - Kabisado Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Focus Audio Engine (Interactive Widget) -->
-        <section class="section" id="engine" aria-labelledby="engine-title">
+        <!-- Focus Audio Engine (Widget 1) -->
+        <section class="section section-engine" id="engine" aria-labelledby="engine-title">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Focus Audio Engine</p>
@@ -270,7 +329,7 @@
                         <p id="cfg-desc" style="color: var(--muted); margin-bottom: 1.5rem;">
                             When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance.
                         </p>
-                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                        <div class="config-actions">
                             <a class="button button-primary" id="cfg-yt" href="https://www.youtube.com/results?search_query=opm+rock+study+playlist" target="_blank" rel="noopener noreferrer">
                                 Open on YouTube
                             </a>
@@ -280,11 +339,73 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Custom Playlist Curator Widget (Widget 2) -->
+                <div class="curator-widget" id="curator">
+                    <div class="section-heading" style="margin-bottom: 2rem;">
+                        <span class="config-tag">In-Site Tool</span>
+                        <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Personal Study Playlist Curator</h2>
+                        <p>Customize your focused study session parameters to generate a targeted tracklist.</p>
+                    </div>
+
+                    <form class="curator-form-grid" id="curator-form" onsubmit="generateCustomPlaylist(event)">
+                        <div class="curator-field">
+                            <label for="workload-phase">Writing Phase</label>
+                            <select id="workload-phase">
+                                <option value="ideation">Brainstorming & Outline (Arousal)</option>
+                                <option value="drafting" selected>Generative Drafting (Cadence)</option>
+                                <option value="revising">Proofreading & Syntax (Low Load)</option>
+                            </select>
+                        </div>
+
+                        <div class="curator-field">
+                            <label for="session-duration">Session Duration</label>
+                            <select id="session-duration">
+                                <option value="25">25 Mins (Pomodoro Sprint)</option>
+                                <option value="50" selected>50 Mins (Extended Deep Work)</option>
+                                <option value="90">90 Mins (Endurance Block)</option>
+                            </select>
+                        </div>
+
+                        <div class="curator-field">
+                            <label for="vocal-preference">Acoustic Texture</label>
+                            <select id="vocal-preference">
+                                <option value="familiar" selected>Familiar OPM / Pop Vocals</option>
+                                <option value="instrumental">Pure Instrumental / Zero Vocals</option>
+                                <option value="hybrid">Dynamic Hybrid (Rhythmic Beats)</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="curator-results" aria-live="polite">
+                        <div class="curator-header">
+                            <div>
+                                <strong id="curator-plan-name" style="font-size: 1.15rem; color: var(--ink);">50-Minute Drafting Flow Set</strong>
+                                <p id="curator-plan-desc" style="font-size: 0.88rem; color: var(--muted); margin: 0.2rem 0 0;">
+                                    Cadence-matched tracks to sustain writing speed and keep the phonological loop habituated.
+                                </p>
+                            </div>
+                            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                                <button type="button" class="button button-secondary" onclick="copyPlaylistToClipboard()" style="min-height: 40px; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                                    Copy Tracklist
+                                </button>
+                                <a id="curator-export-spotify" class="button button-primary" href="https://open.spotify.com/search/upbeat%20opm" target="_blank" rel="noopener noreferrer" style="min-height: 40px; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                                    Listen on Spotify
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="playlist-track-list" id="curator-track-list">
+                            <!-- Populated dynamically via JS -->
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- FAQs -->
-        <section class="section journey" id="faq" aria-labelledby="faq-title">
+        <section class="section section-faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Common Questions</p>
@@ -319,36 +440,34 @@
             </div>
         </section>
 
-        <!-- Takeaways & CTA -->
-        <section class="section audience" id="takeaways" aria-labelledby="takeaways-title">
-            <div class="container audience-grid">
-                <div>
+        <!-- Takeaways -->
+        <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
+            <div class="container">
+                <div class="section-heading">
                     <p class="eyebrow">Practical Rules</p>
                     <h2 id="takeaways-title">
                         Core takeaways for college writers.
                     </h2>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">
+                    <p>
                         Three evidence-based study principles to optimize your writing routine:
                     </p>
-                    <ul class="audience-list">
-                        <li><strong>1. Ditch Study Guilt:</strong> Upbeat music is a legitimate tool for regulating mood, not a sign of poor discipline.</li>
-                        <li><strong>2. Stick to Familiar Tracks:</strong> Your brain effortlessly filters songs you know by heart; save new releases for later.</li>
-                        <li><strong>3. Match the Phase:</strong> Use driving beats to generate rough drafts, and silent or instrumental tracks for final proofreading.</li>
-                    </ul>
                 </div>
-                <div class="cta">
-                    <h2>Read the Full Analytical Essay</h2>
-                    <p>
-                        Explore the complete methodology, theoretical tensions, and survey breakdowns.
-                    </p>
-                    <a
-                        class="button button-primary"
-                        href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Access Paper on Google Drive
-                    </a>
+                <div class="takeaways-3-col">
+                    <article class="takeaway-block">
+                        <span>01</span>
+                        <h4>Ditch Study Guilt</h4>
+                        <p>If silence makes you anxious or distracted, upbeat OPM, Pop, or Rock is a valid way to support dopamine regulation, not a sign of poor discipline.</p>
+                    </article>
+                    <article class="takeaway-block">
+                        <span>02</span>
+                        <h4>Stick to Familiar Tracks</h4>
+                        <p>Your brain easily filters songs you already know by heart. Keep familiar playlists on repeat while writing, and save new releases for later.</p>
+                    </article>
+                    <article class="takeaway-block">
+                        <span>03</span>
+                        <h4>Match the Phase</h4>
+                        <p>Use driving beats to generate rough drafts, and silent or instrumental tracks for final proofreading and structural edits.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -359,16 +478,15 @@
         <div class="container footer-grid">
             <p><strong>SoundFocus &bull; Ralph Andrei P. Buela</strong></p>
             <p>CS30-8P Websites and Online Communication &bull; Mapúa University</p>
-            <p>
-                <a href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                    Original Research Document
-                </a>
-            </p>
+            <p>&copy; 2026 Academic Coursework Resource</p>
         </div>
     </footer>
 
-    <!-- Interactive Widget Script with Dedicated Google Analytics Events -->
+    <!-- Interactive Widgets & GA4 Event Tracking Logic -->
     <script>
+        // -------------------------------------------------------------
+        // Widget 1: Focus Audio Engine Configurator
+        // -------------------------------------------------------------
         const profiles = {
             burnout: {
                 tag: "High Cortical Arousal",
@@ -416,7 +534,6 @@
             document.getElementById('cfg-yt').href = item.yt;
             document.getElementById('cfg-sp').href = item.sp;
 
-            // GA4 Event 1: Dedicated Widget State Selection
             if (typeof gtag === 'function') {
                 gtag('event', 'widget_state_select', {
                     selected_state: key,
@@ -427,11 +544,100 @@
             }
         }
 
+        // -------------------------------------------------------------
+        // Widget 2: In-Site Custom Study Playlist Curator
+        // -------------------------------------------------------------
+        const curatorDatabase = {
+            ideation: [
+                { title: "Multo", artist: "Cup of Joe", duration: "3:48", type: "Familiar Vocal", badge: "Cadence & Uplift" },
+                { title: "Paninindigan Kita", artist: "Ben&Ben", duration: "5:12", type: "Familiar Vocal", badge: "Warm Affect" },
+                { title: "Leaves", artist: "Ben&Ben", duration: "4:05", type: "Familiar Vocal", badge: "Gentle Flow" },
+                { title: "Raining in Manila", artist: "Lola Amour", duration: "4:51", type: "Familiar Vocal", badge: "Arousal Boost" }
+            ],
+            drafting: [
+                { title: "Kabisado", artist: "IV OF SPADES", duration: "4:05", type: "Rhythmic Metronome", badge: "Typing Cadence" },
+                { title: "Pag-Ibig ay Kanibalismo II", artist: "fitzgerald / fitterkarma", duration: "3:15", type: "Textured Indie", badge: "Deep Immersion" },
+                { title: "Come Inside Of My Heart", artist: "IV OF SPADES", duration: "4:06", type: "Familiar Vocal", badge: "Pacing Sync" },
+                { title: "Bawat Piyesa", artist: "Munimuni", duration: "6:02", type: "Acoustic Shield", badge: "Endurance" }
+            ],
+            revising: [
+                { title: "Midnight Lo-Fi Reflection", artist: "Study Beats", duration: "3:10", type: "Zero Vocals", badge: "Syntax Focus" },
+                { title: "Coffeehouse Ambient Piano", artist: "Acoustic Flow", duration: "4:15", type: "Zero Vocals", badge: "Proofreading" },
+                { title: "Deep Space Rain Texture", artist: "Sound Shield", duration: "5:00", type: "Zero Vocals", badge: "Noise Masking" },
+                { title: "Minimal Horizon", artist: "Focus Audio Lab", duration: "3:50", type: "Zero Vocals", badge: "Grammar Audit" }
+            ]
+        };
+
+        function generateCustomPlaylist(e) {
+            if (e) e.preventDefault();
+
+            const phase = document.getElementById('workload-phase').value;
+            const duration = document.getElementById('session-duration').value;
+            const texture = document.getElementById('vocal-preference').value;
+
+            const trackPool = curatorDatabase[phase] || curatorDatabase['drafting'];
+            const trackListEl = document.getElementById('curator-track-list');
+            trackListEl.innerHTML = '';
+
+            let planName = `${duration}-Minute ${phase.charAt(0).toUpperCase() + phase.slice(1)} Session`;
+            let planDesc = `Customized study profile balancing acoustic texture (${texture}) for optimal task stamina.`;
+
+            document.getElementById('curator-plan-name').textContent = planName;
+            document.getElementById('curator-plan-desc').textContent = planDesc;
+            document.getElementById('curator-export-spotify').href = `https://open.spotify.com/search/${encodeURIComponent(phase + ' study focus')}`;
+
+            trackPool.forEach(track => {
+                const li = document.createElement('li');
+                li.className = 'playlist-track-item';
+                li.innerHTML = `
+                    <div class="track-details">
+                        <strong>${track.title}</strong>
+                        <span>${track.artist} &bull; ${track.duration}</span>
+                    </div>
+                    <span class="track-badge">${track.badge}</span>
+                `;
+                trackListEl.appendChild(li);
+            });
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'playlist_curator_generated', {
+                    event_category: 'curator_widget',
+                    phase_selected: phase,
+                    duration_selected: duration,
+                    texture_selected: texture
+                });
+            }
+        }
+
+        function copyPlaylistToClipboard() {
+            const tracks = Array.from(document.querySelectorAll('.playlist-track-item'))
+                .map(item => item.querySelector('.track-details').innerText.replace('\n', ' - '))
+                .join('\n');
+
+            navigator.clipboard.writeText(tracks).then(() => {
+                alert('Curated tracklist copied to clipboard!');
+                if (typeof gtag === 'function') {
+                    gtag('event', 'playlist_curator_copied', {
+                        event_category: 'curator_widget'
+                    });
+                }
+            });
+        }
+
+        // -------------------------------------------------------------
+        // Outbound & UI Interaction Analytics Listeners
+        // -------------------------------------------------------------
         document.addEventListener('DOMContentLoaded', () => {
+            generateCustomPlaylist();
+
+            // Auto-update curator when inputs change
+            ['workload-phase', 'session-duration', 'vocal-preference'].forEach(id => {
+                document.getElementById(id).addEventListener('change', () => generateCustomPlaylist());
+            });
+
             const ytBtn = document.getElementById('cfg-yt');
             const spBtn = document.getElementById('cfg-sp');
 
-            // GA4 Event 2: Dedicated Spotify Query Launch
             if (spBtn) {
                 spBtn.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
@@ -444,7 +650,6 @@
                 });
             }
 
-            // GA4 Event 3: Dedicated YouTube Query Launch
             if (ytBtn) {
                 ytBtn.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
@@ -457,9 +662,9 @@
                 });
             }
 
-            // GA4 Event 4: Hero CTA Click Tracking
+            // Hero buttons click tracking
             document.querySelectorAll('.hero-actions a').forEach(cta => {
-                cta.addEventListener('click', (e) => {
+                cta.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
                         gtag('event', 'hero_cta_click', {
                             cta_text: cta.textContent.trim(),
@@ -469,19 +674,7 @@
                 });
             });
 
-            // GA4 Event 5: External Paper Link Clicks
-            document.querySelectorAll('a[href*="drive.google.com"]').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'paper_link_click', {
-                            link_location: link.closest('section') ? link.closest('section').id : 'footer',
-                            destination: 'google_drive'
-                        });
-                    }
-                });
-            });
-
-            // GA4 Event 6: Navigation Menu Section Clicks
+            // Navigation menu tracking
             document.querySelectorAll('.nav-list a').forEach(navItem => {
                 navItem.addEventListener('click', () => {
                     if (typeof gtag === 'function') {

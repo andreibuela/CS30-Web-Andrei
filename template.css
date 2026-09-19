@@ -1,6 +1,8 @@
 /* =========================================================
-   RESET & BASE
+   SOUNDFOCUS: EXTERNAL STYLESHEET
+   Palette: Warm Cream (#faf8f4), Subtle Surface (#f5f4ef), Cardinal Red (#b91c1c)
 ========================================================= */
+
 *,
 *::before,
 *::after {
@@ -9,7 +11,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -23,8 +25,9 @@ body {
     "Segoe UI",
     sans-serif;
   color: #172033;
-  background: #fdfcf9;
-  line-height: 1.6;
+  background: #faf8f4;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -47,9 +50,6 @@ a {
   outline-offset: 4px;
 }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -67,21 +67,23 @@ a {
   top: 0;
 }
 
-/* =========================================================
-   DESIGN TOKENS (Cream & Cardinal Red)
-========================================================= */
+/* Design Tokens */
 :root {
   --ink: #172033;
   --muted: #5f6b7a;
   --surface: #f5f4ef;
   --surface-dark: #172033;
-  --accent: #ef4444;
-  --accent-dark: #b91c1c;
-  --line: #e7e4dc;
+  --parchment: #f3ede2;
+  --parchment-border: #e6ded1;
+  --cardinal: #b91c1c;
+  --cardinal-hover: #991b1b;
+  --cardinal-soft: #fef2f2;
+  --cardinal-border: #fecaca;
+  --line: #dfe4ea;
   --white: #ffffff;
-
   --max-width: 1180px;
   --radius: 18px;
+  --radius-sm: 8px;
   --shadow: 0 16px 40px rgba(23, 32, 51, 0.08);
 }
 
@@ -90,15 +92,13 @@ a {
   margin-inline: auto;
 }
 
-/* =========================================================
-   HEADER & NAVIGATION
-========================================================= */
+/* Header & Nav */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(253, 252, 249, 0.96);
-  border-bottom: 1px solid var(--line);
+  background: rgba(250, 248, 244, 0.96);
+  border-bottom: 1px solid var(--parchment-border);
   backdrop-filter: blur(12px);
 }
 
@@ -112,14 +112,14 @@ a {
 
 .brand {
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   text-decoration: none;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
 .brand span {
-  color: var(--accent-dark);
+  color: var(--cardinal);
 }
 
 .nav-list {
@@ -140,16 +140,15 @@ a {
 }
 
 .nav-list a:hover {
-  color: var(--accent-dark);
+  color: var(--cardinal);
 }
 
-/* =========================================================
-   HERO (FIXED: CENTERED LAYOUT)
-========================================================= */
+/* Centered Hero */
 .hero {
   background: linear-gradient(135deg, #fbf9f4 0%, #ffffff 55%, #fef2f2 100%);
   padding: clamp(4.5rem, 8vw, 7rem) 0;
   text-align: center;
+  border-bottom: 1px solid var(--parchment-border);
 }
 
 .hero-content {
@@ -166,7 +165,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   margin: 0 auto 1.25rem;
-  color: var(--accent-dark);
+  color: var(--cardinal);
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -177,10 +176,10 @@ a {
   content: "";
   width: 28px;
   height: 3px;
-  background: var(--accent-dark);
+  background: var(--cardinal);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin-top: 0;
   color: var(--ink);
   line-height: 1.15;
@@ -239,12 +238,12 @@ h3 {
 }
 
 .button-primary {
-  background: var(--accent-dark);
+  background: var(--cardinal);
   color: var(--white);
 }
 
 .button-primary:hover {
-  background: #991b1b;
+  background: var(--cardinal-hover);
 }
 
 .button-secondary {
@@ -257,11 +256,23 @@ h3 {
   background: var(--white);
 }
 
-/* =========================================================
-   SECTIONS & BIG IDEA
-========================================================= */
+.button-dark {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.button-dark:hover {
+  background: #232d3f;
+}
+
+/* Sections Base */
 .section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.section-background {
+  background-color: var(--parchment);
+  border-bottom: 1px solid var(--parchment-border);
 }
 
 .section-heading {
@@ -309,9 +320,12 @@ h3 {
   font-size: 1.05rem;
 }
 
-/* =========================================================
-   DATA & VISUALS (Consolidated Section)
-========================================================= */
+/* Data & Visuals */
+.section-evidence {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
 .metrics-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -321,7 +335,7 @@ h3 {
 
 .metric-card {
   padding: 1.5rem;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   text-align: center;
@@ -330,7 +344,7 @@ h3 {
 .metric-value {
   font-size: 2.2rem;
   font-weight: 850;
-  color: var(--accent-dark);
+  color: var(--cardinal);
   line-height: 1.1;
 }
 
@@ -348,7 +362,7 @@ h3 {
 }
 
 .visual-card {
-  background: var(--white);
+  background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -379,12 +393,12 @@ h3 {
   font-size: 0.92rem;
 }
 
-/* =========================================================
-   BIG QUOTE
-========================================================= */
+/* Quote */
 .quote-section {
   padding: clamp(4rem, 8vw, 6rem) 0;
   text-align: center;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
 }
 
 blockquote {
@@ -402,14 +416,13 @@ blockquote p {
 }
 
 blockquote p span {
-  color: var(--accent-dark);
+  color: var(--cardinal);
 }
 
-/* =========================================================
-   GENRES
-========================================================= */
-.journey {
-  background: var(--surface);
+/* Genres */
+.section-genres {
+  background-color: var(--parchment);
+  border-bottom: 1px solid var(--parchment-border);
 }
 
 .journey-grid {
@@ -436,7 +449,7 @@ blockquote p span {
   margin-bottom: 1.2rem;
   border-radius: 50%;
   background: #fee2e2;
-  color: var(--accent-dark);
+  color: var(--cardinal);
   font-weight: 850;
 }
 
@@ -446,50 +459,65 @@ blockquote p span {
   font-size: 0.95rem;
 }
 
-/* =========================================================
-   FEATURED SPOTIFY TRACK
-========================================================= */
-.track-section {
-  background: #fff8f8;
-  border-top: 1px solid #fee2e2;
-  border-bottom: 1px solid #fee2e2;
+/* 3-Track Spotify Case Studies */
+.section-track {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
 }
 
-.track-grid {
+.tracks-grid-3 {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.pill-list {
+.track-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.pill-list li {
-  padding: 0.45rem 0.85rem;
-  background: var(--white);
-  border: 1px solid #fecaca;
-  border-radius: 999px;
+.track-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.track-info .artist {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--accent-dark);
+  color: var(--cardinal);
+  margin-bottom: 0.5rem;
 }
 
-/* =========================================================
-   CONFIGURATOR ENGINE
-========================================================= */
+.track-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.spotify-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+/* Configurator & Curator Section */
+.section-engine {
+  background-color: var(--parchment);
+  border-bottom: 1px solid var(--parchment-border);
+}
+
 .configurator-wrap {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: var(--shadow);
+  margin-bottom: 3.5rem;
 }
 
 .config-tabs {
@@ -514,9 +542,9 @@ blockquote p span {
 
 .config-btn:hover,
 .config-btn.active {
-  background: var(--accent-dark);
+  background: var(--cardinal);
   color: var(--white);
-  border-color: var(--accent-dark);
+  border-color: var(--cardinal);
 }
 
 .config-box {
@@ -531,13 +559,125 @@ blockquote p span {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent-dark);
+  color: var(--cardinal);
   margin-bottom: 0.75rem;
 }
 
-/* =========================================================
-   FAQS
-========================================================= */
+.config-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+/* In-Site Custom Curator Widget */
+.curator-widget {
+  background: var(--white);
+  border: 1.5px solid var(--cardinal-border);
+  border-radius: var(--radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: var(--shadow);
+}
+
+.curator-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.curator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.curator-field label {
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.curator-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  background-color: var(--surface);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.curator-field select:focus {
+  border-color: var(--cardinal);
+}
+
+.curator-results {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+.curator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+}
+
+.playlist-track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.playlist-track-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+}
+
+.track-details strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.track-details span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.track-badge {
+  font-size: 0.75rem;
+  font-weight: 750;
+  color: var(--cardinal);
+  background: var(--cardinal-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* FAQs */
+.section-faq {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -546,7 +686,7 @@ blockquote p span {
 
 .faq-card {
   padding: 1.75rem;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -562,72 +702,49 @@ blockquote p span {
   font-size: 0.95rem;
 }
 
-/* =========================================================
-   TAKEAWAYS & AUDIENCE
-========================================================= */
-.audience {
+/* Takeaways */
+.section-takeaways {
   background: var(--surface);
 }
 
-.audience-grid {
+.takeaways-3-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.audience-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.audience-list li {
-  padding: 1rem 1.2rem;
-  background: var(--white);
+.takeaway-block {
+  background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  border-radius: var(--radius);
+  padding: 2rem;
 }
 
-.audience-list strong {
-  color: var(--accent-dark);
+.takeaway-block span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #fee2e2;
+  color: var(--cardinal);
+  font-weight: 850;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-.cta {
-  padding: clamp(2rem, 5vw, 3.5rem);
-  background: var(--ink);
-  color: var(--white);
-  border-radius: 24px;
-  text-align: center;
+.takeaway-block h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
 }
 
-.cta h2 {
-  color: var(--white);
+.takeaway-block p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin: 0;
 }
 
-.cta p {
-  max-width: 620px;
-  margin: 0 auto 1.5rem;
-  color: #dce2eb;
-}
-
-.cta .button-primary {
-  background: var(--accent);
-  color: var(--white);
-}
-
-.cta .button-primary:hover {
-  background: #dc2626;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* Footer */
 footer {
   padding: 2.5rem 0;
   background: #0e1522;
@@ -641,27 +758,22 @@ footer {
   gap: 1rem;
 }
 
-footer a {
-  color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 footer p {
   margin: 0;
   font-size: 0.9rem;
 }
 
-/* =========================================================
-   RESPONSIVE BREAKPOINTS
-========================================================= */
+/* Responsive */
 @media (max-width: 1000px) {
-  .track-grid,
   .metrics-row {
     grid-template-columns: 1fr 1fr;
   }
-  .visuals-grid {
-    grid-template-columns: 1fr;
+  .visuals-grid,
+  .tracks-grid-3,
+  .journey-grid,
+  .takeaways-3-col,
+  .curator-form-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -681,10 +793,12 @@ footer p {
   }
 
   .intro-grid,
-  .track-grid,
-  .audience-grid,
+  .visuals-grid,
+  .tracks-grid-3,
   .journey-grid,
-  .faq-grid {
+  .faq-grid,
+  .takeaways-3-col,
+  .curator-form-grid {
     grid-template-columns: 1fr;
   }
 
@@ -699,7 +813,7 @@ footer p {
   }
 
   h1 {
-    font-size: clamp(2.4rem, 12vw, 3.5rem);
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
   }
 
   .hero-actions {
@@ -713,6 +827,12 @@ footer p {
 
   .metrics-row {
     grid-template-columns: 1fr;
+  }
+
+  .playlist-track-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
   }
 
   .footer-grid {

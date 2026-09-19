@@ -7,15 +7,15 @@
     <title>SoundFocus — The Impact of Music on Academic Productivity</title>
     <link rel="stylesheet" href="template.css">
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZL88PVJR2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZL88PVJR2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-9ZL88PVJR2');
-</script>
+      gtag('config', 'G-9ZL88PVJR2');
+    </script>
 </head>
 
 <body>
@@ -245,7 +245,7 @@
             </div>
         </section>
 
-        <!-- Focus Audio Engine -->
+        <!-- Focus Audio Engine (Interactive Widget) -->
         <section class="section" id="engine" aria-labelledby="engine-title">
             <div class="container">
                 <div class="section-heading">
@@ -367,6 +367,7 @@
         </div>
     </footer>
 
+    <!-- Interactive Widget Script with Google Analytics Tracking -->
     <script>
         const profiles = {
             burnout: {
@@ -399,17 +400,66 @@
             }
         };
 
+        // Variable to track the active state key for click events
+        let currentProfileKey = 'burnout';
+
         function setProfile(key, btn) {
             document.querySelectorAll('.config-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+            currentProfileKey = key;
             const item = profiles[key];
+            const btnLabel = btn.textContent.trim();
+
             document.getElementById('cfg-tag').textContent = item.tag;
             document.getElementById('cfg-title').textContent = item.title;
             document.getElementById('cfg-desc').textContent = item.desc;
             document.getElementById('cfg-yt').href = item.yt;
             document.getElementById('cfg-sp').href = item.sp;
+
+            // Google Analytics Event: Tab Selection
+            if (typeof gtag === 'function') {
+                gtag('event', 'select_content', {
+                    content_type: 'audio_engine_state',
+                    item_id: key,
+                    content_name: btnLabel,
+                    recommended_title: item.title,
+                    event_category: 'interactive_widget'
+                });
+            }
         }
+
+        // Event listeners for YouTube and Spotify outbound/search clicks
+        document.addEventListener('DOMContentLoaded', () => {
+            const ytBtn = document.getElementById('cfg-yt');
+            const spBtn = document.getElementById('cfg-sp');
+
+            if (ytBtn) {
+                ytBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'click_streaming_link', {
+                            event_category: 'interactive_widget',
+                            platform: 'YouTube',
+                            selected_state: currentProfileKey,
+                            link_url: ytBtn.href
+                        });
+                    }
+                });
+            }
+
+            if (spBtn) {
+                spBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'click_streaming_link', {
+                            event_category: 'interactive_widget',
+                            platform: 'Spotify',
+                            selected_state: currentProfileKey,
+                            link_url: spBtn.href
+                        });
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>

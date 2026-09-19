@@ -1,6 +1,8 @@
 /* =========================================================
-   SOUNDFOCUS: DYNAMIC SECTION THEMES & VIBRANT LAYOUTS
-   Distinct Section Palettes: Parchment, Pure White, Coral Rose, Deep Slate, & Warm Cream
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY & HIGH-CONTRAST PALETTE
+   Base Canvas: Warm Sand (#f7f4ed)
+   Accent: Cardinal Red (#b91c1c) & Deep Wine (#801010)
+   Text: Slate Ink (#0f172a) & Charcoal Gray (#334155)
 ========================================================= */
 
 *,
@@ -24,8 +26,8 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #172033;
-  background-color: #faf8f4;
+  color: #0f172a;
+  background-color: #f7f4ed;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -38,6 +40,7 @@ img {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button,
@@ -55,10 +58,9 @@ a {
   top: -100px;
   left: 1rem;
   z-index: 999;
-  padding: 0.75rem 1rem;
-  background: #172033;
+  padding: 0.75rem 1.25rem;
+  background: #0f172a;
   color: #ffffff;
-  text-decoration: none;
   font-weight: 700;
   border-radius: 0 0 8px 8px;
 }
@@ -67,43 +69,51 @@ a {
   top: 0;
 }
 
-/* Base Tokens */
+/* Design Tokens */
 :root {
-  --ink: #111827;
-  --muted: #4b5563;
+  --ink: #0f172a;
+  --ink-secondary: #334155;
+  --muted: #475569;
+  --white: #ffffff;
+  
   --cardinal: #b91c1c;
   --cardinal-hover: #991b1b;
+  --cardinal-dark: #801010;
   --cardinal-soft: #fef2f2;
-  --cardinal-border: #fecaca;
-  --parchment: #f4ede2;
-  --parchment-border: #e5ded2;
-  --rose-surface: #fff5f5;
-  --rose-border: #fed7d7;
-  --slate-dark: #111827;
-  --line: #e2e8f0;
-  --white: #ffffff;
+  --cardinal-border: #fca5a5;
+
+  --bg-sand: #f7f4ed;
+  --bg-parchment: #ede6d8;
+  --bg-rose: #fdf2f2;
+  --bg-slate: #f1f5f9;
+  --bg-night: #1e0909;
+
+  --border-light: #e2dcd0;
+  --border-card: #d9d0c1;
+  --border-slate: #cbd5e1;
+
   --max-width: 1180px;
-  --radius: 18px;
+  --radius: 16px;
   --radius-sm: 8px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 16px 40px rgba(185, 28, 28, 0.08);
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-cardinal: 0 8px 24px rgba(185, 28, 28, 0.12);
 }
 
 .container {
-  width: min(var(--max-width), calc(100% - 2rem));
+  width: min(var(--max-width), calc(100% - 2.5rem));
   margin-inline: auto;
 }
 
 /* =========================================================
-   STICKY NAVIGATION
+   HEADER & NAVIGATION
 ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 248, 244, 0.95);
-  border-bottom: 1.5px solid var(--parchment-border);
+  background: rgba(247, 244, 237, 0.96);
+  border-bottom: 2px solid var(--border-light);
   backdrop-filter: blur(12px);
 }
 
@@ -117,9 +127,9 @@ a {
 
 .brand {
   font-weight: 800;
-  font-size: 1.3rem;
-  text-decoration: none;
-  letter-spacing: -0.02em;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
   white-space: nowrap;
 }
 
@@ -130,17 +140,16 @@ a {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-list a {
-  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 650;
-  color: #4b5563;
+  color: var(--ink-secondary);
   transition: color 150ms ease;
 }
 
@@ -149,7 +158,7 @@ a {
 }
 
 /* =========================================================
-   BUTTONS
+   BUTTON STYLES
 ========================================================= */
 .button {
   display: inline-flex;
@@ -158,12 +167,11 @@ a {
   min-height: 48px;
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
-  text-decoration: none;
   font-weight: 750;
   border: 2px solid transparent;
   cursor: pointer;
   font-size: 0.95rem;
-  transition: transform 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  transition: all 160ms ease;
 }
 
 .button:hover {
@@ -172,8 +180,8 @@ a {
 
 .button-primary {
   background: var(--cardinal);
-  color: var(--white);
-  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.25);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
 }
 
 .button-primary:hover {
@@ -182,27 +190,29 @@ a {
 
 .button-secondary {
   background: var(--white);
-  color: var(--ink);
-  border-color: #cbd5e1;
+  color: var(--ink) !important;
+  border: 1.5px solid var(--border-slate);
 }
 
 .button-secondary:hover {
   background: #f8fafc;
-  border-color: #94a3b8;
+  border-color: var(--ink);
 }
 
 .button-dark {
   background: var(--ink);
-  color: var(--white);
+  color: #ffffff !important;
 }
 
 .button-dark:hover {
-  background: #1f2937;
+  background: #1e293b;
 }
 
-/* Section Structural Base */
+/* =========================================================
+   TYPOGRAPHY & SECTION SCAFFOLDING
+========================================================= */
 .section {
-  padding: clamp(4rem, 7.5vw, 6.5rem) 0;
+  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
 }
 
 .section-heading {
@@ -211,18 +221,18 @@ a {
 }
 
 .section-heading p {
-  margin: 0;
+  margin: 0.5rem 0 0;
   color: var(--muted);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   color: var(--cardinal);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -230,7 +240,7 @@ a {
 
 .eyebrow::before {
   content: "";
-  width: 28px;
+  width: 26px;
   height: 3px;
   background: var(--cardinal);
 }
@@ -238,18 +248,18 @@ a {
 h1, h2, h3, h4 {
   margin-top: 0;
   color: var(--ink);
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.035em;
 }
 
 /* =========================================================
-   1. HERO: Clean Warm Sand Radial Gradient
+   1. HERO SECTION (Warm Sand Architectural Tone)
 ========================================================= */
 .hero {
-  background: radial-gradient(circle at 50% 15%, #ffffff 0%, #faf8f4 60%, #f3ede2 100%);
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  background: radial-gradient(circle at 50% 15%, #ffffff 0%, #f7f4ed 70%, #ede6d8 100%);
+  padding: clamp(5.5rem, 9vw, 8rem) 0 clamp(4rem, 7vw, 6rem);
   text-align: center;
-  border-bottom: 1.5px solid var(--parchment-border);
+  border-bottom: 2px solid var(--border-light);
 }
 
 .hero-content {
@@ -262,17 +272,17 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  margin-bottom: 1.4rem;
-  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.5rem, 5.5vw, 4.3rem);
+  color: var(--ink);
 }
 
 .hero-copy {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 2rem;
   font-size: clamp(1.1rem, 2vw, 1.3rem);
-  color: var(--muted);
-  text-align: center;
+  color: var(--ink-secondary);
+  line-height: 1.65;
 }
 
 .hero-actions {
@@ -280,289 +290,24 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 /* =========================================================
-   2. BACKGROUND: Organic Parchment with Deep Slate Statement
+   2. PRIMARY OPTIMIZER WORKSPACE (Pure White Canvas)
 ========================================================= */
-.section-background {
-  background-color: var(--parchment);
-  border-bottom: 1.5px solid var(--parchment-border);
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-.statement {
-  padding: clamp(2rem, 4vw, 3.25rem);
-  background: var(--slate-dark);
-  color: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-}
-
-.statement h2 {
-  color: var(--white);
-  font-size: 1.85rem;
-  margin-bottom: 1rem;
-}
-
-.statement p {
-  margin: 0;
-  color: #e2e8f0;
-  font-size: 1.08rem;
-  line-height: 1.7;
-}
-
-.intro-text {
-  background: var(--white);
-  border: 1px solid var(--parchment-border);
-  border-radius: var(--radius);
-  padding: clamp(2rem, 3.5vw, 3rem);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.intro-text p {
-  margin-top: 0;
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.65;
-}
-
-.intro-text p:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================================================
-   3. DATA & VISUALS: Pure Gallery White
-========================================================= */
-.section-evidence {
-  background: #ffffff;
-  border-bottom: 1.5px solid var(--line);
-}
-
-.metrics-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 3.5rem;
-}
-
-.metric-card {
-  padding: 1.75rem 1.25rem;
-  background: #faf8f4;
-  border: 1px solid #e2e8f0;
-  border-top: 4px solid var(--cardinal);
-  border-radius: var(--radius);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.metric-value {
-  font-size: 2.35rem;
-  font-weight: 850;
-  color: var(--cardinal);
-  line-height: 1.1;
-}
-
-.metric-card p {
-  margin: 0.5rem 0 0;
-  font-size: 0.9rem;
-  font-weight: 650;
-  color: var(--muted);
-}
-
-.visuals-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.visual-card {
-  background: #faf8f4;
-  border: 1px solid #e2e8f0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.visual-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  background: #ffffff;
-  padding: 1.25rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.visual-content {
-  padding: 1.5rem;
-}
-
-.visual-content h3 {
-  font-size: 1.18rem;
-  margin-bottom: 0.4rem;
-}
-
-.visual-content p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-/* =========================================================
-   4. BIG QUOTE: Deep Slate Mood Chamber
-========================================================= */
-.quote-section {
-  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
-  text-align: center;
-  background: #111827;
-  color: #ffffff;
-  border-bottom: 1px solid #1f2937;
-}
-
-blockquote {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-blockquote p {
-  margin: 0;
-  color: #f8fafc;
-  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.18;
-  letter-spacing: -0.04em;
-}
-
-blockquote p span {
-  color: #f87171;
-}
-
-/* =========================================================
-   5. GENRES: Clean Sand Canvas with White Pill Cards
-========================================================= */
-.section-genres {
-  background-color: #f8f6f0;
-  border-bottom: 1.5px solid var(--parchment-border);
-}
-
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.journey-card {
-  position: relative;
-  min-height: 250px;
-  padding: 2rem;
-  background: var(--white);
-  border: 1px solid var(--parchment-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-.journey-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 1.25rem;
-  border-radius: 50%;
-  background: #fee2e2;
-  color: var(--cardinal);
-  font-weight: 850;
-  font-size: 1.1rem;
-}
-
-.journey-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.65rem;
-}
-
-.journey-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* =========================================================
-   6. FEATURED TRACKS: Coral Rose Showcase
-========================================================= */
-.section-track {
-  background: var(--rose-surface);
-  border-top: 1px solid var(--rose-border);
-  border-bottom: 1px solid var(--rose-border);
-}
-
-.tracks-grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.track-box {
-  background: var(--white);
-  border: 1.5px solid var(--rose-border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.track-info h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.track-info .artist {
-  font-size: 0.88rem;
-  font-weight: 750;
-  color: var(--cardinal);
-  margin-bottom: 0.6rem;
-}
-
-.track-info p {
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin-bottom: 1.25rem;
-}
-
-.spotify-container {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-}
-
-/* =========================================================
-   7. FOCUS AUDIO STUDIO & CURATOR: Pure Studio White
-========================================================= */
-.section-engine {
-  background-color: #ffffff;
-  border-bottom: 1.5px solid var(--line);
+.section-optimizer {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--border-slate);
 }
 
 .configurator-wrap {
-  background: #faf8f4;
-  border: 1.5px solid var(--parchment-border);
+  background: var(--bg-sand);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
   box-shadow: var(--shadow-sm);
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .config-tabs {
@@ -575,12 +320,12 @@ blockquote p span {
 
 .config-btn {
   background: var(--white);
-  border: 1px solid #cbd5e1;
+  border: 1.5px solid var(--border-slate);
   color: var(--ink);
   padding: 0.65rem 1.25rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 750;
   cursor: pointer;
   transition: all 160ms ease;
 }
@@ -588,26 +333,38 @@ blockquote p span {
 .config-btn:hover,
 .config-btn.active {
   background: var(--cardinal);
-  color: var(--white);
+  color: #ffffff;
   border-color: var(--cardinal);
-  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.2);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
 }
 
 .config-box {
   background: var(--white);
-  border: 1px solid var(--parchment-border);
-  border-radius: 14px;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
   padding: 2rem;
 }
 
 .config-tag {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--cardinal);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.config-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.config-box p {
+  color: var(--ink-secondary);
+  font-size: 1rem;
+  margin: 0;
 }
 
 .config-actions {
@@ -617,13 +374,13 @@ blockquote p span {
   margin-top: 1.5rem;
 }
 
-/* Custom In-Site Curator Box */
+/* In-Site Custom Curator Box */
 .curator-widget {
-  background: var(--white);
+  background: #ffffff;
   border: 2px solid var(--cardinal-border);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-cardinal);
 }
 
 .curator-form-grid {
@@ -650,8 +407,8 @@ blockquote p span {
   min-height: 48px;
   padding: 0.7rem 1rem;
   border-radius: var(--radius-sm);
-  border: 1.5px solid #cbd5e1;
-  background-color: #f8fafc;
+  border: 1.5px solid var(--border-slate);
+  background-color: var(--bg-slate);
   color: var(--ink);
   font-size: 0.92rem;
   font-weight: 600;
@@ -664,8 +421,8 @@ blockquote p span {
 }
 
 .curator-results {
-  background: #faf8f4;
-  border: 1px solid var(--parchment-border);
+  background: var(--bg-sand);
+  border: 1.5px solid var(--border-card);
   border-radius: 14px;
   padding: 1.75rem;
 }
@@ -677,7 +434,7 @@ blockquote p span {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--parchment-border);
+  border-bottom: 1.5px solid var(--border-light);
   padding-bottom: 0.85rem;
 }
 
@@ -695,36 +452,304 @@ blockquote p span {
   justify-content: space-between;
   align-items: center;
   background: var(--white);
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid var(--border-light);
   padding: 0.9rem 1.25rem;
   border-radius: 10px;
 }
 
 .track-details strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
+  color: var(--ink);
 }
 
 .track-details span {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   color: var(--muted);
 }
 
 .track-badge {
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 750;
   color: var(--cardinal);
   background: var(--cardinal-soft);
+  border: 1px solid var(--cardinal-border);
   padding: 0.25rem 0.65rem;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* =========================================================
-   8. FAQS: Muted Gray Grid
+   3. FEATURED OPM TRACKS (Blush Rose Accent Canvas)
+========================================================= */
+.section-track {
+  background-color: var(--bg-rose);
+  border-bottom: 2px solid var(--rose-border);
+}
+
+.tracks-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.track-box {
+  background: var(--white);
+  border: 1.5px solid var(--rose-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--ink);
+}
+
+.track-info .artist {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--cardinal);
+  margin-bottom: 0.6rem;
+}
+
+.track-info p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.spotify-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-slate);
+}
+
+/* =========================================================
+   4. DIVE DEEPER: BACKGROUND (Organic Parchment Base)
+========================================================= */
+.section-background {
+  background-color: var(--bg-parchment);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.statement {
+  padding: clamp(2rem, 4vw, 3.25rem);
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.statement h2 {
+  color: #ffffff;
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+
+.statement p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.intro-text {
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text p {
+  margin-top: 0;
+  color: var(--ink-secondary);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   5. EMPIRICAL EVIDENCE & GALLERY (Crisp Slate Canvas)
+========================================================= */
+.section-evidence {
+  background-color: var(--bg-slate);
+  border-bottom: 2px solid var(--border-slate);
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.metric-card {
+  padding: 1.75rem 1.25rem;
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
+  border-top: 5px solid var(--cardinal);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-value {
+  font-size: 2.35rem;
+  font-weight: 850;
+  color: var(--cardinal);
+  line-height: 1.1;
+}
+
+.metric-card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.visuals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.visual-card {
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-slate);
+}
+
+.visual-content {
+  padding: 1.5rem;
+}
+
+.visual-content h3 {
+  font-size: 1.18rem;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+
+.visual-content p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   6. STATEMENT BANNER (Deep Night Wine Atmosphere)
+========================================================= */
+.quote-section {
+  padding: clamp(4.5rem, 8vw, 6.5rem) 0;
+  text-align: center;
+  background: var(--bg-night);
+  border-bottom: 2px solid #380a0a;
+}
+
+blockquote {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+blockquote p {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+blockquote p span {
+  color: #f87171;
+}
+
+/* =========================================================
+   7. GENRE PROFILES (Warm Oat Canvas)
+========================================================= */
+.section-genres {
+  background-color: var(--bg-sand);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.journey-card {
+  position: relative;
+  min-height: 250px;
+  padding: 2rem;
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.journey-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: var(--cardinal-soft);
+  color: var(--cardinal);
+  font-weight: 850;
+  font-size: 1.1rem;
+  border: 1px solid var(--cardinal-border);
+}
+
+.journey-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.65rem;
+  color: var(--ink);
+}
+
+.journey-card p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   8. FAQS (Clean White Card Tiles)
 ========================================================= */
 .section-faq {
-  background: #f8fafc;
-  border-bottom: 1px solid var(--line);
+  background-color: var(--white);
+  border-bottom: 2px solid var(--border-slate);
 }
 
 .faq-grid {
@@ -735,28 +760,29 @@ blockquote p span {
 
 .faq-card {
   padding: 2rem;
-  background: var(--white);
-  border: 1px solid #e2e8f0;
+  background: var(--bg-sand);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
 
 .faq-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   margin-bottom: 0.5rem;
+  color: var(--ink);
 }
 
 .faq-card p {
-  margin-bottom: 0;
-  color: var(--muted);
+  margin: 0;
+  color: var(--ink-secondary);
   font-size: 0.95rem;
 }
 
 /* =========================================================
-   9. TAKEAWAYS: Warm Parchment Finish
+   9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
-  background: var(--parchment);
+  background-color: var(--bg-parchment);
 }
 
 .takeaways-3-col {
@@ -767,7 +793,7 @@ blockquote p span {
 
 .takeaway-block {
   background: var(--white);
-  border: 1px solid var(--parchment-border);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
@@ -779,29 +805,31 @@ blockquote p span {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: #fee2e2;
+  background: var(--cardinal-soft);
   color: var(--cardinal);
   font-weight: 850;
   border-radius: 8px;
   margin-bottom: 1.2rem;
+  border: 1px solid var(--cardinal-border);
 }
 
 .takeaway-block h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: var(--ink);
 }
 
 .takeaway-block p {
-  color: var(--muted);
+  color: var(--ink-secondary);
   font-size: 0.94rem;
   margin: 0;
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER (Deep Slate Ink)
 ========================================================= */
 footer {
-  padding: 2.75rem 0;
+  padding: 3rem 0;
   background: #0f172a;
   color: #94a3b8;
 }
@@ -813,18 +841,20 @@ footer {
   gap: 1rem;
 }
 
+footer strong {
+  color: #ffffff;
+}
+
 footer p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================================================= */
 @media (max-width: 1000px) {
-  .metrics-row {
-    grid-template-columns: 1fr 1fr;
-  }
+  .metrics-row,
   .visuals-grid,
   .tracks-grid-3,
   .journey-grid,
@@ -835,18 +865,8 @@ footer p {
 }
 
 @media (max-width: 800px) {
-  .nav {
-    min-height: auto;
-    padding: 1rem 0;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
   .nav-list {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+    display: none;
   }
 
   .intro-grid,

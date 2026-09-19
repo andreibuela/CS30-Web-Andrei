@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SoundFocus — An interactive focus audio optimizer and playlist curator designed to enhance essay writing performance.">
+    <meta name="description" content="SoundFocus — An interactive study audio optimizer and playlist curator designed to enhance essay-writing productivity among college students.">
     <title>SoundFocus — Focus Music Optimizer for Academic Writing</title>
+    <link rel="stylesheet" href="template.css">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZL88PVJR2"></script>
@@ -15,320 +16,11 @@
 
       gtag('config', 'G-9ZL88PVJR2');
     </script>
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-        body {
-            margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
-            color: #172033;
-            background-color: #faf8f4;
-            line-height: 1.65;
-        }
-        img { display: block; max-width: 100%; height: auto; }
-        a { color: inherit; }
-        button, a { -webkit-tap-highlight-color: transparent; }
-        :focus-visible { outline: 3px solid #b91c1c; outline-offset: 4px; }
-
-        :root {
-            --ink: #111827;
-            --muted: #4b5563;
-            --cardinal: #b91c1c;
-            --cardinal-hover: #991b1b;
-            --cardinal-soft: #fef2f2;
-            --cardinal-border: #fecaca;
-            --parchment: #f4ede2;
-            --parchment-border: #e5ded2;
-            --rose-surface: #fff5f5;
-            --rose-border: #fed7d7;
-            --line: #e2e8f0;
-            --white: #ffffff;
-            --max-width: 1180px;
-            --radius: 18px;
-            --radius-sm: 8px;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 16px 40px rgba(185, 28, 28, 0.08);
-        }
-
-        .container { width: min(var(--max-width), calc(100% - 2rem)); margin-inline: auto; }
-
-        /* Site Header */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(250, 248, 244, 0.95);
-            border-bottom: 1.5px solid var(--parchment-border);
-            backdrop-filter: blur(12px);
-        }
-        .nav {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-        .brand {
-            font-weight: 800;
-            font-size: 1.3rem;
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-        .brand span { color: var(--cardinal); }
-        .nav-list {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-list a {
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 650;
-            color: #4b5563;
-            transition: color 150ms ease;
-        }
-        .nav-list a:hover { color: var(--cardinal); }
-
-        /* Buttons */
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 48px;
-            padding: 0.8rem 1.4rem;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 750;
-            border: 2px solid transparent;
-            cursor: pointer;
-            font-size: 0.95rem;
-            transition: all 160ms ease;
-        }
-        .button:hover { transform: translateY(-2px); }
-        .button-primary {
-            background: var(--cardinal);
-            color: var(--white);
-            box-shadow: 0 4px 14px rgba(185, 28, 28, 0.25);
-        }
-        .button-primary:hover { background: var(--cardinal-hover); }
-        .button-secondary {
-            background: var(--white);
-            color: var(--ink);
-            border-color: #cbd5e1;
-        }
-        .button-secondary:hover { background: #f8fafc; border-color: #94a3b8; }
-
-        /* Base Typography */
-        .section { padding: clamp(4rem, 7.5vw, 6.5rem) 0; }
-        .section-heading { max-width: 760px; margin-bottom: 3rem; }
-        .section-heading p { margin: 0; color: var(--muted); font-size: 1.08rem; }
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 0 0 1.25rem;
-            color: var(--cardinal);
-            font-size: 0.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-        }
-        .eyebrow::before { content: ""; width: 28px; height: 3px; background: var(--cardinal); }
-        h1, h2, h3, h4 { margin-top: 0; color: var(--ink); line-height: 1.15; letter-spacing: -0.035em; }
-
-        /* 1. HERO */
-        .hero {
-            background: radial-gradient(circle at 50% 15%, #ffffff 0%, #faf8f4 60%, #f3ede2 100%);
-            padding: clamp(5rem, 8.5vw, 7.5rem) 0 clamp(3.5rem, 6vw, 5rem);
-            text-align: center;
-            border-bottom: 1.5px solid var(--parchment-border);
-        }
-        .hero-content {
-            max-width: 860px;
-            margin-inline: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        h1 { margin-bottom: 1.35rem; font-size: clamp(2.5rem, 5.5vw, 4.25rem); text-align: center; }
-        .hero-copy { max-width: 720px; margin: 0 auto 2rem; font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--muted); text-align: center; }
-        .hero-actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.85rem; }
-
-        /* 2. OPTIMIZER & CURATOR (NOW IMMEDIATELY BELOW HERO) */
-        .section-optimizer { background-color: #ffffff; border-bottom: 1.5px solid var(--line); }
-        .configurator-wrap {
-            background: #faf8f4;
-            border: 1.5px solid var(--parchment-border);
-            border-radius: var(--radius);
-            padding: clamp(1.75rem, 4vw, 2.75rem);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 4rem;
-        }
-        .config-tabs { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 1.75rem; justify-content: center; }
-        .config-btn {
-            background: var(--white);
-            border: 1px solid #cbd5e1;
-            color: var(--ink);
-            padding: 0.65rem 1.25rem;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 160ms ease;
-        }
-        .config-btn:hover, .config-btn.active {
-            background: var(--cardinal);
-            color: var(--white);
-            border-color: var(--cardinal);
-            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.2);
-        }
-        .config-box { background: var(--white); border: 1px solid var(--parchment-border); border-radius: 14px; padding: 2rem; }
-        .config-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--cardinal);
-            margin-bottom: 0.75rem;
-        }
-        .config-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; margin-top: 1.5rem; }
-
-        .curator-widget {
-            background: var(--white);
-            border: 2px solid var(--cardinal-border);
-            border-radius: var(--radius);
-            padding: clamp(1.75rem, 4vw, 2.75rem);
-            box-shadow: var(--shadow-lg);
-        }
-        .curator-form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
-        .curator-field { display: flex; flex-direction: column; gap: 0.5rem; }
-        .curator-field label { font-size: 0.88rem; font-weight: 750; color: var(--ink); }
-        .curator-field select {
-            width: 100%; min-height: 48px; padding: 0.7rem 1rem; border-radius: var(--radius-sm);
-            border: 1.5px solid #cbd5e1; background-color: #f8fafc; color: var(--ink); font-size: 0.92rem; font-weight: 600; outline: none;
-        }
-        .curator-field select:focus { border-color: var(--cardinal); }
-        .curator-results { background: #faf8f4; border: 1px solid var(--parchment-border); border-radius: 14px; padding: 1.75rem; }
-        .curator-header {
-            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-            margin-bottom: 1.25rem; border-bottom: 1px solid var(--parchment-border); padding-bottom: 0.85rem;
-        }
-        .playlist-track-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
-        .playlist-track-item {
-            display: flex; justify-content: space-between; align-items: center; background: var(--white);
-            border: 1px solid #e2e8f0; padding: 0.9rem 1.25rem; border-radius: 10px;
-        }
-        .track-details strong { display: block; font-size: 0.95rem; }
-        .track-details span { font-size: 0.82rem; color: var(--muted); }
-        .track-badge {
-            font-size: 0.75rem; font-weight: 750; color: var(--cardinal); background: var(--cardinal-soft);
-            padding: 0.25rem 0.65rem; border-radius: 4px;
-        }
-
-        /* 3. FEATURED TRACKS (ROSE BACKGROUND) */
-        .section-track { background: var(--rose-surface); border-bottom: 1px solid var(--rose-border); }
-        .tracks-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .track-box {
-            background: var(--white); border: 1.5px solid var(--rose-border); border-radius: var(--radius);
-            padding: 1.5rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .track-info h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-        .track-info .artist { font-size: 0.88rem; font-weight: 750; color: var(--cardinal); margin-bottom: 0.6rem; }
-        .track-info p { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.25rem; }
-        .spotify-container { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
-
-        /* 4. DIVE DEEPER: BACKGROUND (WARM PARCHMENT) */
-        .section-background { background-color: var(--parchment); border-bottom: 1.5px solid var(--parchment-border); }
-        .intro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: stretch; }
-        .statement {
-            padding: clamp(2rem, 4vw, 3.25rem); background: var(--slate-dark); color: var(--white);
-            border-radius: var(--radius); box-shadow: var(--shadow-md);
-        }
-        .statement h2 { color: var(--white); font-size: 1.85rem; margin-bottom: 1rem; }
-        .statement p { margin: 0; color: #e2e8f0; font-size: 1.08rem; line-height: 1.7; }
-        .intro-text {
-            background: var(--white); border: 1px solid var(--parchment-border); border-radius: var(--radius);
-            padding: clamp(2rem, 3.5vw, 3rem); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: center;
-        }
-        .intro-text p { margin-top: 0; color: var(--muted); font-size: 1.02rem; line-height: 1.65; }
-
-        /* 5. DATA & VISUAL GALLERY (CLEAN WHITE) */
-        .section-evidence { background: #ffffff; border-bottom: 1.5px solid var(--line); }
-        .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 3.5rem; }
-        .metric-card {
-            padding: 1.75rem 1.25rem; background: #faf8f4; border: 1px solid #e2e8f0;
-            border-top: 4px solid var(--cardinal); border-radius: var(--radius); text-align: center; box-shadow: var(--shadow-sm);
-        }
-        .metric-value { font-size: 2.35rem; font-weight: 850; color: var(--cardinal); line-height: 1.1; }
-        .metric-card p { margin: 0.5rem 0 0; font-size: 0.9rem; font-weight: 650; color: var(--muted); }
-        .visuals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .visual-card { background: #faf8f4; border: 1px solid #e2e8f0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
-        .visual-card img { width: 100%; height: 230px; object-fit: contain; background: #ffffff; padding: 1.25rem; border-bottom: 1px solid #e2e8f0; }
-        .visual-content { padding: 1.5rem; }
-        .visual-content h3 { font-size: 1.18rem; margin-bottom: 0.4rem; }
-        .visual-content p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-
-        /* 6. BIG QUOTE (SLATE DARK) */
-        .quote-section { padding: clamp(4.5rem, 8vw, 6.5rem) 0; text-align: center; background: #111827; color: #ffffff; border-bottom: 1px solid #1f2937; }
-        blockquote { max-width: 860px; margin: 0 auto; }
-        blockquote p { margin: 0; color: #f8fafc; font-size: clamp(1.9rem, 4.5vw, 3.4rem); font-weight: 800; line-height: 1.18; }
-        blockquote p span { color: #f87171; }
-
-        /* 7. GENRES (LIGHT SAND) */
-        .section-genres { background-color: #f8f6f0; border-bottom: 1.5px solid var(--parchment-border); }
-        .journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .journey-card { position: relative; min-height: 250px; padding: 2rem; background: var(--white); border: 1px solid var(--parchment-border); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-        .journey-number {
-            display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
-            margin-bottom: 1.25rem; border-radius: 50%; background: #fee2e2; color: var(--cardinal); font-weight: 850; font-size: 1.1rem;
-        }
-
-        /* 8. FAQS & TAKEAWAYS */
-        .section-faq { background: #f8fafc; border-bottom: 1px solid var(--line); }
-        .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-        .faq-card { padding: 2rem; background: var(--white); border: 1px solid #e2e8f0; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-        .faq-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
-        .faq-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-
-        .section-takeaways { background: var(--parchment); }
-        .takeaways-3-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .takeaway-block { background: var(--white); border: 1px solid var(--parchment-border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-sm); }
-        .takeaway-block span {
-            display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
-            background: #fee2e2; color: var(--cardinal); font-weight: 850; border-radius: 8px; margin-bottom: 1.2rem;
-        }
-
-        footer { padding: 2.75rem 0; background: #0f172a; color: #94a3b8; }
-        .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-        footer p { margin: 0; font-size: 0.9rem; }
-
-        @media (max-width: 1000px) {
-            .metrics-row, .visuals-grid, .tracks-grid-3, .journey-grid, .takeaways-3-col, .curator-form-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 800px) {
-            .nav-list { display: none; }
-            .intro-grid, .visuals-grid, .tracks-grid-3, .journey-grid, .faq-grid, .takeaways-3-col, .curator-form-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 560px) {
-            .container { width: min(var(--max-width), calc(100% - 1.25rem)); }
-            .metrics-row { grid-template-columns: 1fr; }
-            .hero-actions { flex-direction: column; width: 100%; }
-            .button { width: 100%; }
-        }
-    </style>
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- Top Sticky Header -->
+    <!-- Top Navigation Header -->
     <header class="site-header">
         <div class="container nav">
             <a class="brand" href="#">
@@ -350,7 +42,7 @@
 
     <main id="main-content">
         <!-- =====================================================
-             1. HERO (FOCUSED AS MUSIC OPTIMIZER)
+             1. HERO SECTION (FOCUSED ON OPTIMIZER IDENTITY)
         ====================================================== -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero-content">
@@ -376,7 +68,7 @@
         </section>
 
         <!-- =====================================================
-             2. PRIMARY WORKSPACE: AUDIO ENGINE & CURATOR (TOP-LEVEL)
+             2. PRIMARY SUITE: AUDIO ENGINE & CURATOR (TOP WORKSPACE)
         ====================================================== -->
         <section class="section section-optimizer" id="optimizer" aria-labelledby="optimizer-title">
             <div class="container">
@@ -401,7 +93,7 @@
                     <div class="config-box">
                         <span class="config-tag" id="cfg-tag">High Cortical Arousal</span>
                         <h3 id="cfg-title">Energetic Rock & High-Tempo Pop</h3>
-                        <p id="cfg-desc" style="color: var(--muted); margin-bottom: 0;">
+                        <p id="cfg-desc">
                             When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance.
                         </p>
                         <div class="config-actions">
@@ -420,7 +112,7 @@
                     <div class="section-heading" style="margin-bottom: 2rem;">
                         <span class="config-tag">In-Site Optimizer Studio</span>
                         <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Personal Study Playlist Curator</h2>
-                        <p>Configure your writing phase, session length, and acoustic textures to generate a custom study set.</p>
+                        <p>Configure your writing phase, session length, and acoustic textures to dynamically generate a custom study set.</p>
                     </div>
 
                     <form class="curator-form-grid" id="curator-form" onsubmit="generateCustomPlaylist(event)">
@@ -480,7 +172,7 @@
         </section>
 
         <!-- =====================================================
-             3. FEATURED OPM TRACKS (ROSE-TINTED SHOWCASE)
+             3. FEATURED OPM TRACKS (ROSE SHOWCASE)
         ====================================================== -->
         <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
             <div class="container">
@@ -569,7 +261,7 @@
         </section>
 
         <!-- =====================================================
-             4. DIVE DEEPER: THEORETICAL BACKGROUND (WARM PARCHMENT)
+             4. DIVE DEEPER: BACKGROUND (PARCHMENT BASE)
         ====================================================== -->
         <section class="section section-background" id="dive-deeper" aria-labelledby="deep-title">
             <div class="container">
@@ -603,7 +295,7 @@
         </section>
 
         <!-- =====================================================
-             5. EMPIRICAL DATA & RESEARCH VISUALS (CLEAN WHITE)
+             5. EMPIRICAL DATA & RESEARCH VISUALS (CRISP SLATE)
         ====================================================== -->
         <section class="section section-evidence" id="evidence" aria-labelledby="evidence-title">
             <div class="container">
@@ -677,7 +369,7 @@
         </section>
 
         <!-- =====================================================
-             6. BIG QUOTE BANNER (SLATE DARK)
+             6. BIG QUOTE BANNER (DEEP NIGHT WINE)
         ====================================================== -->
         <section class="quote-section" aria-label="Key finding">
             <div class="container">
@@ -690,7 +382,7 @@
         </section>
 
         <!-- =====================================================
-             7. AUDITORY GENRE MECHANICS (LIGHT SAND)
+             7. AUDITORY GENRE MECHANICS (WARM OAT)
         ====================================================== -->
         <section class="section section-genres" id="genres" aria-labelledby="genres-title">
             <div class="container">
@@ -728,7 +420,7 @@
         </section>
 
         <!-- =====================================================
-             8. FAQS SECTION (MUTED GRID)
+             8. FAQS SECTION (CLEAN WHITE TILES)
         ====================================================== -->
         <section class="section section-faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
@@ -766,7 +458,7 @@
         </section>
 
         <!-- =====================================================
-             9. PRACTICAL TAKEAWAYS (WARM PARCHMENT)
+             9. PRACTICAL TAKEAWAYS (PARCHMENT BASE)
         ====================================================== -->
         <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
             <div class="container">
@@ -1036,6 +728,9 @@
             });
         }
 
+        // -------------------------------------------------------------
+        // Listeners & Initialization
+        // -------------------------------------------------------------
         document.addEventListener('DOMContentLoaded', () => {
             generateCustomPlaylist();
 

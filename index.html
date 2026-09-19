@@ -43,7 +43,7 @@
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- 1. Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero-content">
                 <p class="eyebrow">Cognition • Music • Productivity</p>
@@ -67,7 +67,7 @@
             </div>
         </section>
 
-        <!-- Background Section -->
+        <!-- 2. Background Section (Warm Parchment Theme) -->
         <section class="section section-background" id="background" aria-labelledby="background-title">
             <div class="container">
                 <div class="section-heading">
@@ -98,7 +98,7 @@
             </div>
         </section>
 
-        <!-- Data & Visuals Section -->
+        <!-- 3. Data & Visuals Section (Pure White Gallery) -->
         <section class="section section-evidence" id="data-visuals" aria-labelledby="data-title">
             <div class="container">
                 <div class="section-heading">
@@ -170,7 +170,7 @@
             </div>
         </section>
 
-        <!-- Big Statement Quote -->
+        <!-- 4. Big Statement Quote (Deep Slate Theme) -->
         <section class="quote-section" aria-label="Key finding">
             <div class="container">
                 <blockquote>
@@ -181,7 +181,7 @@
             </div>
         </section>
 
-        <!-- Genre Breakdown -->
+        <!-- 5. Genre Breakdown (Clean Sand Canvas) -->
         <section class="section section-genres" id="genres" aria-labelledby="genres-title">
             <div class="container">
                 <div class="section-heading">
@@ -217,7 +217,7 @@
             </div>
         </section>
 
-        <!-- Featured Track: 3-Track Spotify Case Studies -->
+        <!-- 6. Featured Tracks: 3-Track Spotify Case Studies (Coral Rose Theme) -->
         <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
             <div class="container">
                 <div class="section-heading">
@@ -304,11 +304,11 @@
             </div>
         </section>
 
-        <!-- Focus Audio Engine (Widget 1) -->
+        <!-- 7. Focus Audio Engine & Curator (Pure Studio White) -->
         <section class="section section-engine" id="engine" aria-labelledby="engine-title">
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">Focus Audio Engine</p>
+                    <p class="eyebrow">Focus Audio Studio</p>
                     <h2 id="engine-title">Match your playlist to your workload state</h2>
                     <p>
                         Select your current mental workload phase to generate your optimal study audio profile.
@@ -326,7 +326,7 @@
                     <div class="config-box">
                         <span class="config-tag" id="cfg-tag">High Cortical Arousal</span>
                         <h3 id="cfg-title">Energetic Rock & High-Tempo Pop</h3>
-                        <p id="cfg-desc" style="color: var(--muted); margin-bottom: 1.5rem;">
+                        <p id="cfg-desc" style="color: var(--muted); margin-bottom: 0;">
                             When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance.
                         </p>
                         <div class="config-actions">
@@ -340,12 +340,12 @@
                     </div>
                 </div>
 
-                <!-- Custom Playlist Curator Widget (Widget 2) -->
+                <!-- Custom Playlist Curator Widget -->
                 <div class="curator-widget" id="curator">
                     <div class="section-heading" style="margin-bottom: 2rem;">
-                        <span class="config-tag">In-Site Tool</span>
+                        <span class="config-tag">In-Site Interactive Studio</span>
                         <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Personal Study Playlist Curator</h2>
-                        <p>Customize your focused study session parameters to generate a targeted tracklist.</p>
+                        <p>Customize your writing phase, study duration, and acoustic preferences to dynamically generate an evidence-backed tracklist.</p>
                     </div>
 
                     <form class="curator-form-grid" id="curator-form" onsubmit="generateCustomPlaylist(event)">
@@ -361,9 +361,9 @@
                         <div class="curator-field">
                             <label for="session-duration">Session Duration</label>
                             <select id="session-duration">
-                                <option value="25">25 Mins (Pomodoro Sprint)</option>
-                                <option value="50" selected>50 Mins (Extended Deep Work)</option>
-                                <option value="90">90 Mins (Endurance Block)</option>
+                                <option value="25">25 Mins (Pomodoro Sprint • 3 Tracks)</option>
+                                <option value="50" selected>50 Mins (Extended Block • 5 Tracks)</option>
+                                <option value="90">90 Mins (Endurance Marathon • 8 Tracks)</option>
                             </select>
                         </div>
 
@@ -380,23 +380,23 @@
                     <div class="curator-results" aria-live="polite">
                         <div class="curator-header">
                             <div>
-                                <strong id="curator-plan-name" style="font-size: 1.15rem; color: var(--ink);">50-Minute Drafting Flow Set</strong>
-                                <p id="curator-plan-desc" style="font-size: 0.88rem; color: var(--muted); margin: 0.2rem 0 0;">
+                                <strong id="curator-plan-name" style="font-size: 1.2rem; color: var(--ink);">50-Minute Drafting Flow Set</strong>
+                                <p id="curator-plan-desc" style="font-size: 0.9rem; color: var(--muted); margin: 0.25rem 0 0;">
                                     Cadence-matched tracks to sustain writing speed and keep the phonological loop habituated.
                                 </p>
                             </div>
-                            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                                <button type="button" class="button button-secondary" onclick="copyPlaylistToClipboard()" style="min-height: 40px; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                            <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+                                <button type="button" class="button button-secondary" onclick="copyPlaylistToClipboard()" style="min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.85rem;">
                                     Copy Tracklist
                                 </button>
-                                <a id="curator-export-spotify" class="button button-primary" href="https://open.spotify.com/search/upbeat%20opm" target="_blank" rel="noopener noreferrer" style="min-height: 40px; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                                <a id="curator-export-spotify" class="button button-primary" href="https://open.spotify.com/search/upbeat%20opm" target="_blank" rel="noopener noreferrer" style="min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.85rem;">
                                     Listen on Spotify
                                 </a>
                             </div>
                         </div>
 
                         <ul class="playlist-track-list" id="curator-track-list">
-                            <!-- Populated dynamically via JS -->
+                            <!-- Populated dynamically based on all 3 dropdowns -->
                         </ul>
                     </div>
                 </div>
@@ -404,7 +404,7 @@
             </div>
         </section>
 
-        <!-- FAQs -->
+        <!-- 8. FAQs (Muted Slate Theme) -->
         <section class="section section-faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
                 <div class="section-heading">
@@ -440,7 +440,7 @@
             </div>
         </section>
 
-        <!-- Takeaways -->
+        <!-- 9. Takeaways (Warm Parchment Finish) -->
         <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
             <div class="container">
                 <div class="section-heading">
@@ -482,7 +482,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Widgets & GA4 Event Tracking Logic -->
+    <!-- Interactive Logic & GA4 Events -->
     <script>
         // -------------------------------------------------------------
         // Widget 1: Focus Audio Engine Configurator
@@ -545,27 +545,106 @@
         }
 
         // -------------------------------------------------------------
-        // Widget 2: In-Site Custom Study Playlist Curator
+        // Widget 2: Expanded In-Site Study Playlist Curator
+        // Multi-dimensional database (Phase + Texture + Duration)
         // -------------------------------------------------------------
-        const curatorDatabase = {
-            ideation: [
-                { title: "Multo", artist: "Cup of Joe", duration: "3:48", type: "Familiar Vocal", badge: "Cadence & Uplift" },
-                { title: "Paninindigan Kita", artist: "Ben&Ben", duration: "5:12", type: "Familiar Vocal", badge: "Warm Affect" },
-                { title: "Leaves", artist: "Ben&Ben", duration: "4:05", type: "Familiar Vocal", badge: "Gentle Flow" },
-                { title: "Raining in Manila", artist: "Lola Amour", duration: "4:51", type: "Familiar Vocal", badge: "Arousal Boost" }
-            ],
-            drafting: [
-                { title: "Kabisado", artist: "IV OF SPADES", duration: "4:05", type: "Rhythmic Metronome", badge: "Typing Cadence" },
-                { title: "Pag-Ibig ay Kanibalismo II", artist: "fitzgerald / fitterkarma", duration: "3:15", type: "Textured Indie", badge: "Deep Immersion" },
-                { title: "Come Inside Of My Heart", artist: "IV OF SPADES", duration: "4:06", type: "Familiar Vocal", badge: "Pacing Sync" },
-                { title: "Bawat Piyesa", artist: "Munimuni", duration: "6:02", type: "Acoustic Shield", badge: "Endurance" }
-            ],
-            revising: [
-                { title: "Midnight Lo-Fi Reflection", artist: "Study Beats", duration: "3:10", type: "Zero Vocals", badge: "Syntax Focus" },
-                { title: "Coffeehouse Ambient Piano", artist: "Acoustic Flow", duration: "4:15", type: "Zero Vocals", badge: "Proofreading" },
-                { title: "Deep Space Rain Texture", artist: "Sound Shield", duration: "5:00", type: "Zero Vocals", badge: "Noise Masking" },
-                { title: "Minimal Horizon", artist: "Focus Audio Lab", duration: "3:50", type: "Zero Vocals", badge: "Grammar Audit" }
-            ]
+        const multiTrackLibrary = {
+            ideation: {
+                familiar: [
+                    { title: "Multo", artist: "Cup of Joe", duration: "3:48", badge: "Arousal Boost" },
+                    { title: "Raining in Manila", artist: "Lola Amour", duration: "4:51", badge: "Dopamine Trigger" },
+                    { title: "Paninindigan Kita", artist: "Ben&Ben", duration: "5:12", badge: "Warm Affect" },
+                    { title: "Uhaw (Tayong Lahat)", artist: "Dilaw", duration: "4:01", badge: "Task Initiation" },
+                    { title: "Ere", artist: "juan karlos", duration: "4:43", badge: "High Intensity" },
+                    { title: "Ligaya", artist: "Eraserheads", duration: "4:31", badge: "Nostalgic Comfort" },
+                    { title: "Sino", artist: "Unique Salonga", duration: "4:40", badge: "Expansive Flow" },
+                    { title: "Antukin", artist: "Rico Blanco", duration: "4:48", badge: "Energy Recovery" }
+                ],
+                instrumental: [
+                    { title: "Daylight Acoustic Guitar", artist: "Sunken Studio", duration: "3:40", badge: "Concept Flow" },
+                    { title: "Warm Morning Chords", artist: "Acoustic Manila", duration: "4:12", badge: "Idea Generation" },
+                    { title: "Mind Map Piano Sketch", artist: "Cognitive Sound", duration: "3:55", badge: "Neural Activation" },
+                    { title: "Golden Hour Resonance", artist: "Ambient Horizon", duration: "4:30", badge: "Creative Horizon" },
+                    { title: "Breeze Over Intramuros", artist: "Harbor Strings", duration: "3:25", badge: "Relaxed Focus" },
+                    { title: "Open Canvas Prelude", artist: "Focus Lab", duration: "4:05", badge: "Outline Spark" },
+                    { title: "Sunlight on Cedar", artist: "Quiet Strings", duration: "3:50", badge: "Gentle Pace" },
+                    { title: "Catalyst in D Major", artist: "Modern Chamber", duration: "4:20", badge: "Brainstorm Peak" }
+                ],
+                hybrid: [
+                    { title: "Manila Chillhop Grooves", artist: "Bay Beats", duration: "3:15", badge: "Rhythmic Warmup" },
+                    { title: "Lo-Fi Jeepney Transit", artist: "City Pulse", duration: "2:50", badge: "Cadence Setup" },
+                    { title: "High-Rise Skyline Beats", artist: "Makati Nights", duration: "3:30", badge: "Dopamine Rhythm" },
+                    { title: "Tropical Beat Tapestry", artist: "Island Waves", duration: "3:45", badge: "Endurance Spark" },
+                    { title: "Urban Neon Odyssey", artist: "Night Shift", duration: "3:20", badge: "Exploratory Beat" },
+                    { title: "Dusk to Dawn Pulse", artist: "Metro Soundscapes", duration: "3:55", badge: "Steady Uplift" },
+                    { title: "Coffee & Tape Cassettes", artist: "Analog Manila", duration: "3:10", badge: "Lo-Fi Pacing" },
+                    { title: "Sunset Boulevard Rhythm", artist: "Caelum Audio", duration: "4:00", badge: "Creative Momentum" }
+                ]
+            },
+            drafting: {
+                familiar: [
+                    { title: "Kabisado", artist: "IV OF SPADES", duration: "4:05", badge: "Typing Metronome" },
+                    { title: "Pag-Ibig ay Kanibalismo II", artist: "fitzgerald / fitterkarma", duration: "3:15", badge: "Deep Immersion" },
+                    { title: "Come Inside Of My Heart", artist: "IV OF SPADES", duration: "4:06", badge: "Writing Cadence" },
+                    { title: "Bawat Piyesa", artist: "Munimuni", duration: "6:02", badge: "Acoustic Shield" },
+                    { title: "Tahanan", artist: "Adie", duration: "4:00", badge: "Emotional Buffer" },
+                    { title: "Leaves", artist: "Ben&Ben", duration: "5:10", badge: "Sustained Velocity" },
+                    { title: "Alat", artist: "The Juans", duration: "3:42", badge: "Sprint Energy" },
+                    { title: "Higa", artist: "Arthur Nery", duration: "4:05", badge: "Flow Stabilization" }
+                ],
+                instrumental: [
+                    { title: "Video Game Ambient Study Suite", artist: "Quest Audio", duration: "4:20", badge: "Noise Masking" },
+                    { title: "80 BPM Lo-Fi Writing Beat", artist: "Draft Lab", duration: "3:35", badge: "Cadence Match" },
+                    { title: "Deep Focus Rain & Felt Piano", artist: "Sound Shield", duration: "5:10", badge: "Phonological Shield" },
+                    { title: "Modular Synthesizer Pulse", artist: "Analog Focus", duration: "4:15", badge: "Steady Typing" },
+                    { title: "Midnight Keyboards in Solitude", artist: "Metro Ambient", duration: "3:50", badge: "Syntax Alignment" },
+                    { title: "Calm Waves Acoustic Drift", artist: "Serene Waves", duration: "4:40", badge: "Distraction Barrier" },
+                    { title: "Subtle Bass & Drum Cadence", artist: "Rhythm Engine", duration: "3:45", badge: "Velocity Sync" },
+                    { title: "The Flow State Continuum", artist: "Neuro Audio", duration: "5:00", badge: "Deep Sprint" }
+                ],
+                hybrid: [
+                    { title: "Habituated Vocal Chops Beat", artist: "Lofi OPM Lab", duration: "3:15", badge: "Vocal Texture" },
+                    { title: "Subtle Grooves for Drafting", artist: "City Sounds PH", duration: "3:40", badge: "Steady Rhythm" },
+                    { title: "Tape Saturation & Snare Pacing", artist: "Analog Manila", duration: "3:25", badge: "Metronomic Beat" },
+                    { title: "Binaural Study Beats 70 BPM", artist: "Focus Lab", duration: "4:10", badge: "Alpha Wave Sync" },
+                    { title: "Atmospheric Indie Beat Loop", artist: "Cloud Acoustic", duration: "3:30", badge: "Typing Cadence" },
+                    { title: "Pacific Drift Electric Rhodes", artist: "Island Focus", duration: "4:05", badge: "Endurance Drive" },
+                    { title: "Resonant Sub & Vinyl Dust", artist: "Late Night Desk", duration: "3:50", badge: "Deep Work Loop" },
+                    { title: "Midnight Espresso Tape Loop", artist: "Cafe PH", duration: "3:40", badge: "Frictionless Pace" }
+                ]
+            },
+            revising: {
+                familiar: [
+                    { title: "Kathang Isip (Acoustic Strip)", artist: "Ben&Ben", duration: "5:15", badge: "Gentle Background" },
+                    { title: "Dapithapon", artist: "Johnoy Danao", duration: "4:20", badge: "Soft Familiarity" },
+                    { title: "Burnout (Slowed Down)", artist: "Sugarfree", duration: "4:12", badge: "Habituated Pace" },
+                    { title: "Sinta", artist: "Rob Deniel", duration: "3:40", badge: "Unobtrusive Cadence" },
+                    { title: "Ikaw Lamang", artist: "Silent Sanctuary", duration: "5:05", badge: "Predictable Melody" },
+                    { title: "Balang Araw", artist: "I Belong to the Zoo", duration: "4:10", badge: "Calm Attention" },
+                    { title: "Bibingka", artist: "Ben&Ben", duration: "3:55", badge: "Gentle Rhythm" },
+                    { title: "Pagsamo", artist: "Arthur Nery", duration: "4:45", badge: "Soft Attenuation" }
+                ],
+                instrumental: [
+                    { title: "Zero-Vocal Syntax Piano", artist: "Grammar Flow", duration: "4:10", badge: "Phonological Free" },
+                    { title: "Gentle Rain on Library Window", artist: "Acoustic Perimeter", duration: "5:30", badge: "Zero Semantic Load" },
+                    { title: "Minimalist String Quartet in C", artist: "Focus Classics", duration: "4:45", badge: "Citation Check" },
+                    { title: "Pure Binaural Theta Meditation", artist: "Neuro Wave", duration: "6:00", badge: "Error Detection" },
+                    { title: "Soft Felt Piano & Room Tone", artist: "Quiet Desk", duration: "3:50", badge: "Proofreading" },
+                    { title: "Dormant Ambient Drone", artist: "Deep Space Focus", duration: "5:15", badge: "Grammar Audit" },
+                    { title: "Neutral Acoustic Resonance", artist: "Solo Woodwinds", duration: "4:05", badge: "Clarity Mode" },
+                    { title: "Subtle Riverbed Soundscape", artist: "Nature Shield", duration: "4:30", badge: "Lexical Isolation" }
+                ],
+                hybrid: [
+                    { title: "Ambient Lo-Fi Chill Pulse", artist: "Study Beats Int.", duration: "3:20", badge: "Low Interference" },
+                    { title: "Muted Rhymes & Soft Rimshots", artist: "Pencil & Paper", duration: "3:10", badge: "Steady Inspection" },
+                    { title: "Subdued Vinyl Textures", artist: "Desk Dust", duration: "4:00", badge: "Soft Rhythm" },
+                    { title: "Warm Tape Hiss & Muted Keys", artist: "Nocturne Studio", duration: "3:45", badge: "Careful Reading" },
+                    { title: "Low-Pass Filtered Rhodes", artist: "Lofi Study Lab", duration: "3:30", badge: "Cognitive Neutral" },
+                    { title: "Mellow Dusk Beat Sequence", artist: "Quiet Beatmaker", duration: "3:50", badge: "Line-by-Line Mode" },
+                    { title: "Late Night Review Metronome", artist: "Sync Lab", duration: "4:15", badge: "Pacing Guard" },
+                    { title: "Gentle Tick & Ambient Bass", artist: "Final Draft Beats", duration: "3:40", badge: "Final Polish" }
+                ]
+            }
         };
 
         function generateCustomPlaylist(e) {
@@ -575,18 +654,24 @@
             const duration = document.getElementById('session-duration').value;
             const texture = document.getElementById('vocal-preference').value;
 
-            const trackPool = curatorDatabase[phase] || curatorDatabase['drafting'];
+            // Target track counts by duration
+            const trackCountMap = { "25": 3, "50": 5, "90": 8 };
+            const trackCount = trackCountMap[duration] || 5;
+
+            const pool = multiTrackLibrary[phase][texture] || multiTrackLibrary['drafting']['familiar'];
+            const selectedTracks = pool.slice(0, trackCount);
+
             const trackListEl = document.getElementById('curator-track-list');
             trackListEl.innerHTML = '';
 
-            let planName = `${duration}-Minute ${phase.charAt(0).toUpperCase() + phase.slice(1)} Session`;
-            let planDesc = `Customized study profile balancing acoustic texture (${texture}) for optimal task stamina.`;
+            const phaseLabel = phase.charAt(0).toUpperCase() + phase.slice(1);
+            const textureLabel = texture.charAt(0).toUpperCase() + texture.slice(1);
 
-            document.getElementById('curator-plan-name').textContent = planName;
-            document.getElementById('curator-plan-desc').textContent = planDesc;
-            document.getElementById('curator-export-spotify').href = `https://open.spotify.com/search/${encodeURIComponent(phase + ' study focus')}`;
+            document.getElementById('curator-plan-name').textContent = `${duration}-Minute ${phaseLabel} Suite (${textureLabel})`;
+            document.getElementById('curator-plan-desc').textContent = `Targeted sequence of ${trackCount} tracks balanced for ${phase} cognitive tasks using ${texture} audio texture.`;
+            document.getElementById('curator-export-spotify').href = `https://open.spotify.com/search/${encodeURIComponent(phase + ' ' + texture + ' focus music')}`;
 
-            trackPool.forEach(track => {
+            selectedTracks.forEach(track => {
                 const li = document.createElement('li');
                 li.className = 'playlist-track-item';
                 li.innerHTML = `
@@ -600,11 +685,12 @@
             });
 
             if (typeof gtag === 'function') {
-                gtag('event', 'playlist_curator_generated', {
+                gtag('event', 'curator_custom_generate', {
                     event_category: 'curator_widget',
                     phase_selected: phase,
                     duration_selected: duration,
-                    texture_selected: texture
+                    texture_selected: texture,
+                    tracks_loaded: trackCount
                 });
             }
         }
@@ -617,7 +703,7 @@
             navigator.clipboard.writeText(tracks).then(() => {
                 alert('Curated tracklist copied to clipboard!');
                 if (typeof gtag === 'function') {
-                    gtag('event', 'playlist_curator_copied', {
+                    gtag('event', 'curator_clipboard_copy', {
                         event_category: 'curator_widget'
                     });
                 }
@@ -625,12 +711,12 @@
         }
 
         // -------------------------------------------------------------
-        // Outbound & UI Interaction Analytics Listeners
+        // Listeners & Initialization
         // -------------------------------------------------------------
         document.addEventListener('DOMContentLoaded', () => {
             generateCustomPlaylist();
 
-            // Auto-update curator when inputs change
+            // Realtime update on ANY form selector change
             ['workload-phase', 'session-duration', 'vocal-preference'].forEach(id => {
                 document.getElementById(id).addEventListener('change', () => generateCustomPlaylist());
             });
@@ -662,7 +748,6 @@
                 });
             }
 
-            // Hero buttons click tracking
             document.querySelectorAll('.hero-actions a').forEach(cta => {
                 cta.addEventListener('click', () => {
                     if (typeof gtag === 'function') {
@@ -674,7 +759,6 @@
                 });
             });
 
-            // Navigation menu tracking
             document.querySelectorAll('.nav-list a').forEach(navItem => {
                 navItem.addEventListener('click', () => {
                     if (typeof gtag === 'function') {

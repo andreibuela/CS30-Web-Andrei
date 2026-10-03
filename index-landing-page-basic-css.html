@@ -129,6 +129,9 @@
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 0.85rem 1.75rem;
       border-radius: 8px;
       font-weight: 600;
@@ -300,6 +303,52 @@
       border-top: 4px solid #f87171;
     }
 
+    /* Research Document Showcase Section */
+    .research-showcase {
+      background: linear-gradient(145deg, #111827 0%, #1e1b2e 100%);
+      border: 1.5px solid rgba(220, 38, 38, 0.4);
+      border-radius: 20px;
+      padding: clamp(2.5rem, 5vw, 4rem) 2rem;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      margin-top: 4rem;
+    }
+
+    .research-showcase h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .research-showcase p {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .research-badges {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .research-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(220, 38, 38, 0.15);
+      border: 1px solid rgba(220, 38, 38, 0.4);
+      color: var(--accent);
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--surface-border);
@@ -312,12 +361,6 @@
       color: var(--text-muted);
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
-    }
-
-    footer a {
-      color: var(--text);
-      text-decoration: underline;
-      text-underline-offset: 3px;
     }
 
     @media (max-width: 768px) {
@@ -340,8 +383,9 @@
       <li><a href="#dynamics">Focus Dynamics</a></li>
       <li><a href="#profiles">Profiles</a></li>
       <li><a href="#soundscapes">Lo-Fi</a></li>
+      <li><a href="#research">Original Research</a></li>
     </ul>
-    <a href="#genres" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Explore Findings</a>
+    <a href="#research" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Paper</a>
   </nav>
 
   <!-- Hero Header -->
@@ -351,7 +395,7 @@
     <p>Discover how mood regulation, lyric familiarity, and acoustic environments optimize cognitive endurance during intensive writing workflows.</p>
     <div class="cta-group">
       <a href="#genres" class="btn btn-primary">Browse Genre Metrics</a>
-      <a href="#dynamics" class="btn btn-outline">Read The Research</a>
+      <a href="#research" class="btn btn-outline">Read The Research</a>
     </div>
   </header>
 
@@ -446,17 +490,33 @@
       </a>
     </div>
 
+    <!-- Dedicated Research Showcase Section -->
+    <section class="research-showcase" id="research" aria-labelledby="research-title">
+      <div class="research-badges">
+        <span class="research-badge">Empirical Study</span>
+        <span class="research-badge">Causal-Comparative Analysis</span>
+        <span class="research-badge">Full PDF</span>
+      </div>
+      <h2 id="research-title">Read the Complete Analytical Paper</h2>
+      <p>
+        Examine the original research paper detailing the methodology, cognitive frameworks, statistical genre breakdowns, and survey findings regarding student writing productivity.
+      </p>
+      <a
+        href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+        Open Original Research Paper (Google Drive) &rarr;
+      </a>
+    </section>
+
   </div>
 
   <!-- Footer -->
   <footer>
     <p><strong>Developed by Ralph Andrei P. Buela</strong></p>
     <p>&copy; 2026 CS30-8P Websites and Online Communication &bull; Academic Project</p>
-    <p>
-      <a href="https://drive.google.com/file/d/1ndqJoQ2mMH0mHHL3F79hTd2VjW8Fz0ti/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-        Access Original Research Paper (PDF)
-      </a>
-    </p>
   </footer>
 
 </body>

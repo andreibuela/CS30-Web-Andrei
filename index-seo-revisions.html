@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://ralphbuela.github.io/CS30-Web-Andrei/">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ralphbuela.github.io/CS30-Web-Andrei/">
     <meta property="og:title" content="Music Optimizer for Writing & Focus Flow | SoundFocus">
@@ -25,7 +25,7 @@
     <meta name="twitter:description" content="Match drafting and editing phases to curated acoustic textures to defeat task friction. Build your personalized focus set now.">
     <meta name="twitter:image" content="assets/hero-bg.jpg">
 
-    <!-- Structured Data (JSON-LD Schema) for Google Search Console & Crawlers -->
+    <!-- Structured Data (JSON-LD Schema) for Search Engines -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,7 +46,7 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZL88PVJR2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -57,7 +57,7 @@
 
     <style>
 /* =========================================================
-   SOUNDFOCUS: REFINED CONTRAST & RESPONSIVE ARCHITECTURE
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY & COMPLETE STYLES
    Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
 ========================================================= */
 
@@ -142,12 +142,12 @@ a {
   --border-card: #d9d0c1;
   --border-slate: #cbd5e1;
 
-  --max-width: 1220px;
+  --max-width: 1180px;
   --radius: 18px;
   --radius-sm: 8px;
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
   --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.16);
-  --shadow-lg: 0 24px 50px rgba(15, 23, 42, 0.22);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
 .container {
@@ -155,12 +155,14 @@ a {
   margin-inline: auto;
 }
 
-/* Header & Nav */
+/* =========================================================
+   TOP NAVIGATION BAR
+========================================================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 244, 237, 0.96);
+  background: rgba(247, 244, 237, 0.94);
   border-bottom: 2px solid var(--border-light);
   backdrop-filter: blur(14px);
 }
@@ -205,7 +207,9 @@ a {
   color: var(--cardinal);
 }
 
-/* Button Styles */
+/* =========================================================
+   BUTTON STYLES
+========================================================= */
 .button {
   display: inline-flex;
   align-items: center;
@@ -235,9 +239,10 @@ a {
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--ink) !important;
   border: 1.5px solid var(--border-slate);
+  backdrop-filter: blur(6px);
 }
 
 .button-secondary:hover {
@@ -245,9 +250,11 @@ a {
   border-color: var(--ink);
 }
 
-/* Sections Global */
+/* =========================================================
+   TYPOGRAPHY & SECTION SCAFFOLDING
+========================================================= */
 .section {
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
   position: relative;
 }
 
@@ -289,66 +296,54 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO: RE-ENGINEERED WITH HIGH SUBJECT VISIBILITY
-   Left-Aligned Architectural Glass Card
+   1. HERO: PROMINENT VISIBLE H1 & OPTIMIZED METRICS
 ========================================================= */
 .hero {
   position: relative;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  background: url("./assets/hero-bg.jpg") right 30% / cover no-repeat;
+  background: url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
+  padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
-}
-
-/* Soft directional gradient ensures image subject on right is 100% visible */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(247, 244, 237, 0.92) 0%, rgba(247, 244, 237, 0.6) 45%, rgba(247, 244, 237, 0.1) 100%);
-  pointer-events: none;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
 }
 
 .hero-glass-box {
-  max-width: 620px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  padding: clamp(2rem, 4vw, 3.25rem);
+  max-width: 860px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  padding: clamp(2.5rem, 5vw, 4rem);
   border-radius: 24px;
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-lg);
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 h1 {
-  margin-bottom: 1.15rem;
-  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
   font-weight: 850;
   color: var(--ink);
   letter-spacing: -0.04em;
-  line-height: 1.14;
+  display: block !important;
+  visibility: visible !important;
 }
 
 .hero-copy {
-  margin: 0 0 2rem;
-  font-size: 1.08rem;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   color: var(--ink-secondary);
   line-height: 1.65;
 }
 
 .hero-actions {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 /* =========================================================
@@ -373,7 +368,7 @@ h1 {
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-bottom: 1.75rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .config-btn {
@@ -549,7 +544,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.48);
+  background: rgba(15, 23, 42, 0.45);
   pointer-events: none;
 }
 
@@ -628,7 +623,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.42);
+  background: rgba(15, 23, 42, 0.4);
   pointer-events: none;
 }
 
@@ -798,7 +793,7 @@ h1 {
 .quote-glass-box {
   max-width: 880px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.86);
+  background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(12px);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 24px;
@@ -823,7 +818,7 @@ blockquote p span {
 }
 
 /* =========================================================
-   7. GENRE PROFILES
+   7. GENRE PROFILES (Warm Oat Canvas)
 ========================================================= */
 .section-genres {
   background-color: var(--bg-sand);
@@ -874,7 +869,7 @@ blockquote p span {
 }
 
 /* =========================================================
-   8. FAQS SECTION
+   8. FAQS (Clean White Card Tiles)
 ========================================================= */
 .section-faq {
   background-color: var(--white);
@@ -908,7 +903,7 @@ blockquote p span {
 }
 
 /* =========================================================
-   9. TAKEAWAYS SECTION
+   9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
   background-color: #ede6d8;
@@ -954,7 +949,9 @@ blockquote p span {
   margin: 0;
 }
 
-/* Footer */
+/* =========================================================
+   FOOTER (Deep Slate Ink)
+========================================================= */
 footer {
   padding: 3rem 0;
   background: #0f172a;
@@ -977,21 +974,10 @@ footer p {
   font-size: 0.92rem;
 }
 
-/* Responsive */
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+========================================================= */
 @media (max-width: 1000px) {
-  .hero {
-    background-position: center;
-  }
-  .hero::before {
-    background: linear-gradient(180deg, rgba(247, 244, 237, 0.9) 0%, rgba(247, 244, 237, 0.6) 100%);
-  }
-  .hero-glass-box {
-    max-width: 100%;
-    text-align: center;
-  }
-  .hero-actions {
-    justify-content: center;
-  }
   .metrics-row,
   .visuals-grid,
   .tracks-grid-3,
@@ -1006,6 +992,7 @@ footer p {
   .nav-list {
     display: none;
   }
+
   .intro-grid,
   .visuals-grid,
   .tracks-grid-3,
@@ -1015,33 +1002,54 @@ footer p {
   .curator-form-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero {
+    padding-top: 4rem;
+  }
 }
 
 @media (max-width: 560px) {
   .container {
     width: min(var(--max-width), calc(100% - 1.25rem));
   }
+
   h1 {
-    font-size: clamp(2rem, 8.5vw, 2.6rem);
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
   }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
   }
+
   .button {
     width: 100%;
   }
+
   .metrics-row {
     grid-template-columns: 1fr;
   }
+
   .playlist-track-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
   }
+
   .footer-grid {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 }
     </style>
@@ -1072,7 +1080,7 @@ footer p {
 
     <main id="main-content">
         <!-- =====================================================
-             1. HERO SECTION (REBALANCED WITH FULL PHOTO VISIBILITY)
+             1. HERO SECTION (PROMINENT H1 HEADER)
         ====================================================== -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container">

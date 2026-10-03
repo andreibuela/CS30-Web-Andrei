@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover an intuitive music optimizer for writing. Match drafting and editing phases to curated acoustic textures to beat fatigue. Build your writing set now.">
+    <title>Music Optimizer for Writing & Focus Flow | SoundFocus</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZL88PVJR2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9ZL88PVJR2');
+    </script>
+
+    <style>
+/* =========================================================
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH VIVID BACKDROPS
+   Full-Visibility Photo Sections + Frosted Glass Cards
+   Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #0f172a;
+  background-color: #f7f4ed;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #b91c1c;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 999;
+  padding: 0.75rem 1.25rem;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Tokens */
+:root {
+  --ink: #0f172a;
+  --ink-secondary: #334155;
+  --muted: #475569;
+  --white: #ffffff;
+
+  --cardinal: #b91c1c;
+  --cardinal-hover: #991b1b;
+  --cardinal-soft: #fef2f2;
+  --cardinal-border: #fca5a5;
+
+  --bg-sand: #f7f4ed;
+  --border-light: #e2dcd0;
+  --border-card: #d9d0c1;
+  --border-slate: #cbd5e1;
+
+  --max-width: 1180px;
+  --radius: 18px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.16);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   TOP NAVIGATION BAR
+========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 244, 237, 0.94);
+  border-bottom: 2px solid var(--border-light);
+  backdrop-filter: blur(14px);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.brand span {
+  color: var(--cardinal);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  transition: color 150ms ease;
+}
+
+.nav-list a:hover {
+  color: var(--cardinal);
+}
+
+/* =========================================================
+   BUTTON STYLES
+========================================================= */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 750;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--cardinal);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.35);
+}
+
+.button-primary:hover {
+  background: var(--cardinal-hover);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink) !important;
+  border: 1.5px solid var(--border-slate);
+  backdrop-filter: blur(6px);
+}
+
+.button-secondary:hover {
+  background: #ffffff;
+  border-color: var(--ink);
+}
+
+/* =========================================================
+   TYPOGRAPHY & SECTION SCAFFOLDING
+========================================================= */
+.section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.section-heading p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  color: var(--cardinal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 3px;
+  background: var(--cardinal);
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: var(--ink);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+/* =========================================================
+   1. HERO: VIBRANT PHOTOGRAPHIC BACKDROP (hero-bg.jpg)
+========================================================= */
+.hero {
+  position: relative;
+  background: url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
+  padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.hero-glass-box {
+  max-width: 860px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  color: var(--ink);
+}
+
+.hero-copy {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: var(--ink-secondary);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* =========================================================
+   2. PRIMARY OPTIMIZER & CURATOR WORKSPACE
+========================================================= */
+.section-optimizer {
+  background-color: #faf8f4;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.configurator-wrap {
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3.5rem;
+}
+
+.config-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+  justify-content: center;
+}
+
+.config-btn {
+  background: #f1f5f9;
+  border: 1.5px solid var(--border-slate);
+  color: var(--ink);
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.config-btn:hover,
+.config-btn.active {
+  background: var(--cardinal);
+  color: #ffffff;
+  border-color: var(--cardinal);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+}
+
+.config-box {
+  background: #fdfcf9;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.config-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cardinal);
+  margin-bottom: 0.5rem;
+}
+
+.config-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.config-box p {
+  color: var(--ink-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.config-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* In-Site Custom Curator Box */
+.curator-widget {
+  background: #ffffff;
+  border: 2px solid var(--cardinal-border);
+  border-radius: var(--radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: var(--shadow-md);
+}
+
+.curator-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.curator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.curator-field label {
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.curator-field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-slate);
+  background-color: #f8fafc;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.curator-field select:focus {
+  border-color: var(--cardinal);
+}
+
+.curator-results {
+  background: #fdfcf9;
+  border: 1.5px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+.curator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1.5px solid var(--border-light);
+  padding-bottom: 0.85rem;
+}
+
+.playlist-track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.playlist-track-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  border: 1.5px solid var(--border-light);
+  padding: 0.9rem 1.25rem;
+  border-radius: 10px;
+}
+
+.track-details strong {
+  display: block;
+  font-size: 0.96rem;
+  color: var(--ink);
+}
+
+.track-details span {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.track-badge {
+  font-size: 0.76rem;
+  font-weight: 750;
+  color: var(--cardinal);
+  background: var(--cardinal-soft);
+  border: 1px solid var(--cardinal-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   3. FEATURED OPM TRACKS (tracks-bg.jpg)
+========================================================= */
+.section-track {
+  position: relative;
+  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.section-track::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  pointer-events: none;
+}
+
+.section-track .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-track .section-heading h2,
+.section-track .section-heading p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.section-track .eyebrow {
+  color: #fca5a5;
+}
+
+.section-track .eyebrow::before {
+  background: #fca5a5;
+}
+
+.tracks-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.track-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--ink);
+}
+
+.track-info .artist {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--cardinal);
+  margin-bottom: 0.6rem;
+}
+
+.track-info p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.spotify-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--border-slate);
+}
+
+/* =========================================================
+   4. DIVE DEEPER: RESEARCH BACKGROUND (deep-bg.jpg)
+========================================================= */
+.section-background {
+  position: relative;
+  background: url("./assets/deep-bg.jpg") center / cover no-repeat;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.section-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  pointer-events: none;
+}
+
+.section-background .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-background .section-heading h2,
+.section-background .section-heading p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.section-background .eyebrow {
+  color: #fca5a5;
+}
+
+.section-background .eyebrow::before {
+  background: #fca5a5;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.statement {
+  padding: clamp(2rem, 4vw, 3.25rem);
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.statement h2 {
+  color: #ffffff;
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+
+.statement p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.intro-text {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text p {
+  margin-top: 0;
+  color: var(--ink-secondary);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   5. EMPIRICAL EVIDENCE & DATA GALLERY
+========================================================= */
+.section-evidence {
+  background-color: #f1f5f9;
+  border-bottom: 2px solid var(--border-slate);
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.metric-card {
+  padding: 1.75rem 1.25rem;
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
+  border-top: 5px solid var(--cardinal);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-value {
+  font-size: 2.35rem;
+  font-weight: 850;
+  color: var(--cardinal);
+  line-height: 1.1;
+}
+
+.metric-card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.visuals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.visual-card {
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-slate);
+}
+
+.visual-content {
+  padding: 1.5rem;
+}
+
+.visual-content h3 {
+  font-size: 1.18rem;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+
+.visual-content p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   6. STATEMENT QUOTE BANNER (quote-bg.jpg)
+========================================================= */
+.quote-section {
+  position: relative;
+  background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
+  padding: clamp(6rem, 10vw, 8.5rem) 0;
+  text-align: center;
+  border-bottom: 2px solid #380a0a;
+}
+
+.quote-glass-box {
+  max-width: 880px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(12px);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-lg);
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.22;
+}
+
+blockquote p span {
+  color: #fca5a5;
+}
+
+/* =========================================================
+   7. GENRE PROFILES (Warm Oat Canvas)
+========================================================= */
+.section-genres {
+  background-color: var(--bg-sand);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.journey-card {
+  position: relative;
+  min-height: 250px;
+  padding: 2rem;
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.journey-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: var(--cardinal-soft);
+  color: var(--cardinal);
+  font-weight: 850;
+  font-size: 1.1rem;
+  border: 1px solid var(--cardinal-border);
+}
+
+.journey-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.65rem;
+  color: var(--ink);
+}
+
+.journey-card p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   8. FAQS (Clean White Card Tiles)
+========================================================= */
+.section-faq {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--border-slate);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.faq-card {
+  padding: 2rem;
+  background: #fdfcf9;
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-card h3 {
+  font-size: 1.18rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.faq-card p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   9. TAKEAWAYS (Parchment Summary Base)
+========================================================= */
+.section-takeaways {
+  background-color: #ede6d8;
+}
+
+.takeaways-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.takeaway-block {
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.takeaway-block span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--cardinal-soft);
+  color: var(--cardinal);
+  font-weight: 850;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--cardinal-border);
+}
+
+.takeaway-block h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.takeaway-block p {
+  color: var(--ink-secondary);
+  font-size: 0.94rem;
+  margin: 0;
+}
+
+/* =========================================================
+   FOOTER (Deep Slate Ink)
+========================================================= */
+footer {
+  padding: 3rem 0;
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+footer strong {
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+========================================================= */
+@media (max-width: 1000px) {
+  .metrics-row,
+  .visuals-grid,
+  .tracks-grid-3,
+  .journey-grid,
+  .takeaways-3-col,
+  .curator-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-list {
+    display: none;
+  }
+
+  .intro-grid,
+  .visuals-grid,
+  .tracks-grid-3,
+  .journey-grid,
+  .faq-grid,
+  .takeaways-3-col,
+  .curator-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(var(--max-width), calc(100% - 1.25rem));
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .playlist-track-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .footer-grid {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#">
+                Sound<span>Focus</span>
+            </a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#optimizer">Audio Engine</a></li>
+                    <li><a href="#curator">Playlist Curator</a></li>
+                    <li><a href="#tracks">Featured Tracks</a></li>
+                    <li><a href="#dive-deeper">Why It Works</a></li>
+                    <li><a href="#evidence">Empirical Data</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#takeaways">Takeaways</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- =====================================================
+             1. HERO SECTION (REVISED FOR WRITING IN GENERAL)
+        ====================================================== -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-glass-box">
+                    <p class="eyebrow">Study Audio Optimizer • Custom Playlist Engine</p>
+                    <h1 id="hero-title">
+                        Music Optimizer for Writing & Deep Focus Flow
+                    </h1>
+                    <p class="hero-copy">
+                        SoundFocus is an interactive music optimizer for writing and custom playlist curator. Synchronize drafting and editing phases to curated acoustic textures that defeat task friction and sustain uninterrupted momentum.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#curator">
+                            Build Custom Playlist
+                        </a>
+                        <a class="button button-secondary" href="#optimizer">
+                            Quick State Presets
+                        </a>
+                        <a class="button button-secondary" href="#tracks">
+                            Featured Music
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             2. PRIMARY SUITE: AUDIO ENGINE & CURATOR
+        ====================================================== -->
+        <section class="section section-optimizer" id="optimizer" aria-labelledby="optimizer-title">
+            <div class="container">
+                
+                <!-- Quick Focus Preset Switcher (Widget 1) -->
+                <div class="section-heading">
+                    <p class="eyebrow">Instant State Presets</p>
+                    <h2 id="optimizer-title">Focus Audio Engine</h2>
+                    <p>
+                        Select your current cognitive state to instantly retrieve an evidence-backed auditory profile.
+                    </p>
+                </div>
+
+                <div class="configurator-wrap">
+                    <div class="config-tabs" role="tablist">
+                        <button class="config-btn active" onclick="setProfile('burnout', this)">Exhausted / Low Energy</button>
+                        <button class="config-btn" onclick="setProfile('drafting', this)">Fast Drafting Sprint</button>
+                        <button class="config-btn" onclick="setProfile('editing', this)">Proofreading / Syntax</button>
+                        <button class="config-btn" onclick="setProfile('ambient', this)">Noisy Living Space</button>
+                    </div>
+
+                    <div class="config-box">
+                        <span class="config-tag" id="cfg-tag">High Cortical Arousal</span>
+                        <h3 id="cfg-title">Energetic Rock & High-Tempo Pop</h3>
+                        <p id="cfg-desc">
+                            When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance.
+                        </p>
+                        <div class="config-actions">
+                            <a class="button button-primary" id="cfg-yt" href="https://www.youtube.com/results?search_query=opm+rock+study+playlist" target="_blank" rel="noopener noreferrer">
+                                Open on YouTube
+                            </a>
+                            <a class="button button-secondary" id="cfg-sp" href="https://open.spotify.com/search/opm%20rock%20high%20energy" target="_blank" rel="noopener noreferrer">
+                                Open on Spotify
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom In-Site Playlist Curator (Widget 2) -->
+                <div class="curator-widget" id="curator">
+                    <div class="section-heading" style="margin-bottom: 2rem;">
+                        <span class="config-tag">In-Site Optimizer Studio</span>
+                        <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Personal Study Playlist Curator</h2>
+                        <p>Configure your writing phase, session length, and acoustic textures to dynamically generate a custom study set.</p>
+                    </div>
+
+                    <form class="curator-form-grid" id="curator-form" onsubmit="generateCustomPlaylist(event)">
+                        <div class="curator-field">
+                            <label for="workload-phase">Writing Phase</label>
+                            <select id="workload-phase">
+                                <option value="ideation">Brainstorming & Outline (High Arousal)</option>
+                                <option value="drafting" selected>Generative Drafting (Cadence & Rhythm)</option>
+                                <option value="revising">Proofreading & Syntax (Minimal Load)</option>
+                            </select>
+                        </div>
+
+                        <div class="curator-field">
+                            <label for="session-duration">Session Duration</label>
+                            <select id="session-duration">
+                                <option value="25">25 Mins (Pomodoro Sprint • 3 Tracks)</option>
+                                <option value="50" selected>50 Mins (Extended Block • 5 Tracks)</option>
+                                <option value="90">90 Mins (Endurance Marathon • 8 Tracks)</option>
+                            </select>
+                        </div>
+
+                        <div class="curator-field">
+                            <label for="vocal-preference">Acoustic Texture</label>
+                            <select id="vocal-preference">
+                                <option value="familiar" selected>Familiar OPM / Pop Vocals</option>
+                                <option value="instrumental">Pure Instrumental / Zero Vocals</option>
+                                <option value="hybrid">Dynamic Hybrid (Rhythmic Beats)</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="curator-results" aria-live="polite">
+                        <div class="curator-header">
+                            <div>
+                                <strong id="curator-plan-name" style="font-size: 1.2rem; color: var(--ink);">50-Minute Drafting Flow Set</strong>
+                                <p id="curator-plan-desc" style="font-size: 0.9rem; color: var(--muted); margin: 0.25rem 0 0;">
+                                    Cadence-matched tracks to sustain writing speed and keep the phonological loop habituated.
+                                </p>
+                            </div>
+                            <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+                                <button type="button" class="button button-secondary" onclick="copyPlaylistToClipboard()" style="min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                                    Copy Tracklist
+                                </button>
+                                <a id="curator-export-spotify" class="button button-primary" href="https://open.spotify.com/search/upbeat%20opm" target="_blank" rel="noopener noreferrer" style="min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+                                    Listen on Spotify
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="playlist-track-list" id="curator-track-list">
+                            <!-- Populated dynamically across Phase + Duration + Texture -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. FEATURED OPM TRACKS (VIBRANT PHOTO 2)
+        ====================================================== -->
+        <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Featured OPM Case Studies</p>
+                    <h2 id="tracks-title">Local Soundtracks for Writing Flow</h2>
+                    <p>
+                        Three empirical examples demonstrating how familiar melodies, textured rhythms, and driving grooves support positive affect without semantic competition.
+                    </p>
+                </div>
+
+                <div class="tracks-grid-3">
+                    <!-- Track 1: Multo -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Multo</h3>
+                            <div class="artist">Cup of Joe</div>
+                            <p>
+                                Demonstrates the habituation paradox: highly melodic, familiar Filipino pop provides emotional momentum and comfort during long writing sessions.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/5tlb0AxuzsMWL2GtEppXGX?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="Cup of Joe - Multo Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
+
+                    <!-- Track 2: Pag-Ibig ay Kanibalismo II -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Pag-Ibig ay Kanibalismo II</h3>
+                            <div class="artist">fitzgerald / fitterkarma</div>
+                            <p>
+                                Layered indie guitars and cyclical melodic arrangements create an ambient acoustic cushion, ideal for sustained focus during exploratory drafting.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/1I44TjvgnOjZTxaGs0E44W?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="Pag-Ibig ay Kanibalismo II Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
+
+                    <!-- Track 3: Kabisado -->
+                    <article class="track-box">
+                        <div class="track-info">
+                            <h3>Kabisado</h3>
+                            <div class="artist">IV OF SPADES</div>
+                            <p>
+                                A rhythmic groove and steady tempo serve as an auditory metronome, synchronizing keyboard typing velocity during fast drafting sprints.
+                            </p>
+                        </div>
+                        <div class="spotify-container">
+                            <iframe
+                                style="border-radius: 12px;"
+                                src="https://open.spotify.com/embed/track/4z928BtE4j1bjhcX9RU44M?utm_source=generator&theme=0"
+                                width="100%"
+                                height="152"
+                                frameBorder="0"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                title="IV OF SPADES - Kabisado Spotify Player">
+                            </iframe>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             4. DIVE DEEPER: BACKGROUND (VIBRANT PHOTO 4)
+        ====================================================== -->
+        <section class="section section-background" id="dive-deeper" aria-labelledby="deep-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Dive Deeper</p>
+                    <h2 id="deep-title">Why silence is no longer the default study model.</h2>
+                    <p>
+                        Understanding the cognitive science behind music-assisted writing workflows.
+                    </p>
+                </div>
+                <div class="intro-grid">
+                    <div class="statement">
+                        <h2>The Rigorous Pace of Generative Work</h2>
+                        <p>
+                            Navigating intensive writing requirements demands rapid synthesis, continuous problem-solving, and heavy output under tight schedules. In this high-intensity environment, emotional exhaustion and task fatigue often become far steeper hurdles than vocabulary retrieval.
+                        </p>
+                    </div>
+                    <div class="intro-text">
+                        <p>
+                            Traditional advice insists that writers should work in absolute silence or stick strictly to classical instrumentals to avoid cognitive overload.
+                        </p>
+                        <p>
+                            Yet across shared workspaces, coffee shops, and home desks, writers routinely choose high-energy, lyrical genres like Pop, OPM, and Rock during demanding drafts.
+                        </p>
+                        <p>
+                            Our research investigated this contradiction: familiar songs bypass the brain's phonological bottleneck through neurological habituation, providing the dopamine and stamina needed to finish writing projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             5. EMPIRICAL DATA & RESEARCH VISUALS
+        ====================================================== -->
+        <section class="section section-evidence" id="evidence" aria-labelledby="evidence-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Empirical Results</p>
+                    <h2 id="evidence-title">Data and Visual Research Evidence</h2>
+                    <p>
+                        Survey findings from writers examining cognitive load and acoustic focus.
+                    </p>
+                </div>
+
+                <!-- 4-Column Stat Metric Row -->
+                <div class="metrics-row">
+                    <article class="metric-card">
+                        <div class="metric-value">69.4%</div>
+                        <p>Deem music essential for mental survival</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-value">75.0%</div>
+                        <p>Report measurable writing speed gains</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-value">72.2%</div>
+                        <p>Tolerate or prefer lyrics while writing</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-value">3.96/5</div>
+                        <p>Flow-state score for lyrical listeners</p>
+                    </article>
+                </div>
+
+                <!-- 3-Column Diagram Grid -->
+                <div class="visuals-grid">
+                    <article class="visual-card">
+                        <img
+                            src="assets/conceptual-framework.png"
+                            alt="IPO Conceptual Framework diagram illustrating music genre input and writing output."
+                            loading="lazy"
+                        >
+                        <div class="visual-content">
+                            <h3>IPO Theoretical Framework</h3>
+                            <p>Illustrates how music genre inputs causally alter working memory load to dictate drafting speed and syntactic precision.</p>
+                        </div>
+                    </article>
+
+                    <article class="visual-card">
+                        <img
+                            src="assets/genre-distribution.png"
+                            alt="Bar chart showing frequency of preferred music genres."
+                            loading="lazy"
+                        >
+                        <div class="visual-content">
+                            <h3>Genre Distribution Data</h3>
+                            <p>Pop/OPM (61.1%) and Rock/Metal (58.3%) dominate writing sessions over traditional Lo-fi or Classical options.</p>
+                        </div>
+                    </article>
+
+                    <article class="visual-card">
+                        <img
+                            src="assets/flow-habituation.png"
+                            alt="Pie chart illustrating the preference for lyrics versus instrumentals."
+                            loading="lazy"
+                        >
+                        <div class="visual-content">
+                            <h3>The Habituation Split</h3>
+                            <p>Over 72% confirm lyrics cause no disruption, revealing a subconscious neurological habituation filter at work.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             6. STATEMENT BANNER (VIBRANT PHOTO 3)
+        ====================================================== -->
+        <section class="quote-section" aria-label="Key finding">
+            <div class="container">
+                <div class="quote-glass-box">
+                    <blockquote>
+                        <p>
+                            "Silence induces anxiety and phone checks. <span>Music is our psychological shield."</span>
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             7. AUDITORY GENRE MECHANICS
+        ====================================================== -->
+        <section class="section section-genres" id="genres" aria-labelledby="genres-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Auditory Mechanics</p>
+                    <h2 id="genres-title">How specific genres fuel writing workflows</h2>
+                    <p>
+                        Different sonic profiles solve distinct cognitive and emotional hurdles during long sessions.
+                    </p>
+                </div>
+                <div class="journey-grid">
+                    <article class="journey-card">
+                        <span class="journey-number">01</span>
+                        <h3>Pop & OPM</h3>
+                        <p>
+                            Familiar vocal cadences provide emotional comfort, softening the strain of isolated writing sprints.
+                        </p>
+                    </article>
+                    <article class="journey-card">
+                        <span class="journey-number">02</span>
+                        <h3>Rock & Metal</h3>
+                        <p>
+                            Driving rhythms and acoustic intensity elevate physiological arousal, supplying dopamine to break past task fatigue.
+                        </p>
+                    </article>
+                    <article class="journey-card">
+                        <span class="journey-number">03</span>
+                        <h3>Lo-Fi & Game OSTs</h3>
+                        <p>
+                            Steady, non-vocal beatscapes mask uncontrolled environmental noises (traffic, household chatter) without competing for working memory.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             8. FAQS SECTION
+        ====================================================== -->
+        <section class="section section-faq" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Common Questions</p>
+                    <h2 id="faq-title">Evidence-based answers to writing dilemmas</h2>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-card">
+                        <h3>Do lyrics hurt vocabulary and grammar?</h3>
+                        <p>Unfamiliar lyrics do compete for working memory. However, repeated exposure enables neurological habituation: the brain treats familiar vocals as acoustic texture rather than semantic speech.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Why is silence counterproductive for some?</h3>
+                        <p>Total silence often amplifies internal anxiety and under-stimulation, prompting frequent smartphone checking. In shared households, it also leaves you exposed to sudden noise spikes.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>What is metacognitive auditing?</h3>
+                        <p>It means intentionally shifting audio: deploy high-energy lyrical tracks during initial idea drafting to build momentum, then switch to instrumentals for syntactic editing.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Do new songs have the same effect?</h3>
+                        <p>No. Habituation relies on predictability. Novel songs force your brain to actively decode new lyrics and chord shifts, triggering the Irrelevant Speech Effect.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>What is the ideal volume level?</h3>
+                        <p>Moderate volume (50–65 dB) provides effective acoustic masking without commanding conscious attention. Blaring volume can overstimulate the nervous system.</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>Does this apply across different writing styles?</h3>
+                        <p>Yes. Whether working on technical documentation, creative work, or analytical summaries, generative writing shares identical linguistic demands for lexical retrieval.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             9. PRACTICAL TAKEAWAYS
+        ====================================================== -->
+        <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Practical Rules</p>
+                    <h2 id="takeaways-title">
+                        Core takeaways for productive writers.
+                    </h2>
+                    <p>
+                        Three evidence-based principles to optimize your writing routine:
+                    </p>
+                </div>
+                <div class="takeaways-3-col">
+                    <article class="takeaway-block">
+                        <span>01</span>
+                        <h4>Ditch the Guilt</h4>
+                        <p>If silence makes you anxious or distracted, upbeat OPM, Pop, or Rock is a valid way to support dopamine regulation, not a sign of poor discipline.</p>
+                    </article>
+                    <article class="takeaway-block">
+                        <span>02</span>
+                        <h4>Stick to Familiar Tracks</h4>
+                        <p>Your brain easily filters songs you already know by heart. Keep familiar playlists on repeat while writing, and save new releases for downtime.</p>
+                    </article>
+                    <article class="takeaway-block">
+                        <span>03</span>
+                        <h4>Match the Phase</h4>
+                        <p>Use driving beats to generate rough drafts, and silent or instrumental tracks for final proofreading and structural edits.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <p><strong>SoundFocus &bull; Ralph Andrei P. Buela</strong></p>
+            <p>CS30-8P Websites and Online Communication &bull; Mapúa University</p>
+            <p>&copy; 2026 Academic Coursework Resource</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & GA4 Events -->
+    <script>
+        const profiles = {
+            burnout: {
+                tag: "High Cortical Arousal",
+                title: "Energetic Rock & High-Tempo Pop",
+                desc: "When experiencing mental fatigue, your baseline requires upregulation. Fast-tempo Pop, OPM, or Rock generates dopamine, mitigates burnout, and breaks initial task resistance.",
+                yt: "https://www.youtube.com/results?search_query=opm+rock+study+playlist",
+                sp: "https://open.spotify.com/search/opm%20rock%20high%20energy"
+            },
+            drafting: {
+                tag: "Writing Cadence",
+                title: "Cadence & Rhythmic Flow (Pop / OPM)",
+                desc: "Upbeat rhythmic songs provide an auditory metronome matching keyboard typing velocity, sustaining a state of deep flow during long drafting sessions.",
+                yt: "https://www.youtube.com/results?search_query=upbeat+opm+focus",
+                sp: "https://open.spotify.com/search/upbeat%20opm"
+            },
+            editing: {
+                tag: "Minimal Phonological Load",
+                title: "Zero-Vocal Instrumental (Lo-Fi & Classical)",
+                desc: "Eliminates all external verbal competition while checking citation mechanics, grammar syntax, and logical flow.",
+                yt: "https://www.youtube.com/results?search_query=lofi+beats+to+study+to",
+                sp: "https://open.spotify.com/search/lofi%20study%20beats"
+            },
+            ambient: {
+                tag: "Noise Masking",
+                title: "Acoustic Shielding (Video Game Soundtracks)",
+                desc: "Designed to keep listeners engaged without stealing central attention, masking background interruptions in shared households.",
+                yt: "https://www.youtube.com/results?search_query=video+game+ambient+study+music",
+                sp: "https://open.spotify.com/search/video%20game%20soundtracks%20focus"
+            }
+        };
+
+        let currentProfileKey = 'burnout';
+
+        function setProfile(key, btn) {
+            document.querySelectorAll('.config-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            currentProfileKey = key;
+            const item = profiles[key];
+            const btnLabel = btn.textContent.trim();
+
+            document.getElementById('cfg-tag').textContent = item.tag;
+            document.getElementById('cfg-title').textContent = item.title;
+            document.getElementById('cfg-desc').textContent = item.desc;
+            document.getElementById('cfg-yt').href = item.yt;
+            document.getElementById('cfg-sp').href = item.sp;
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'widget_state_select', {
+                    selected_state: key,
+                    button_label: btnLabel,
+                    recommended_genre: item.title,
+                    event_category: 'audio_engine'
+                });
+            }
+        }
+
+        const multiTrackLibrary = {
+            ideation: {
+                familiar: [
+                    { title: "Multo", artist: "Cup of Joe", duration: "3:48", badge: "Arousal Boost" },
+                    { title: "Raining in Manila", artist: "Lola Amour", duration: "4:51", badge: "Dopamine Trigger" },
+                    { title: "Paninindigan Kita", artist: "Ben&Ben", duration: "5:12", badge: "Warm Affect" },
+                    { title: "Uhaw (Tayong Lahat)", artist: "Dilaw", duration: "4:01", badge: "Task Initiation" },
+                    { title: "Ere", artist: "juan karlos", duration: "4:43", badge: "High Intensity" },
+                    { title: "Ligaya", artist: "Eraserheads", duration: "4:31", badge: "Nostalgic Comfort" },
+                    { title: "Sino", artist: "Unique Salonga", duration: "4:40", badge: "Expansive Flow" },
+                    { title: "Antukin", artist: "Rico Blanco", duration: "4:48", badge: "Energy Recovery" }
+                ],
+                instrumental: [
+                    { title: "Daylight Acoustic Guitar", artist: "Sunken Studio", duration: "3:40", badge: "Concept Flow" },
+                    { title: "Warm Morning Chords", artist: "Acoustic Manila", duration: "4:12", badge: "Idea Generation" },
+                    { title: "Mind Map Piano Sketch", artist: "Cognitive Sound", duration: "3:55", badge: "Neural Activation" },
+                    { title: "Golden Hour Resonance", artist: "Ambient Horizon", duration: "4:30", badge: "Creative Horizon" },
+                    { title: "Breeze Over Intramuros", artist: "Harbor Strings", duration: "3:25", badge: "Relaxed Focus" },
+                    { title: "Open Canvas Prelude", artist: "Focus Lab", duration: "4:05", badge: "Outline Spark" },
+                    { title: "Sunlight on Cedar", artist: "Quiet Strings", duration: "3:50", badge: "Gentle Pace" },
+                    { title: "Catalyst in D Major", artist: "Modern Chamber", duration: "4:20", badge: "Brainstorm Peak" }
+                ],
+                hybrid: [
+                    { title: "Manila Chillhop Grooves", artist: "Bay Beats", duration: "3:15", badge: "Rhythmic Warmup" },
+                    { title: "Lo-Fi Jeepney Transit", artist: "City Pulse", duration: "2:50", badge: "Cadence Setup" },
+                    { title: "High-Rise Skyline Beats", artist: "Makati Nights", duration: "3:30", badge: "Dopamine Rhythm" },
+                    { title: "Tropical Beat Tapestry", artist: "Island Waves", duration: "3:45", badge: "Endurance Spark" },
+                    { title: "Urban Neon Odyssey", artist: "Night Shift", duration: "3:20", badge: "Exploratory Beat" },
+                    { title: "Dusk to Dawn Pulse", artist: "Metro Soundscapes", duration: "3:55", badge: "Steady Uplift" },
+                    { title: "Coffee & Tape Cassettes", artist: "Analog Manila", duration: "3:10", badge: "Lo-Fi Pacing" },
+                    { title: "Sunset Boulevard Rhythm", artist: "Caelum Audio", duration: "4:00", badge: "Creative Momentum" }
+                ]
+            },
+            drafting: {
+                familiar: [
+                    { title: "Kabisado", artist: "IV OF SPADES", duration: "4:05", badge: "Typing Metronome" },
+                    { title: "Pag-Ibig ay Kanibalismo II", artist: "fitzgerald / fitterkarma", duration: "3:15", badge: "Deep Immersion" },
+                    { title: "Come Inside Of My Heart", artist: "IV OF SPADES", duration: "4:06", badge: "Writing Cadence" },
+                    { title: "Bawat Piyesa", artist: "Munimuni", duration: "6:02", badge: "Acoustic Shield" },
+                    { title: "Tahanan", artist: "Adie", duration: "4:00", badge: "Emotional Buffer" },
+                    { title: "Leaves", artist: "Ben&Ben", duration: "5:10", badge: "Sustained Velocity" },
+                    { title: "Alat", artist: "The Juans", duration: "3:42", badge: "Sprint Energy" },
+                    { title: "Higa", artist: "Arthur Nery", duration: "4:05", badge: "Flow Stabilization" }
+                ],
+                instrumental: [
+                    { title: "Video Game Ambient Study Suite", artist: "Quest Audio", duration: "4:20", badge: "Noise Masking" },
+                    { title: "80 BPM Lo-Fi Writing Beat", artist: "Draft Lab", duration: "3:35", badge: "Cadence Match" },
+                    { title: "Deep Focus Rain & Felt Piano", artist: "Sound Shield", duration: "5:10", badge: "Phonological Shield" },
+                    { title: "Modular Synthesizer Pulse", artist: "Analog Focus", duration: "4:15", badge: "Steady Typing" },
+                    { title: "Midnight Keyboards in Solitude", artist: "Metro Ambient", duration: "3:50", badge: "Syntax Alignment" },
+                    { title: "Calm Waves Acoustic Drift", artist: "Serene Waves", duration: "4:40", badge: "Distraction Barrier" },
+                    { title: "Subtle Bass & Drum Cadence", artist: "Rhythm Engine", duration: "3:45", badge: "Velocity Sync" },
+                    { title: "The Flow State Continuum", artist: "Neuro Audio", duration: "5:00", badge: "Deep Sprint" }
+                ],
+                hybrid: [
+                    { title: "Habituated Vocal Chops Beat", artist: "Lofi OPM Lab", duration: "3:15", badge: "Vocal Texture" },
+                    { title: "Subtle Grooves for Drafting", artist: "City Sounds PH", duration: "3:40", badge: "Steady Rhythm" },
+                    { title: "Tape Saturation & Snare Pacing", artist: "Analog Manila", duration: "3:25", badge: "Metronomic Beat" },
+                    { title: "Binaural Study Beats 70 BPM", artist: "Focus Lab", duration: "4:10", badge: "Alpha Wave Sync" },
+                    { title: "Atmospheric Indie Beat Loop", artist: "Cloud Acoustic", duration: "3:30", badge: "Typing Cadence" },
+                    { title: "Pacific Drift Electric Rhodes", artist: "Island Focus", duration: "4:05", badge: "Endurance Drive" },
+                    { title: "Resonant Sub & Vinyl Dust", artist: "Late Night Desk", duration: "3:50", badge: "Deep Work Loop" },
+                    { title: "Midnight Espresso Tape Loop", artist: "Cafe PH", duration: "3:40", badge: "Frictionless Pace" }
+                ]
+            },
+            revising: {
+                familiar: [
+                    { title: "Kathang Isip (Acoustic Strip)", artist: "Ben&Ben", duration: "5:15", badge: "Gentle Background" },
+                    { title: "Dapithapon", artist: "Johnoy Danao", duration: "4:20", badge: "Soft Familiarity" },
+                    { title: "Burnout (Slowed Down)", artist: "Sugarfree", duration: "4:12", badge: "Habituated Pace" },
+                    { title: "Sinta", artist: "Rob Deniel", duration: "3:40", badge: "Unobtrusive Cadence" },
+                    { title: "Ikaw Lamang", artist: "Silent Sanctuary", duration: "5:05", badge: "Predictable Melody" },
+                    { title: "Balang Araw", artist: "I Belong to the Zoo", duration: "4:10", badge: "Calm Attention" },
+                    { title: "Bibingka", artist: "Ben&Ben", duration: "3:55", badge: "Gentle Rhythm" },
+                    { title: "Pagsamo", artist: "Arthur Nery", duration: "4:45", badge: "Soft Attenuation" }
+                ],
+                instrumental: [
+                    { title: "Zero-Vocal Syntax Piano", artist: "Grammar Flow", duration: "4:10", badge: "Phonological Free" },
+                    { title: "Gentle Rain on Library Window", artist: "Acoustic Perimeter", duration: "5:30", badge: "Zero Semantic Load" },
+                    { title: "Minimalist String Quartet in C", artist: "Focus Classics", duration: "4:45", badge: "Citation Check" },
+                    { title: "Pure Binaural Theta Meditation", artist: "Neuro Wave", duration: "6:00", badge: "Error Detection" },
+                    { title: "Soft Felt Piano & Room Tone", artist: "Quiet Desk", duration: "3:50", badge: "Proofreading" },
+                    { title: "Dormant Ambient Drone", artist: "Deep Space Focus", duration: "5:15", badge: "Grammar Audit" },
+                    { title: "Neutral Acoustic Resonance", artist: "Solo Woodwinds", duration: "4:05", badge: "Clarity Mode" },
+                    { title: "Subtle Riverbed Soundscape", artist: "Nature Shield", duration: "4:30", badge: "Lexical Isolation" }
+                ],
+                hybrid: [
+                    { title: "Ambient Lo-Fi Chill Pulse", artist: "Study Beats Int.", duration: "3:20", badge: "Low Interference" },
+                    { title: "Muted Rhymes & Soft Rimshots", artist: "Pencil & Paper", duration: "3:10", badge: "Steady Inspection" },
+                    { title: "Subdued Vinyl Textures", artist: "Desk Dust", duration: "4:00", badge: "Soft Rhythm" },
+                    { title: "Warm Tape Hiss & Muted Keys", artist: "Nocturne Studio", duration: "3:45", badge: "Careful Reading" },
+                    { title: "Low-Pass Filtered Rhodes", artist: "Lofi Study Lab", duration: "3:30", badge: "Cognitive Neutral" },
+                    { title: "Mellow Dusk Beat Sequence", artist: "Quiet Beatmaker", duration: "3:50", badge: "Line-by-Line Mode" },
+                    { title: "Late Night Review Metronome", artist: "Sync Lab", duration: "4:15", badge: "Pacing Guard" },
+                    { title: "Gentle Tick & Ambient Bass", artist: "Final Draft Beats", duration: "3:40", badge: "Final Polish" }
+                ]
+            }
+        };
+
+        function generateCustomPlaylist(e) {
+            if (e) e.preventDefault();
+
+            const phase = document.getElementById('workload-phase').value;
+            const duration = document.getElementById('session-duration').value;
+            const texture = document.getElementById('vocal-preference').value;
+
+            const trackCountMap = { "25": 3, "50": 5, "90": 8 };
+            const trackCount = trackCountMap[duration] || 5;
+
+            const pool = multiTrackLibrary[phase][texture] || multiTrackLibrary['drafting']['familiar'];
+            const selectedTracks = pool.slice(0, trackCount);
+
+            const trackListEl = document.getElementById('curator-track-list');
+            trackListEl.innerHTML = '';
+
+            const phaseLabel = phase.charAt(0).toUpperCase() + phase.slice(1);
+            const textureLabel = texture.charAt(0).toUpperCase() + texture.slice(1);
+
+            document.getElementById('curator-plan-name').textContent = `${duration}-Minute ${phaseLabel} Suite (${textureLabel})`;
+            document.getElementById('curator-plan-desc').textContent = `Targeted sequence of ${trackCount} tracks balanced for ${phase} writing tasks using ${texture} audio texture.`;
+            document.getElementById('curator-export-spotify').href = `https://open.spotify.com/search/${encodeURIComponent(phase + ' ' + texture + ' focus music')}`;
+
+            selectedTracks.forEach(track => {
+                const li = document.createElement('li');
+                li.className = 'playlist-track-item';
+                li.innerHTML = `
+                    <div class="track-details">
+                        <strong>${track.title}</strong>
+                        <span>${track.artist} &bull; ${track.duration}</span>
+                    </div>
+                    <span class="track-badge">${track.badge}</span>
+                `;
+                trackListEl.appendChild(li);
+            });
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'curator_custom_generate', {
+                    event_category: 'curator_widget',
+                    phase_selected: phase,
+                    duration_selected: duration,
+                    texture_selected: texture,
+                    tracks_loaded: trackCount
+                });
+            }
+        }
+
+        function copyPlaylistToClipboard() {
+            const tracks = Array.from(document.querySelectorAll('.playlist-track-item'))
+                .map(item => item.querySelector('.track-details').innerText.replace('\n', ' - '))
+                .join('\n');
+
+            navigator.clipboard.writeText(tracks).then(() => {
+                alert('Curated tracklist copied to clipboard!');
+                if (typeof gtag === 'function') {
+                    gtag('event', 'curator_clipboard_copy', {
+                        event_category: 'curator_widget'
+                    });
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            generateCustomPlaylist();
+
+            ['workload-phase', 'session-duration', 'vocal-preference'].forEach(id => {
+                document.getElementById(id).addEventListener('change', () => generateCustomPlaylist());
+            });
+
+            const ytBtn = document.getElementById('cfg-yt');
+            const spBtn = document.getElementById('cfg-sp');
+
+            if (spBtn) {
+                spBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'widget_spotify_click', {
+                            event_category: 'audio_engine_outbound',
+                            active_state: currentProfileKey,
+                            destination_url: spBtn.href
+                        });
+                    }
+                });
+            }
+
+            if (ytBtn) {
+                ytBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'widget_youtube_click', {
+                            event_category: 'audio_engine_outbound',
+                            active_state: currentProfileKey,
+                            destination_url: ytBtn.href
+                        });
+                    }
+                });
+            }
+
+            document.querySelectorAll('.hero-actions a').forEach(cta => {
+                cta.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'hero_cta_click', {
+                            cta_text: cta.textContent.trim(),
+                            cta_target: cta.getAttribute('href')
+                        });
+                    }
+                });
+            });
+
+            document.querySelectorAll('.nav-list a').forEach(navItem => {
+                navItem.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'nav_link_click', {
+                            section_target: navItem.getAttribute('href'),
+                            menu_label: navItem.textContent.trim()
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -84,13 +84,12 @@
 
     <main id="main-content">
         <!-- =====================================================
-             1. HERO SECTION (CENTERED & VISIBLE VIDEO BACKGROUND)
+             1. HERO SECTION (CENTERED & UNFILTERED RAW VIDEO)
         ====================================================== -->
         <section class="hero" aria-labelledby="hero-title">
             <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/hero-bg.jpg">
                 <source src="./assets/hero-bg-video.mp4" type="video/mp4">
             </video>
-            <div class="video-scrim"></div>
             <div class="container">
                 <div class="hero-glass-box">
                     <p class="eyebrow">Study Audio Optimizer • Custom Playlist Engine</p>
@@ -116,13 +115,13 @@
         </section>
 
         <!-- =====================================================
-             2. PRIMARY SUITE: AUDIO ENGINE & CURATOR
+             2. PRIMARY SUITE: AUDIO ENGINE & CURATOR (HERO-BG IMAGE)
         ====================================================== -->
         <section class="section section-optimizer" id="optimizer" aria-labelledby="optimizer-title">
             <div class="container">
                 
                 <!-- Quick Focus Preset Switcher (Widget 1) -->
-                <div class="section-heading">
+                <div class="section-heading text-center-heading">
                     <p class="eyebrow">Instant State Presets</p>
                     <h2 id="optimizer-title">Focus Audio Engine</h2>
                     <p>
@@ -220,13 +219,12 @@
         </section>
 
         <!-- =====================================================
-             3. FEATURED OPM TRACKS WITH VIDEO BACKDROP
+             3. FEATURED OPM TRACKS (UNFILTERED RAW VIDEO)
         ====================================================== -->
         <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
             <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/tracks-bg.jpg">
                 <source src="./assets/tracks-bg-video.mp4" type="video/mp4">
             </video>
-            <div class="video-scrim"></div>
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Featured OPM Case Studies</p>
@@ -313,13 +311,12 @@
         </section>
 
         <!-- =====================================================
-             4. DIVE DEEPER WITH VIDEO BACKDROP
+             4. DIVE DEEPER: WHY IT WORKS (UNFILTERED RAW VIDEO)
         ====================================================== -->
         <section class="section section-background" id="dive-deeper" aria-labelledby="deep-title">
             <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/deep-bg.jpg">
                 <source src="./assets/deep-dive-video.mp4" type="video/mp4">
             </video>
-            <div class="video-scrim"></div>
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Dive Deeper</p>
@@ -351,7 +348,7 @@
         </section>
 
         <!-- =====================================================
-             5. EMPIRICAL DATA & RESEARCH VISUALS
+             5. EMPIRICAL DATA & RESEARCH VISUALS (DEEP-BG IMAGE)
         ====================================================== -->
         <section class="section section-evidence" id="evidence" aria-labelledby="evidence-title">
             <div class="container">
@@ -425,7 +422,7 @@
         </section>
 
         <!-- =====================================================
-             6. STATEMENT BANNER (VIBRANT PHOTO 3)
+             6. STATEMENT BANNER (QUOTE-BG IMAGE)
         ====================================================== -->
         <section class="quote-section" aria-label="Key finding">
             <div class="container">
@@ -440,7 +437,7 @@
         </section>
 
         <!-- =====================================================
-             7. AUDITORY GENRE MECHANICS
+             7. AUDITORY GENRE MECHANICS (TRACKS-BG IMAGE)
         ====================================================== -->
         <section class="section section-genres" id="genres" aria-labelledby="genres-title">
             <div class="container">
@@ -478,7 +475,7 @@
         </section>
 
         <!-- =====================================================
-             8. FAQS SECTION
+             8. FAQS SECTION (HERO-BG IMAGE)
         ====================================================== -->
         <section class="section section-faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
@@ -516,7 +513,7 @@
         </section>
 
         <!-- =====================================================
-             9. PRACTICAL TAKEAWAYS
+             9. PRACTICAL TAKEAWAYS (DEEP-BG IMAGE)
         ====================================================== -->
         <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
             <div class="container">
@@ -561,14 +558,12 @@
 
     <!-- Interactive Logic & Auto-Play Enforcer -->
     <script>
-        // Force browser to play all background videos even if initially throttled
         function ensureVideosPlay() {
             document.querySelectorAll('video').forEach(video => {
                 video.muted = true;
                 const playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(() => {
-                        // Retry on user interaction if browser blocked strict autoplay
                         window.addEventListener('click', () => video.play(), { once: true });
                         window.addEventListener('touchstart', () => video.play(), { once: true });
                     });

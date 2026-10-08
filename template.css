@@ -1,6 +1,5 @@
 /* =========================================================
-   SOUNDFOCUS: NATURAL SCROLL BACKGROUNDS (IMAGE & VIDEO)
-   Centered Hero & Total Visual Immersion Across All Sections
+   SOUNDFOCUS: COMPLETE STYLESHEET WITH CENTERED HERO & VIDEO
    Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
 ========================================================= */
 
@@ -96,12 +95,10 @@ a {
 .container {
   width: min(var(--max-width), calc(100% - 2.5rem));
   margin-inline: auto;
-  position: relative;
-  z-index: 2;
 }
 
 /* =========================================================
-   PURE UNFILTERED VIDEO BACKGROUND (NO DARK OVERLAYS)
+   UNIVERSAL VIDEO BACKGROUND RULES
 ========================================================= */
 .video-bg {
   position: absolute;
@@ -114,6 +111,14 @@ a {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
+}
+
+.video-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -220,17 +225,11 @@ a {
 .section {
   padding: clamp(5rem, 8vw, 7.5rem) 0;
   position: relative;
-  overflow: hidden;
 }
 
 .section-heading {
   max-width: 760px;
   margin-bottom: 3rem;
-}
-
-.text-center-heading {
-  margin-inline: auto;
-  text-align: center;
 }
 
 .section-heading p {
@@ -266,7 +265,7 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO: CENTERED SYMMETRY + UNFILTERED RAW VIDEO
+   1. HERO: CENTERED SYMMETRY WITH TRANSLUCENT FROSTED GLASS
 ========================================================= */
 .hero {
   position: relative;
@@ -275,11 +274,14 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #0f172a;
   padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
 }
 
 .hero .container {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
 }
@@ -288,12 +290,12 @@ h1, h2, h3, h4 {
   max-width: 860px;
   width: 100%;
   margin-inline: auto;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: clamp(2.5rem, 5vw, 4rem);
   border-radius: 24px;
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
@@ -332,19 +334,16 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   2. PRIMARY SUITE: AUDIO ENGINE & CURATOR (hero-bg.jpg)
-   Natural Scroll Position
+   2. PRIMARY OPTIMIZER & CURATOR WORKSPACE
 ========================================================= */
 .section-optimizer {
-  background: url("./assets/hero-bg.jpg") center / cover no-repeat;
+  background-color: #faf8f4;
   border-bottom: 2px solid var(--border-light);
 }
 
 .configurator-wrap {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
   box-shadow: var(--shadow-md);
@@ -360,7 +359,7 @@ h1, h2, h3, h4 {
 }
 
 .config-btn {
-  background: #ffffff;
+  background: #f1f5f9;
   border: 1.5px solid var(--border-slate);
   color: var(--ink);
   padding: 0.65rem 1.25rem;
@@ -380,11 +379,10 @@ h1, h2, h3, h4 {
 }
 
 .config-box {
-  background: rgba(253, 252, 249, 0.92);
+  background: #fdfcf9;
   border: 1.5px solid var(--border-light);
   border-radius: 12px;
   padding: 2rem;
-  text-align: center;
 }
 
 .config-tag {
@@ -407,8 +405,6 @@ h1, h2, h3, h4 {
   color: var(--ink-secondary);
   font-size: 1rem;
   margin: 0;
-  max-width: 680px;
-  margin-inline: auto;
 }
 
 .config-actions {
@@ -416,14 +412,11 @@ h1, h2, h3, h4 {
   gap: 0.85rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-  justify-content: center;
 }
 
 /* In-Site Custom Curator Box */
 .curator-widget {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #ffffff;
   border: 2px solid var(--cardinal-border);
   border-radius: var(--radius);
   padding: clamp(1.75rem, 4vw, 2.75rem);
@@ -455,7 +448,7 @@ h1, h2, h3, h4 {
   padding: 0.7rem 1rem;
   border-radius: var(--radius-sm);
   border: 1.5px solid var(--border-slate);
-  background-color: #ffffff;
+  background-color: #f8fafc;
   color: var(--ink);
   font-size: 0.92rem;
   font-weight: 600;
@@ -468,7 +461,7 @@ h1, h2, h3, h4 {
 }
 
 .curator-results {
-  background: rgba(253, 252, 249, 0.94);
+  background: #fdfcf9;
   border: 1.5px solid var(--border-card);
   border-radius: 14px;
   padding: 1.75rem;
@@ -526,26 +519,32 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS (UNFILTERED RAW VIDEO)
+   3. FEATURED OPM TRACKS WITH VIDEO BACKDROP
 ========================================================= */
 .section-track {
   position: relative;
   overflow: hidden;
+  background-color: #0f172a;
   border-bottom: 2px solid var(--border-light);
+}
+
+.section-track .container {
+  position: relative;
+  z-index: 2;
 }
 
 .section-track .section-heading h2,
 .section-track .section-heading p {
-  color: #0f172a !important;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.85);
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .section-track .eyebrow {
-  color: var(--cardinal);
+  color: #fca5a5;
 }
 
 .section-track .eyebrow::before {
-  background: var(--cardinal);
+  background: #fca5a5;
 }
 
 .tracks-grid-3 {
@@ -555,9 +554,9 @@ h1, h2, h3, h4 {
 }
 
 .track-box {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
   padding: 1.75rem;
@@ -593,26 +592,32 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   4. DIVE DEEPER: WHY IT WORKS (UNFILTERED RAW VIDEO)
+   4. DIVE DEEPER WITH VIDEO BACKDROP
 ========================================================= */
 .section-background {
   position: relative;
   overflow: hidden;
+  background-color: #0f172a;
   border-bottom: 2px solid var(--border-light);
+}
+
+.section-background .container {
+  position: relative;
+  z-index: 2;
 }
 
 .section-background .section-heading h2,
 .section-background .section-heading p {
-  color: #0f172a !important;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.85);
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .section-background .eyebrow {
-  color: var(--cardinal);
+  color: #fca5a5;
 }
 
 .section-background .eyebrow::before {
-  background: var(--cardinal);
+  background: #fca5a5;
 }
 
 .intro-grid {
@@ -624,11 +629,11 @@ h1, h2, h3, h4 {
 
 .statement {
   padding: clamp(2rem, 4vw, 3.25rem);
-  background: rgba(15, 23, 42, 0.84);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
 }
@@ -647,9 +652,9 @@ h1, h2, h3, h4 {
 }
 
 .intro-text {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
   padding: clamp(2rem, 3.5vw, 3rem);
@@ -671,26 +676,11 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   5. EMPIRICAL DATA & RESEARCH VISUALS (deep-bg.jpg)
-   Natural Scroll Position
+   5. EMPIRICAL EVIDENCE & DATA GALLERY
 ========================================================= */
 .section-evidence {
-  background: url("./assets/deep-bg.jpg") center / cover no-repeat;
+  background-color: #f1f5f9;
   border-bottom: 2px solid var(--border-slate);
-}
-
-.section-evidence .section-heading h2,
-.section-evidence .section-heading p {
-  color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-.section-evidence .eyebrow {
-  color: #fca5a5;
-}
-
-.section-evidence .eyebrow::before {
-  background: #fca5a5;
 }
 
 .metrics-row {
@@ -702,10 +692,8 @@ h1, h2, h3, h4 {
 
 .metric-card {
   padding: 1.75rem 1.25rem;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
   border-top: 5px solid var(--cardinal);
   border-radius: var(--radius);
   text-align: center;
@@ -733,10 +721,8 @@ h1, h2, h3, h4 {
 }
 
 .visual-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: var(--white);
+  border: 1.5px solid var(--border-slate);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -771,7 +757,6 @@ h1, h2, h3, h4 {
 
 /* =========================================================
    6. STATEMENT QUOTE BANNER (quote-bg.jpg)
-   Natural Scroll Position
 ========================================================= */
 .quote-section {
   position: relative;
@@ -784,9 +769,9 @@ h1, h2, h3, h4 {
 .quote-glass-box {
   max-width: 880px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 24px;
   border: 1.5px solid rgba(255, 255, 255, 0.25);
@@ -810,26 +795,11 @@ blockquote p span {
 }
 
 /* =========================================================
-   7. GENRE PROFILES (tracks-bg.jpg)
-   Natural Scroll Position
+   7. GENRE PROFILES (Warm Oat Canvas)
 ========================================================= */
 .section-genres {
-  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  background-color: var(--bg-sand);
   border-bottom: 2px solid var(--border-light);
-}
-
-.section-genres .section-heading h2,
-.section-genres .section-heading p {
-  color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-.section-genres .eyebrow {
-  color: #fca5a5;
-}
-
-.section-genres .eyebrow::before {
-  background: #fca5a5;
 }
 
 .journey-grid {
@@ -842,10 +812,8 @@ blockquote p span {
   position: relative;
   min-height: 250px;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
@@ -878,11 +846,10 @@ blockquote p span {
 }
 
 /* =========================================================
-   8. FAQS (hero-bg.jpg)
-   Natural Scroll Position
+   8. FAQS (Clean White Card Tiles)
 ========================================================= */
 .section-faq {
-  background: url("./assets/hero-bg.jpg") center / cover no-repeat;
+  background-color: var(--white);
   border-bottom: 2px solid var(--border-slate);
 }
 
@@ -894,10 +861,8 @@ blockquote p span {
 
 .faq-card {
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  background: #fdfcf9;
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
@@ -915,25 +880,10 @@ blockquote p span {
 }
 
 /* =========================================================
-   9. TAKEAWAYS (deep-bg.jpg)
-   Natural Scroll Position
+   9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
-  background: url("./assets/deep-bg.jpg") center / cover no-repeat;
-}
-
-.section-takeaways .section-heading h2,
-.section-takeaways .section-heading p {
-  color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-.section-takeaways .eyebrow {
-  color: #fca5a5;
-}
-
-.section-takeaways .eyebrow::before {
-  background: #fca5a5;
+  background-color: #ede6d8;
 }
 
 .takeaways-3-col {
@@ -943,10 +893,8 @@ blockquote p span {
 }
 
 .takeaway-block {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  background: var(--white);
+  border: 1.5px solid var(--border-card);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
@@ -985,8 +933,6 @@ footer {
   padding: 3rem 0;
   background: #0f172a;
   color: #94a3b8;
-  position: relative;
-  z-index: 2;
 }
 
 .footer-grid {
@@ -1009,9 +955,6 @@ footer p {
    RESPONSIVE DESIGN BREAKPOINTS
 ========================================================= */
 @media (max-width: 1000px) {
-  .hero-glass-box {
-    max-width: 100%;
-  }
   .metrics-row,
   .visuals-grid,
   .tracks-grid-3,

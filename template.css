@@ -129,7 +129,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 244, 237, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 2px solid var(--border-light);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -883,7 +883,7 @@ blockquote p span {
    9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
-  background-color: #ffa8a8;
+  background-color: #ffffff;
 }
 
 .takeaways-3-col {

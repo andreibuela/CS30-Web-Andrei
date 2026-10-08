@@ -760,7 +760,7 @@ h1, h2, h3, h4 {
 ========================================================= */
 .quote-section {
   position: relative;
-  background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
+  background: url("./assets/tracks-bg.jpg") center 25% / cover no-repeat;
   padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
   border-bottom: 2px solid #380a0a;
@@ -883,7 +883,7 @@ blockquote p span {
    9. TAKEAWAYS (Parchment Summary Base)
 ========================================================= */
 .section-takeaways {
-  background-color: #ede6d8;
+  background-color: #ffa8a8;
 }
 
 .takeaways-3-col {

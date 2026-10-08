@@ -1,6 +1,5 @@
 /* =========================================================
-   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH VIDEO BACKDROPS
-   Full-Visibility Video & Photo Sections + Frosted Glass Cards
+   SOUNDFOCUS: COMPLETE STYLESHEET WITH VIDEO BACKDROPS
    Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
 ========================================================= */
 
@@ -101,11 +100,6 @@ a {
 /* =========================================================
    UNIVERSAL VIDEO BACKGROUND RULES
 ========================================================= */
-.video-bg-container {
-  position: relative;
-  overflow: hidden;
-}
-
 .video-bg {
   position: absolute;
   top: 50%;
@@ -120,12 +114,6 @@ a {
   pointer-events: none;
 }
 
-/* Ensure foreground content and glass cards float cleanly above video */
-.video-bg-container .container {
-  position: relative;
-  z-index: 2;
-}
-
 /* =========================================================
    TOP NAVIGATION BAR
 ========================================================= */
@@ -136,6 +124,7 @@ a {
   background: rgba(247, 244, 237, 0.94);
   border-bottom: 2px solid var(--border-light);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .nav {
@@ -214,6 +203,7 @@ a {
   color: var(--ink) !important;
   border: 1.5px solid var(--border-slate);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .button-secondary:hover {
@@ -267,26 +257,26 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO: VIDEO / IMAGE BACKDROP (hero-bg-video.mp4 / hero-bg.jpg)
+   1. HERO: DYNAMIC VIDEO & FROSTED GLASS
 ========================================================= */
 .hero {
   position: relative;
   overflow: hidden;
-  background: url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
+  background-color: #0b0f19;
   padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
 }
 
-/* Directional scrim overlay to ensure left-aligned text stays fully legible */
+/* Directional scrim ensures moving video is visible while keeping left text high-contrast */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(247, 244, 237, 0.94) 0%,
-    rgba(247, 244, 237, 0.68) 48%,
-    rgba(247, 244, 237, 0.18) 100%
+    90deg, 
+    rgba(11, 15, 25, 0.78) 0%, 
+    rgba(11, 15, 25, 0.45) 50%, 
+    rgba(11, 15, 25, 0.15) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -299,11 +289,12 @@ h1, h2, h3, h4 {
 
 .hero-glass-box {
   max-width: 660px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(15, 23, 42, 0.74);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding: clamp(2.5rem, 5vw, 4rem);
   border-radius: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
@@ -311,18 +302,27 @@ h1, h2, h3, h4 {
   text-align: left;
 }
 
-h1 {
+.hero-glass-box h1 {
   margin-bottom: 1.25rem;
   font-size: clamp(2.3rem, 5vw, 3.8rem);
-  color: var(--ink);
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-copy {
+.hero-glass-box .hero-copy {
   max-width: 700px;
   margin: 0 0 2rem;
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  color: var(--ink-secondary);
+  color: #cbd5e1;
   line-height: 1.65;
+}
+
+.hero-glass-box .eyebrow {
+  color: #fca5a5;
+}
+
+.hero-glass-box .eyebrow::before {
+  background: #fca5a5;
 }
 
 .hero-actions {
@@ -518,12 +518,12 @@ h1 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS: VIDEO / IMAGE (tracks-bg-video.mp4)
+   3. FEATURED OPM TRACKS WITH VIDEO BACKDROP
 ========================================================= */
 .section-track {
   position: relative;
   overflow: hidden;
-  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  background-color: #0b0f19;
   border-bottom: 2px solid var(--border-light);
 }
 
@@ -531,7 +531,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.52);
+  background: rgba(11, 15, 25, 0.58);
   z-index: 1;
   pointer-events: none;
 }
@@ -562,9 +562,10 @@ h1 {
 }
 
 .track-box {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow-md);
@@ -599,12 +600,12 @@ h1 {
 }
 
 /* =========================================================
-   4. DIVE DEEPER: VIDEO / IMAGE (deep-dive-video.mp4)
+   4. DIVE DEEPER WITH VIDEO BACKDROP
 ========================================================= */
 .section-background {
   position: relative;
   overflow: hidden;
-  background: url("./assets/deep-bg.jpg") center / cover no-repeat;
+  background-color: #0b0f19;
   border-bottom: 2px solid var(--border-light);
 }
 
@@ -612,7 +613,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.48);
+  background: rgba(11, 15, 25, 0.52);
   z-index: 1;
   pointer-events: none;
 }
@@ -645,8 +646,9 @@ h1 {
 
 .statement {
   padding: clamp(2rem, 4vw, 3.25rem);
-  background: rgba(15, 23, 42, 0.94);
+  background: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #ffffff;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
@@ -667,8 +669,9 @@ h1 {
 }
 
 .intro-text {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
   padding: clamp(2rem, 3.5vw, 3rem);
@@ -770,11 +773,10 @@ h1 {
 }
 
 /* =========================================================
-   6. STATEMENT QUOTE BANNER
+   6. STATEMENT QUOTE BANNER (quote-bg.jpg)
 ========================================================= */
 .quote-section {
   position: relative;
-  overflow: hidden;
   background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
   padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
@@ -786,12 +788,11 @@ h1 {
   margin: 0 auto;
   background: rgba(15, 23, 42, 0.86);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 24px;
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   box-shadow: var(--shadow-lg);
-  position: relative;
-  z-index: 2;
 }
 
 blockquote {
@@ -1014,8 +1015,8 @@ footer p {
     width: min(var(--max-width), calc(100% - 1.25rem));
   }
 
-  h1 {
-    font-size: clamp(2rem, 9.5vw, 2.8rem);
+  .hero-glass-box h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
   }
 
   .hero-actions {
@@ -1043,7 +1044,6 @@ footer p {
   }
 }
 
-/* Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

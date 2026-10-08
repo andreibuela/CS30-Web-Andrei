@@ -84,12 +84,13 @@
 
     <main id="main-content">
         <!-- =====================================================
-             1. HERO SECTION WITH BACKGROUND VIDEO
+             1. HERO SECTION (CENTERED & VISIBLE VIDEO BACKGROUND)
         ====================================================== -->
         <section class="hero" aria-labelledby="hero-title">
-            <video class="video-bg" autoplay muted loop playsinline poster="./assets/hero-bg.jpg">
+            <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/hero-bg.jpg">
                 <source src="./assets/hero-bg-video.mp4" type="video/mp4">
             </video>
+            <div class="video-scrim"></div>
             <div class="container">
                 <div class="hero-glass-box">
                     <p class="eyebrow">Study Audio Optimizer • Custom Playlist Engine</p>
@@ -219,12 +220,13 @@
         </section>
 
         <!-- =====================================================
-             3. FEATURED OPM TRACKS WITH BACKGROUND VIDEO
+             3. FEATURED OPM TRACKS WITH VIDEO BACKDROP
         ====================================================== -->
         <section class="section section-track" id="tracks" aria-labelledby="tracks-title">
-            <video class="video-bg" autoplay muted loop playsinline poster="./assets/tracks-bg.jpg">
+            <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/tracks-bg.jpg">
                 <source src="./assets/tracks-bg-video.mp4" type="video/mp4">
             </video>
+            <div class="video-scrim"></div>
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Featured OPM Case Studies</p>
@@ -311,12 +313,13 @@
         </section>
 
         <!-- =====================================================
-             4. DIVE DEEPER WITH BACKGROUND VIDEO
+             4. DIVE DEEPER WITH VIDEO BACKDROP
         ====================================================== -->
         <section class="section section-background" id="dive-deeper" aria-labelledby="deep-title">
-            <video class="video-bg" autoplay muted loop playsinline poster="./assets/deep-bg.jpg">
+            <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="./assets/deep-bg.jpg">
                 <source src="./assets/deep-dive-video.mp4" type="video/mp4">
             </video>
+            <div class="video-scrim"></div>
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">Dive Deeper</p>
@@ -556,8 +559,23 @@
         </div>
     </footer>
 
-    <!-- Interactive Logic & GA4 Events -->
+    <!-- Interactive Logic & Auto-Play Enforcer -->
     <script>
+        // Force browser to play all background videos even if initially throttled
+        function ensureVideosPlay() {
+            document.querySelectorAll('video').forEach(video => {
+                video.muted = true;
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // Retry on user interaction if browser blocked strict autoplay
+                        window.addEventListener('click', () => video.play(), { once: true });
+                        window.addEventListener('touchstart', () => video.play(), { once: true });
+                    });
+                }
+            });
+        }
+
         const profiles = {
             burnout: {
                 tag: "High Cortical Arousal",
@@ -777,6 +795,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            ensureVideosPlay();
             generateCustomPlaylist();
 
             ['workload-phase', 'session-duration', 'vocal-preference'].forEach(id => {

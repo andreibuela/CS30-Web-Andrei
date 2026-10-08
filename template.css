@@ -772,7 +772,7 @@ h1, h2, h3, h4 {
 ========================================================= */
 .quote-section {
   position: relative;
-  background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
+  background: url("./assets/deep-bg.jpg") center 25% / cover no-repeat;
   padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
   border-bottom: 2px solid #380a0a;
@@ -810,7 +810,7 @@ blockquote p span {
    7. GENRE PROFILES (tracks-bg.jpg)
 ========================================================= */
 .section-genres {
-  background: url("./assets/tracks-bg.jpg") center / cover no-repeat fixed;
+  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
 }
 

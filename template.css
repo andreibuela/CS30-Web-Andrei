@@ -1,6 +1,6 @@
 /* =========================================================
-   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH VIVID BACKDROPS
-   Full-Visibility Photo Sections + Frosted Glass Cards
+   SOUNDFOCUS: REFRESHED VISUAL IDENTITY WITH VIDEO BACKDROPS
+   Full-Visibility Video & Photo Sections + Frosted Glass Cards
    Accent: Cardinal Red (#b91c1c) | Ink: Slate (#0f172a)
 ========================================================= */
 
@@ -96,6 +96,34 @@ a {
 .container {
   width: min(var(--max-width), calc(100% - 2.5rem));
   margin-inline: auto;
+}
+
+/* =========================================================
+   UNIVERSAL VIDEO BACKGROUND RULES
+========================================================= */
+.video-bg-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure foreground content and glass cards float cleanly above video */
+.video-bg-container .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================================================
@@ -239,18 +267,38 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
-   1. HERO: VIBRANT PHOTOGRAPHIC BACKDROP (hero-bg.jpg)
+   1. HERO: VIDEO / IMAGE BACKDROP (hero-bg-video.mp4 / hero-bg.jpg)
 ========================================================= */
 .hero {
   position: relative;
+  overflow: hidden;
   background: url("./assets/hero-bg.jpg") center 30% / cover no-repeat;
   padding: clamp(6rem, 10vw, 9rem) 0 clamp(4.5rem, 8vw, 7rem);
   border-bottom: 2px solid var(--border-light);
 }
 
+/* Directional scrim overlay to ensure left-aligned text stays fully legible */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 244, 237, 0.94) 0%,
+    rgba(247, 244, 237, 0.68) 48%,
+    rgba(247, 244, 237, 0.18) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-glass-box {
-  max-width: 860px;
-  margin-inline: auto;
+  max-width: 660px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   padding: clamp(2.5rem, 5vw, 4rem);
@@ -259,27 +307,26 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 h1 {
   margin-bottom: 1.25rem;
-  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
   color: var(--ink);
 }
 
 .hero-copy {
   max-width: 700px;
-  margin: 0 auto 2rem;
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  margin: 0 0 2rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   color: var(--ink-secondary);
   line-height: 1.65;
 }
 
 .hero-actions {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
@@ -307,7 +354,7 @@ h1 {
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-bottom: 1.75rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .config-btn {
@@ -471,10 +518,11 @@ h1 {
 }
 
 /* =========================================================
-   3. FEATURED OPM TRACKS (tracks-bg.jpg)
+   3. FEATURED OPM TRACKS: VIDEO / IMAGE (tracks-bg-video.mp4)
 ========================================================= */
 .section-track {
   position: relative;
+  overflow: hidden;
   background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
 }
@@ -483,7 +531,8 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(15, 23, 42, 0.52);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -550,10 +599,11 @@ h1 {
 }
 
 /* =========================================================
-   4. DIVE DEEPER: RESEARCH BACKGROUND (deep-bg.jpg)
+   4. DIVE DEEPER: VIDEO / IMAGE (deep-dive-video.mp4)
 ========================================================= */
 .section-background {
   position: relative;
+  overflow: hidden;
   background: url("./assets/deep-bg.jpg") center / cover no-repeat;
   border-bottom: 2px solid var(--border-light);
 }
@@ -562,7 +612,8 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(15, 23, 42, 0.48);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -719,10 +770,11 @@ h1 {
 }
 
 /* =========================================================
-   6. STATEMENT QUOTE BANNER (quote-bg.jpg)
+   6. STATEMENT QUOTE BANNER
 ========================================================= */
 .quote-section {
   position: relative;
+  overflow: hidden;
   background: url("./assets/quote-bg.jpg") center 25% / cover no-repeat;
   padding: clamp(6rem, 10vw, 8.5rem) 0;
   text-align: center;
@@ -732,12 +784,14 @@ h1 {
 .quote-glass-box {
   max-width: 880px;
   margin: 0 auto;
-  background: rgba(15, 23, 42, 0.82);
+  background: rgba(15, 23, 42, 0.86);
   backdrop-filter: blur(12px);
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 24px;
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
 }
 
 blockquote {
@@ -917,6 +971,14 @@ footer p {
    RESPONSIVE DESIGN BREAKPOINTS
 ========================================================= */
 @media (max-width: 1000px) {
+  .hero-glass-box {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
   .metrics-row,
   .visuals-grid,
   .tracks-grid-3,
@@ -953,7 +1015,7 @@ footer p {
   }
 
   h1 {
-    font-size: clamp(2.2rem, 11vw, 3.2rem);
+    font-size: clamp(2rem, 9.5vw, 2.8rem);
   }
 
   .hero-actions {
@@ -981,6 +1043,7 @@ footer p {
   }
 }
 
+/* Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -989,5 +1052,8 @@ footer p {
   *::before,
   *::after {
     transition: none !important;
+  }
+  .video-bg {
+    display: none !important;
   }
 }

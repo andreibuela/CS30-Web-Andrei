@@ -810,7 +810,7 @@ blockquote p span {
    7. GENRE PROFILES (tracks-bg.jpg)
 ========================================================= */
 .section-genres {
-  background: url("./assets/tracks-bg.jpg") center / cover no-repeat;
+  background: url("./assets/tracks-bg.jpg") center / cover no-repeat fixed;
   border-bottom: 2px solid var(--border-light);
 }
 

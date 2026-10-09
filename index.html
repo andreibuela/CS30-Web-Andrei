@@ -10,14 +10,14 @@
     <meta name="keywords" content="music optimizer for writing, study playlist curator, focus music, writing flow, acoustic ergonomics, cognitive load, writing productivity">
     <meta name="author" content="Ralph Andrei P. Buela">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-    <link rel="canonical" href="https://ralphbuela.github.io/CS30-Web-Andrei/">
+    <link rel="canonical" href="https://andreibuela.github.io/CS30-Web-Andrei/">
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="template.css">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ralphbuela.github.io/CS30-Web-Andrei/">
+    <meta property="og:url" content="https://andreibuela.github.io/CS30-Web-Andrei/">
     <meta property="og:title" content="Music Optimizer for Writing & Focus Flow | SoundFocus">
     <meta property="og:description" content="Match drafting and editing phases to curated acoustic textures to defeat task friction. Build your personalized focus set now.">
     <meta property="og:image" content="assets/hero-bg.jpg">
@@ -348,7 +348,7 @@
         </section>
 
         <!-- =====================================================
-             5. EMPIRICAL DATA & RESEARCH VISUALS (DEEP-BG IMAGE)
+             5. EMPIRICAL DATA & RESEARCH VISUALS (deep-bg.jpg)
         ====================================================== -->
         <section class="section section-evidence" id="evidence" aria-labelledby="evidence-title">
             <div class="container">
@@ -422,7 +422,7 @@
         </section>
 
         <!-- =====================================================
-             6. STATEMENT BANNER (QUOTE-BG IMAGE)
+             6. STATEMENT BANNER (quote-bg.jpg)
         ====================================================== -->
         <section class="quote-section" aria-label="Key finding">
             <div class="container">
@@ -437,7 +437,7 @@
         </section>
 
         <!-- =====================================================
-             7. AUDITORY GENRE MECHANICS (TRACKS-BG IMAGE)
+             7. AUDITORY GENRE MECHANICS (tracks-bg.jpg)
         ====================================================== -->
         <section class="section section-genres" id="genres" aria-labelledby="genres-title">
             <div class="container">
@@ -475,7 +475,7 @@
         </section>
 
         <!-- =====================================================
-             8. FAQS SECTION (HERO-BG IMAGE)
+             8. FAQS SECTION (hero-bg.jpg)
         ====================================================== -->
         <section class="section section-faq" id="faq" aria-labelledby="faq-title">
             <div class="container">
@@ -513,7 +513,7 @@
         </section>
 
         <!-- =====================================================
-             9. PRACTICAL TAKEAWAYS (DEEP-BG IMAGE)
+             9. PRACTICAL TAKEAWAYS (deep-bg.jpg)
         ====================================================== -->
         <section class="section section-takeaways" id="takeaways" aria-labelledby="takeaways-title">
             <div class="container">
@@ -552,11 +552,17 @@
         <div class="container footer-grid">
             <p><strong>SoundFocus &bull; Ralph Andrei P. Buela</strong></p>
             <p>CS30-8P Websites and Online Communication &bull; Mapúa University</p>
-            <p>&copy; 2026 Academic Coursework Resource</p>
+            <p style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span>&copy; 2026 Academic Coursework Resource</span>
+                <span>&bull;</span>
+                <a id="share-facebook" href="https://andreibuela.github.io/CS30-Web-Andrei/?utm_source=Facebook&utm_medium=social%20media&utm_campaign=promotion&utm_content=try-it-now&utm_term=SoundFocus,%20Personal%20Study%20Playlist%20Curator,%20Focus%20Audio%20Engine" target="_blank" rel="noopener noreferrer" style="color: #fca5a5; text-decoration: underline;">
+                    Campaign Link (Facebook)
+                </a>
+            </p>
         </div>
     </footer>
 
-    <!-- Interactive Logic & Auto-Play Enforcer -->
+    <!-- Interactive Logic & GA4 UTM Campaign Engine -->
     <script>
         function ensureVideosPlay() {
             document.querySelectorAll('video').forEach(video => {
@@ -569,6 +575,63 @@
                     });
                 }
             });
+        }
+
+        // =========================================================
+        // GA4 UTM ATTRIBUTION & FACEBOOK CAMPAIGN TRACKER
+        // =========================================================
+        function trackUtmCampaignEvent() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const utmSource = urlParams.get('utm_source');
+            const utmMedium = urlParams.get('utm_medium');
+            const utmCampaign = urlParams.get('utm_campaign');
+            const utmContent = urlParams.get('utm_content');
+            const utmTerm = urlParams.get('utm_term');
+
+            // If page is opened via the Facebook UTM link
+            if (utmSource && utmSource.toLowerCase() === 'facebook') {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'facebook_campaign_visit', {
+                        event_category: 'campaign_traffic',
+                        campaign_source: utmSource,
+                        campaign_medium: utmMedium || 'social media',
+                        campaign_name: utmCampaign || 'promotion',
+                        campaign_content: utmContent || 'try-it-now',
+                        campaign_term: utmTerm || 'SoundFocus',
+                        full_page_url: window.location.href
+                    });
+                }
+
+                // Fire an engaged conversion upon first user interaction
+                const fireEngagedEvent = () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'facebook_campaign_engaged', {
+                            event_category: 'campaign_engagement',
+                            campaign_source: utmSource,
+                            campaign_name: utmCampaign || 'promotion'
+                        });
+                    }
+                    window.removeEventListener('click', fireEngagedEvent);
+                    window.removeEventListener('scroll', fireEngagedEvent);
+                };
+                window.addEventListener('click', fireEngagedEvent, { passive: true });
+                window.addEventListener('scroll', fireEngagedEvent, { passive: true });
+            }
+
+            // Click listener for outbound/share campaign link
+            const fbShareBtn = document.getElementById('share-facebook');
+            if (fbShareBtn) {
+                fbShareBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'facebook_campaign_click', {
+                            event_category: 'outbound_campaign',
+                            link_url: fbShareBtn.href,
+                            campaign_name: 'promotion',
+                            campaign_source: 'Facebook'
+                        });
+                    }
+                });
+            }
         }
 
         const profiles = {
@@ -791,6 +854,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             ensureVideosPlay();
+            trackUtmCampaignEvent();
             generateCustomPlaylist();
 
             ['workload-phase', 'session-duration', 'vocal-preference'].forEach(id => {
